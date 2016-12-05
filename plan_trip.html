@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>規劃行程</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/latin-ext.css">
+<link rel="stylesheet" href="css/font-face.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/mainFinal.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/plan_trip.css">
+<link rel="stylesheet" href="css/member.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Microsoft JhengHei UI Light";
+  src:url(fonts/msjh.ttc);}
+.w3-navbar,h1,button {font-family: "Microsoft JhengHei UI Light";  src:url(fonts/msjh.ttc);}
+
+</style>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdRdFfcLnTGZ_RpewgJ-QX9_a4nhTcyeQ&callback=succCallback"
+        ></script>
+<script src="js/plan_trip.js"></script>
+<body>
+
+
+
+<!-- Navbar -->
+<div class="tabcontent-box " id="b_top">
+  <ul class="w3-navbar w3-red w3-card-2 w3-top w3-left-align w3-large tabcontent-box-zindex">
+      <li  class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+          <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      </li>
+      <li class="logo-picture-change "><a href="home_page.html" class="w3-padding-large w3-white " style="height:100px; width:120px;" >
+          <img src="images/logo_black.png" width="70px" height="70px"></a>
+      </li>
+      <li class="w3-hide-small ">
+          <a href="#" class=" w3-padding-large w3-hover-white">關於我們</a> 
+      </li>
+      <li class="w3-hide-small dropdown-meunbar">
+          <a href="#" class="dropbtn-meunbar w3-padding-large w3-hover-white">行程規劃</a>
+          <div class="tabcontent-box2">
+              <div class="dropdown-content-meunbar">
+                <a href="#" style="float:left;">使用教學</a>
+                <a href="plan_trip.html"  style="float:left;">旅程規劃</a>      
+              </div>
+          </div>
+      </li>  
+      <li class="w3-hide-small">
+          <a href="member_share.html" class="w3-padding-large w3-hover-white">行程分享</a>
+      </li>
+      <li class="w3-hide-small">
+          <a href="travel_column.html" class="w3-padding-large w3-hover-white">旅遊專欄</a>
+      </li>
+      <li class="w3-hide-small">
+          <a href="search.html" class="w3-padding-large w3-hover-white">景點搜尋</a>
+      </li>
+      <li class="w3-hide-small w3-center ">
+          <a href="member_login.html" class="w3-padding-12 login-button2 w3-hover-white " ><i class="fa fa-users fa-2x  w3-center "  aria-hidden="true"></i><p class="fonts-style5">會員中心</p></a>
+      </li>
+      <li class="w3-hide-small w3-center">
+          <a href="member_login.html" class="w3-padding-large login-button w3-hover-white" ><i class="fa fa-user fa-2x "  aria-hidden="true"></i><p class="fonts-style5">登入</p></a>
+      </li>
+      <li class="w3-hide-small w3-center">
+         <a href="member_login.html" class="w3-padding-large login-button w3-hover-white" ><i class="fa fa-user fa-2x"  aria-hidden="true"></i><p class="fonts-style5">登入</p></a>
+      </li>
+  </ul>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class=" accordion w3-hide w3-hide-large w3-hide-medium w3-top z-index10" style="margin-top:100px;">
+  <ul class="w3-navbar w3-left-align w3-large w3-black ">    
+      <li><a class="w3-padding-large" href="#">關於我們</a></li>
+      <li class=" ">    
+        <button class="w3-padding-12  accordion" >&nbsp;行程規劃</button>
+        <div class="panel margin_bottom0" >
+          <a href="">使用教學</a>
+          <a href="plan_trip_member.html">旅程規劃</a>      
+        </div>     
+      </li>
+      <li><a class="w3-padding-large" href="member_share.html">行程分享</a></li>
+      <li><a class="w3-padding-large" href="travel_column.html">旅遊專欄</a></li>
+      <li><a class="w3-padding-large" href="search.html">景點搜尋</a></li>
+      <li><a class="w3-padding-large" href="member_login.html">會員中心</a></li>    
+       <li style="height:51px;"><a class="w3-padding-large " href="member_login.html"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a></li>  
+  </ul>  
+</div>
+
+  <div id="myModal-pt" class="modal-pt">
+  <!-- Modal content -->  
+      <div class="modal-content-pt border_style_radius2 overflow1">      
+        <span class="close-pt">x</span>
+        <div class="align-content1 w3-padding-12 w3-center ">
+           <h1 class="margin_bottom5 fonts-style3">新增景點</h1>
+           <form action="" method="">
+             <div class=" justify_content3 auto_width3 margin_bottom5 ">
+                  <div>
+                      <span class="margin_right1 ">景點照片</span>
+                  </div>
+                  <div>
+                      <input type="file" name="Picture" class="" > 
+                  </div>
+              </div>
+              <div id="" style="height:800px;" class="try_border1">
+                  <!-- <img src="" alt=""> -->
+              </div>
+              <div class=" justify_content3 auto_width9 margin_bottom5">
+                  <div>
+                      <span class="margin_right1 ">地點</span>
+                  </div>
+                  <div>
+                      <input type="text" name="Spots" class="border_style3" > 
+                  </div>
+              </div>
+              <div class=" justify_content3 auto_width9 margin_bottom5">
+                  <div>
+                      <span class="margin_right1 ">電話</span>
+                  </div>
+                  <div>
+                      <input type="text" name="Phone" class="border_style3" > 
+                  </div>
+              </div>
+              <div class=" justify_content3 auto_width9 margin_bottom5">
+                  <div>
+                      <span class="margin_right1 ">地址</span>
+                  </div>
+                  <div>
+                      <input type="text" name="Address" class="border_style3" > 
+                  </div>
+              </div>
+              <div class=" justify_content3 auto_width9 margin_bottom5">
+                  <div>
+                      <span class="margin_right1 ">景點類型</span>
+                  </div>
+                  <div>
+                      <input type="radio" name="SpotType" class="border_style3" >景點
+                      <input type="radio" name="SpotType" class="border_style3" >食物
+                      <input type="radio" name="SpotType" class="border_style3" >住宿
+                  </div>
+              </div>
+              <div class=" justify_content3 auto_width9 margin_bottom5">
+                  <div>
+                      <span class="margin_right1 ">景點類型</span>
+                  </div>
+                  <div>
+                      <input type="radio" name="Local" class="border_style3" >北部
+                      <input type="radio" name="Local" class="border_style3" >中部
+                      <input type="radio" name="Local" class="border_style3" >南部
+                      <input type="radio" name="Local" class="border_style3" >東部
+                  </div>
+              </div>
+              <div class=" justify_content3 auto_width9 margin_bottom5">
+                  <div>
+                      <span class="margin_right1 ">是否公開</span>
+                  </div>
+                  <div>
+                      <input type="radio" name="Publish" class="border_style3" >公開
+                      <input type="radio" name="Publish" class="border_style3" >私有
+                  </div>
+              </div>
+              <div class=" align-content1 auto_width9 margin_bottom5">
+                  <div>
+                      <span class="margin_right1 ">景點描述</span>
+                  </div>
+                  <div>
+                      <textarea class="border_style_radius2 height_100 normal_width200" placeholder="景點描述"></textarea>
+                  </div>
+              </div>
+              <div class="">
+                <input type="submit" name="Submit" value="確認">
+              </div>
+           </form>
+
+        </div>
+      </div>     
+  </div>
+
+  <!-- The Modal -->
+<div id="myModal-join" class="modal-join">
+  <!-- Modal content -->  
+      <div class="modal-content-join border_style_radius2">      
+        <span class="close-join">x</span>
+
+        
+      </div>     
+    </div>
+
+    
+
+<!-- Header -->
+<div class="w3-container-header w3-red w3-center ">
+  <div class="images_bar2 images_bar_image07 w3-padding-24">
+    <h1 class="w3-jumbo fonts-style6" >規畫行程</h1>
+    <p class="w3-xlarge fonts-style6-2">Experience your Life</p>
+  </div>
+</div>
+
+<!-- First Grid -->
+<div class="pt_padding_20  w3-container-body " >
+    <div class="justify_content1 ">
+      <div  class="pt_leftblock  pt_blockfloat_left" >
+        <div class="auto_width3 w3-margin-top " >
+            <span style="font-size:24px;cursor:pointer" onclick="openNavLeft()" class="w3-margin-left button_style10 " >
+              <i class="fa fa-arrow-circle-o-right fa-2x" aria-hidden="true"></i>規劃行程
+            </span>
+        </div>      
+        <div id="mySidenav" class="sidenav w3-card-2 w3-margin-top overflow2">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNavLeft()">
+                <font class="w3-margin-right">規劃行程</font>
+                <i class="fa fa-arrow-left " aria-hidden="true"></i>
+            </a>
+            <div class="align-content1 normal_width350 w3-margin-top">
+                <div class="  justify_content3 ">
+                  <button class="button_style11">
+                    &nbsp;<i class="fa fa-calendar-plus-o fa-2x" aria-hidden="true"></i>&nbsp;增加天數
+                  </button>
+                </div>
+              <div class=" height_500 normal_width330 w3-margin-top overflow1">
+                <div class="auto_width3 justify_content3">
+                  <div class="auto_width7 w3-card-4 w3-margin-left">
+                      <button class="accordion-pt">Section 1</button>
+                      <div class="panel-pt ">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      </div>
+                  </div>
+                  <div class="auto_width6 w3-margin-left">
+                      <button class="button_style10 ">
+                        <i class="fa fa-times" aria-hidden="true"></i>刪除
+                      </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="auto_width3 justify_content2">
+              <div>
+                <button id="myBtn-pt" class="button_style5 media-change12-button-width">確認送出</button>
+              </div>
+            </div>            
+        </div>       
+      </div> 
+
+      <div class="pt_rightblock  pt_blockfloat_left " >
+          <div class="   w3-right-align w3-margin-top margin_left200" >
+              <span style="font-size:24px;cursor:pointer" onclick="openNavRight()" class="w3-margin-right button_style10 " >
+                 搜尋景點               
+                <i class="fa fa-arrow-circle-o-left fa-2x" aria-hidden="true"></i>
+              </span>
+          </div>      
+          <div id="mySidenav_right" class="sidenav_right pt_blockfloat_left w3-card-2 w3-margin-top">
+                <a href="javascript:void(0)" class="closebtn_right " onclick="closeNavRight()">
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  <font class="w3-margin-left">搜尋景點</font>
+                </a>
+                <div class="justify_content3 normal_width300 margin_left50 w3-margin-top">
+                    <form action="" method="">
+                        <input type="search" name="" placeholder="&nbsp;景點搜尋" class="pt_searchbar">
+                        <input type="button" name="" value="搜尋" width="50px" class="button_style11 " src="">
+                    </form>
+                </div>
+                <div class="align-content1 normal_width350 margin_left30 margin_top2 height_500 pt_search_spots overflow1">
+                    <div class="height_150 auto_width3 pt_search_spots2 border_style_radius1 w3-card-2">
+                        <div class="justify_content5 auto_width3">
+                          <div>
+                              <img src="images/montain.jpg" width="100px" height="100px" class="margin_left30 margin_top2  border_style_radius4">
+                          </div>
+                          <div class="align-content1 height_100 w3-margin-left w3-padding-4">
+                              <div class="">
+                                <h5>陽明山國家公園</h5>
+                                <p class="margin_bottom6">112台北市北投區陽明山國家公園</p>
+                                <button class="button_style10 ">
+                                  <i class="fa fa-plus" aria-hidden="true"></i>加入行程
+                                </button>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>     
+      </div>
+    </div>
+    
+
+    <div class="pt_mapblock">
+      <div id="myMap" style="height: 100%; width: 100%;"></div>
+    </div>
+    
+</div>
+
+
+
+
+<div class="images_bar3  images_bar_image16"> 
+  <div class="w3-container w3-center w3-black w3-opacity">
+    <h1 class=" w3-xlarge">experience your life</h1>
+    <h2><a href="home_page.html"><img src="images/logo.png" width="200px" height="150px"></a></h2> 
+  </div>  
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-12 w3-center w3-opacity">
+  <div class="w3-xlarge w3-padding-32">
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
+   <a href="#" class="w3-hover-text-red"><i class="fa fa-pinterest-p"></i></a>
+   <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
+   <a href="#" class="w3-hover-text-grey"><i class="fa fa-flickr"></i></a>
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
+ </div>
+ <p>Copyright&copy;2016</p>
+</footer>
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+function openNavLeft() {
+    document.getElementById("mySidenav").style.left = "0";
+}
+
+function closeNavLeft() {
+    document.getElementById("mySidenav").style.left = "-380px";
+}
+function openNavRight() {
+    document.getElementById("mySidenav_right").style.right = "0";
+}
+
+function closeNavRight() {
+    document.getElementById("mySidenav_right").style.right = "-380px";
+}
+
+
+
+
+
+var acc = document.getElementsByClassName("accordion-pt");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+
+// Get the modal
+var modal = document.getElementById('myModal-pt');
+
+var btn = document.getElementById("myBtn-pt");
+
+var span = document.getElementsByClassName("close-pt")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Get the modal
+var modal2 = document.getElementById('myModal-join');
+var btn2 = document.getElementById("myBtn-join");
+var span2 = document.getElementsByClassName("close-join")[0];
+
+btn2.onclick = function() {
+    modal2.style.display = "block";
+}
+
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,773 @@
+body {
+    font-family: "Pacifico", "微軟正黑體", "Helvetica Neue", cursive, Helvetica, sans-serif;
+}
+
+header {}
+
+h1 {
+    font-size: 50px;
+}
+
+
+/*所有footer*/
+
+.footer {
+    background-color: #7aa354;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer_image {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer-h5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.icon-list {
+    text-align: center;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.icon-list1:hover {
+    background-color: #0000;
+    color: #7aa354;
+}
+
+
+/*所有footer*/
+
+
+/*所有navbar*/
+
+.navbar1 {
+    background-color: #7aa354;
+}
+
+.logo {
+    height: 50px;
+    width=: 50px;
+}
+
+
+/*所有navbar*/
+
+
+/*cglohas.html*/
+
+.poster1 {
+    background-color: #fff;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.poster2 {
+    background-color: #fff;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.poster3 {
+    background-color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50PX;
+}
+
+.myvideo {
+    width: 100%;
+    margin-top: -150px;
+}
+
+.CG1 {
+    z-index: 1;
+    text-align: center;
+}
+
+.cgh1 {
+    width: 100px;
+    height: 100px;
+    margin-top: 1000px;
+    padding-top: 1000px;
+}
+
+.cgh3 {
+    margin-right: 1000px;
+    margin-bottom: 500px;
+    position: relative;
+    text-shadow: 3px 0px 8px #000;
+    color: white;
+}
+
+.slideshow {
+
+    margin-top: 20px;
+    margin-bottom: 400px;
+}
+
+.slideshow_image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 700px;
+}
+
+.slideshow_image01 {
+    background-image: url(../image/Grocer-2.jpeg);
+}
+
+.slideshow_image02 {
+    background-image: url(../image/location_farming2025.jpg);
+}
+
+.slideshow_image03 {
+    background-image: url(../image/0004.jpg);
+}
+
+.slideshow_image04 {
+    background-image: url(../image/online-community.jpg);
+}
+
+.index-gray-text1 {
+    margin-left: -5px;
+    margin-top: 400px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 3px 0px 8px #000;
+    color: white
+}
+
+.gray-text2 {
+    margin-top: 200px;
+    text-align: center;
+    position: relative;
+    text-shadow: 3px 0px 8px #000;
+    color: white
+}
+
+.bg-text {
+    background-image: url(../image/v_bg01.png);
+    background-position: left;
+}
+
+.image_00 {
+    margin-top: -150px;
+    height: 500px;
+    opacity: 0.9;
+    background-position: center;
+    background-size: cover;
+}
+
+.image_000 {
+    background-image: url(../image/clip_image007.jpg);
+}
+
+.image_001 {
+    background-image: url(../image/fruit-192753_960_720.jpg);
+}
+
+.image_002 {
+    background-image: url(../image/fruit-210105_960_720.jpg);
+}
+
+.image_003 {
+    background-image: url(../image/salad-264826_960_720.jpg);
+}
+
+.parallax-window {
+    background: transparent;
+    padding-top: -200px;
+}
+
+.parallax-window-image {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    transition: width 3s, height 3s;
+}
+
+.parallax-window-image:hover {
+    width: 400px;
+    height: 400px;
+}
+
+.parallax-window-image01 {
+    margin-left: 800px;
+    background-image: url(../image/pexels-photo-54296.jpeg);
+}
+
+.parallax-window-image02 {
+    margin-left: 70px;
+    margin-top: -400px;
+    background-image: url(../image/blog3.png);
+}
+
+.parallax-window-image03 {
+    margin-left: 70px;
+    background-image: url(../image/blog2-1.png);
+}
+
+.parallax-window-image04 {
+    margin-left: 800px;
+    margin-top: -400px;
+    background-image: url(../image/Rancho.jpg);
+}
+
+
+/*cglohas.html*/
+
+
+/*vagetable.html*/
+
+.va-sign {
+    font-family: "Arial";
+}
+
+.cou2 {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    background-image: url(../image/Seasonal-Vegetables.jpg);
+    width: 100%;
+    height: 300px;
+    /*border: solid 1px #ccc;*/
+    background-size: cover;
+    background-position: 25% center;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+.gray-area1 {
+    height: 300px;
+    width: 100%;
+    background-color: #666;
+    opacity: 0.2;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.gray-text1 {
+    margin-top: 0px;
+    position: absolute;
+    z-index: 10;
+}
+
+.va-image {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 15px;
+}
+
+.va-iconbar {
+    margin-bottom: 0px;
+    padding: 0 0;
+    margin: 0 0;
+    background-color: #DDD;
+}
+
+.va-iconbar1 {
+    margin-bottom: 0px;
+}
+
+.va-iconhover:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.va-poster {
+    width: 100%;
+    height: auto;
+    padding-bottom: padding-top: px;
+    margin-top: 250px;
+    margin-bottom: 50px;
+    position: absolute;
+    z-index: 30;
+    /*background-image: url(../image/wood_laser_04.jpg);*/
+    background-position: center;
+    background-size: cover;
+}
+
+.va-body {
+    position: relative;
+    margin-bottom: -60px;
+}
+
+.va-box {
+    border-radius: 5px;
+    background-color: #fff;
+    height: 400px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.va-box-bg {
+    /*padding-top: -1000px;*/
+    /*margin-top: 300px;*/
+    margin-bottom: 00px;
+   /* background-color: green;*/
+    background-color: rgb(235,235,235);
+}
+
+/*.va-box-image {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+   
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+}
+.va-box-image1{
+	background-image: url(../image/villa.jpg);
+}
+.va-box-image2{
+	background-image: url(../image/villa1.jpg);
+}
+.va-box-image3{
+	background-image: url(../image/villa2.jpg);
+}
+.va-box-image4{
+	background-image: url(../image/villa3.jpg);
+}*/
+
+.va-box-text {
+    padding-top: 5px;
+    text-align: center;
+    padding-left: 15px;
+    font-size: 38px;
+    margin: 0 0
+}
+
+.va-box-text-ntd {
+    padding-top: 20px;
+    text-align: center;
+    padding-left: 5px;
+    font-size: 16;
+    margin: 0 0
+}
+
+.va-box-text1 {
+    padding-left: 15px;
+    margin-top: 20px;
+    text-align: left;
+    background-color: #fff;
+}
+
+.va-row {
+    margin: 0 0;
+    padding: 0 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.va-row .left {
+    float: left;
+}
+
+.va-row .right {
+    float: right;
+}
+
+.va-fa1 {
+    float: left;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+    background-color: green;
+    margin: 10 10;
+    padding: 15 15;
+}
+
+.va-right- {
+   
+    height: 15px;
+    width: 15px;
+}
+
+.va-fa {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+    background-color: orange;
+    margin: 10 10;
+    padding: 15 15;
+}
+
+.va-box-bottom {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.va-box-text1-1{
+	font-size:22px;
+}
+.va-box-text1-2{
+	font-size:30px;
+}
+.va-box-text1-3{
+	font-size:22px;
+}
+
+/*vagetable.html*/
+
+
+/*recipe.html*/
+
+.cou3 {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    background-image: url(../image/kitchen.jpg);
+    width: 100%;
+    height: 600px;
+    /*border: solid 1px #ccc;*/
+    background-size: cover;
+    background-position: 25% center;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+
+/*recipe.html*/
+
+
+/*community.html*/
+
+.cou4 {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    background-image: url(../image/0405.jpg);
+    width: 100%;
+    height: 600px;
+    /*border: solid 1px #ccc;*/
+    background-size: cover;
+    background-position: 25% center;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+
+/*community.html*/
+
+
+/*member_center.html*/
+
+.mc-poster {
+    width: 100%;
+    height: auto;
+    padding-bottom: padding-top: 50px;
+    margin-top: -10px;
+    /*background-image: url(../image/wood_laser_04.jpg);*/
+    background-position: center;
+    background-size: cover;
+}
+
+.mc-text {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+    color: #fff;
+}
+
+.mc-h1 {
+
+    position: relative;
+    text-align: center;
+    margin-top: 510px;
+    padding-top: 50px;
+    background-image: url(../image/v_bg01.png);
+    background-position:center; 
+   
+}
+
+.about1 {
+
+
+    text-align: center;
+}
+
+.cou1 {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    background-image: url(../image/11.jpg);
+    width: 100%;
+    height: 600px;
+    /*border: solid 1px #ccc;*/
+    background-size: cover;
+    background-position: 25% center;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+.gray-area {
+    height: 100%;
+    width: 100%;
+    background-color: #666;
+    opacity: 0.2;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.gray-text {
+    margin-bottom: 350px;
+    margin-top: 150px;
+    position: relative;
+    z-index: 10;
+}
+
+.mc-icon {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.mc-icon1 {
+    background-image: url(../image/png/apple-1.png);
+}
+
+.mc-icon2 {
+    background-image: url(../image/png/aubergine.png);
+}
+
+.mc-icon3 {
+    background-image: url(../image/png/avocado2.png);
+}
+
+.mc-icon4 {
+    background-image: url(../image/png/banana.png);
+}
+
+
+/*member_center.html*/
+
+
+/*select_member.html*/
+
+.sm-text {
+    text-align: center;
+}
+
+.sm-parallax-window {
+    background: transparent;
+    padding: 0 0;
+    margin-top: 120px;
+    height: 100%;
+}
+
+.sm-icon {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.sm-icon1 {
+    background-image: url(../image/png/blueberries.png);
+}
+
+.sm-icon2 {
+    background-image: url(../image/png/beans.png);
+}
+
+.sm-icon3 {
+    background-image: url(../image/png/carrot2.png);
+}
+
+.sm-icon4 {
+    background-image: url(../image/png/cherries2.png);
+}
+
+.sm-icon5 {
+    background-image: url(../image/png/broccoli2.png);
+}
+
+.sm-icon-text {
+    color: #000;
+}
+
+
+/*select_member.html*/
+
+
+/*select_member_data.html*/
+
+.smd-icon {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.smd-icon1 {
+    background-image: url(../image/png/croissant2.png);
+}
+
+.smd-icon2 {
+    background-image: url(../image/png/fish2.png);
+}
+
+.smd-icon3 {
+    background-image: url(../image/png/french-fries.png);
+}
+
+.smd-icon4 {
+    background-image: url(../image/png/grapes2.png);
+}
+
+.smd-icon-text {
+    color: #000;
+}
+
+
+/*select_member_data.html*/
+
+
+/*login.html*/
+
+.big-checkbox {
+    width: 30px;
+    height: 30px;
+}
+
+.login-from {
+    text-align: center;
+}
+
+.login-button {
+    width: 100px;
+    height: 50px;
+}
+
+
+/*login.html*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* qa */
+
+.qa {
+    background-color: #eee;
+    padding-bottom: 20px;
+}
+
+.tab-content {
+    background-color: white;
+    height: 300px;
+    border: solid 1px #ddd;
+    border-top: 0;
+    padding: 20px;
+    text-align: justify;
+}
+
+
+/*sign*/
+
+.box {
+    border: solid 1px #ccc;
+    height: 300px;
+    margin: 20px;
+}
+
+.sign_image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.sign_image01 {
+    background-image: url(../../image/040101.jpg);
+}
+
+.info_row {
+    border: solid 1px #666;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+
+/* poster */
+
+.pos {
+    /*height: 300px;*/
+    padding-top: 30px;
+    text-align: center;
+}
+
+
+/*software*/
+
+dd {
+    text-align: justify;
+}
+
+
+/* about */
+
+.about>.container {
+    text-align: center;
+}
+
+ul {
+    text-align: justify;
+}
+
+
+/* course */
+
+.cou {
+    height: 500px;
+    /*border: solid 1px #ccc;*/
+    background-size: cover;
+    background-position: top;
+    cursor: pointer;
+}
+
+.form1 {
+    margin-right: 10%;
+    margin-left: 10%;
+    width: 90%;
+}
+
+.cou:hover {
+    opacity: 0.5;
+}
+
+.coutext:hover {
+    text-decoration: underline;
+    opacity: 0.5;
+    cursor: pointer;
+}
+*/*/

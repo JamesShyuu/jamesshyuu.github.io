@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>旅遊專欄</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"> -->
+<link rel="stylesheet" href="css/latin-ext.css">
+<link rel="stylesheet" href="css/font-face.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/mainFinal.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/row_column.css">
+<link rel="stylesheet" href="css/member.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Microsoft JhengHei UI Light";
+  src:url(fonts/msjh.ttc);}
+.w3-navbar,h1,button {font-family: "Microsoft JhengHei UI Light";  src:url(fonts/msjh.ttc);}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="tabcontent-box " id="b_top">
+  <ul class="w3-navbar w3-red w3-card-2 w3-top w3-left-align w3-large tabcontent-box-zindex">
+      <li  class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+          <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      </li>
+      <li class="logo-picture-change "><a href="home_page.html" class="w3-padding-large w3-white " style="height:100px; width:120px;" >
+          <img src="images/logo_black.png" width="70px" height="70px"></a>
+      </li>
+      <li class="w3-hide-small ">
+          <a href="#" class=" w3-padding-large w3-hover-white">關於我們</a> 
+      </li>
+      <li class="w3-hide-small dropdown-meunbar">
+          <a href="#" class="dropbtn-meunbar w3-padding-large w3-hover-white">行程規劃</a>
+          <div class="tabcontent-box2">
+              <div class="dropdown-content-meunbar">
+                <a href="#" style="float:left;">使用教學</a>
+                <a href="plan_trip.html"  style="float:left;">旅程規劃</a>      
+              </div>
+          </div>
+      </li>  
+      <li class="w3-hide-small">
+          <a href="member_share.html" class="w3-padding-large w3-hover-white">行程分享</a>
+      </li>
+      <li class="w3-hide-small">
+          <a href="travel_column.html" class="w3-padding-large w3-hover-white">旅遊專欄</a>
+      </li>
+      <li class="w3-hide-small">
+          <a href="search.html" class="w3-padding-large w3-hover-white">景點搜尋</a>
+      </li>
+      <li class="w3-hide-small w3-center ">
+          <a href="member_login.html" class="w3-padding-12 login-button2 w3-hover-white " ><i class="fa fa-users fa-2x  w3-center "  aria-hidden="true"></i><p class="fonts-style5">會員中心</p></a>
+      </li>
+      <li class="w3-hide-small w3-center">
+          <a href="member_login.html" class="w3-padding-large login-button w3-hover-white" ><i class="fa fa-user fa-2x "  aria-hidden="true"></i><p class="fonts-style5">登入</p></a>
+      </li>
+      <li class="w3-hide-small w3-center">
+         <a href="member_login.html" class="w3-padding-large login-button w3-hover-white" ><i class="fa fa-user fa-2x"  aria-hidden="true"></i><p class="fonts-style5">登入</p></a>
+      </li>
+  </ul>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class=" accordion w3-hide w3-hide-large w3-hide-medium w3-top z-index10" style="margin-top:100px;">
+  <ul class="w3-navbar w3-left-align w3-large w3-black ">    
+      <li><a class="w3-padding-large" href="#">關於我們</a></li>
+      <li class=" ">    
+        <button class="w3-padding-12  accordion" >&nbsp;行程規劃</button>
+        <div class="panel margin_bottom0" >
+          <a href="">使用教學</a>
+          <a href="plan_trip_member.html">旅程規劃</a>      
+        </div>     
+      </li>
+      <li><a class="w3-padding-large" href="member_share.html">行程分享</a></li>
+      <li><a class="w3-padding-large" href="travel_column.html">旅遊專欄</a></li>
+      <li><a class="w3-padding-large" href="search.html">景點搜尋</a></li>
+      <li><a class="w3-padding-large" href="member_login.html">會員中心</a></li>    
+       <li style="height:51px;"><a class="w3-padding-large " href="member_login.html"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a></li>  
+  </ul>  
+</div>
+
+<!-- Header -->
+<div class="w3-container-header w3-red w3-center ">
+  <div class="images_bar images_bar_image06 w3-padding-48">
+    <h1 class=" w3-jumbo  fonts-style6">旅遊專欄</h1>
+    <p class="w3-xlarge fonts-style6-2">邀請多位知名專欄作家提供旅遊文章及資訊</p>
+  </div>
+</div>
+
+
+
+<!-- First Grid -->
+<div class="w3-center margin_bt30">
+    <div class="">
+      <form action="<c:url value='Trip_Search'/>" method="GET">
+        <div id="search" class="justify_content3">
+          <div class="tc_serachtitle">搜尋</div>
+          <input type="text" name="search" class="tc_serach" placeholder="關鍵字 部落客 作家..">
+          <input type="submit" name="Submit" value="確認" class="tc_btn_style1">          
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+          <a href="travel_column_readmore.html" style="text-decoration: none;">
+            <div class="tc_columnbox" id="columnbox">
+              <div class="tc_imgbox">
+                <img src="images/seattle.jpg" alt="" class="tc_columnimg">
+              </div>              
+              <div class="tc_titlebtn">
+                <h5><b>旅遊筆記：西雅圖</b></h5>
+                <span style="color:#9e9e9e;"><i class="fa fa-eye" aria-hidden="true"></i>點閱數<span class="tc_viewnum">10</span></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="travel_column_readmore.html" style="text-decoration: none;">
+            <div class="tc_columnbox" id="columnbox">
+              <div class="tc_imgbox">
+                <img src="images/pexels-photo-131921.jpeg" alt="" class="tc_columnimg">
+              </div>              
+              <div class="tc_titlebtn">
+                <h5><b>巴里島之旅</b></h5>
+                <span style="color:#9e9e9e;"><i class="fa fa-eye" aria-hidden="true"></i>點閱數<span class="tc_viewnum">10</span></span>
+              </div>
+            </div>
+          </a>
+        
+        <div class="tc_pagebox ">
+          <c:if test="${pageNo > 1}">
+            <a href="<c:url value='${servletPath}?page=${pageNo-1}&type=column' />" style="text-decoration: none;">
+              <div class="tc_prev">
+                <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+              </div>
+            </a>
+          </c:if>           
+          <select id="my_selection" class="tc_pagenum">
+            <c:forEach var="p" begin="1" end="${TotalPages}">
+              <c:choose>
+                <c:when test="${pageNo==p}">
+                  <c:set value="selected" var="selected"></c:set>
+                </c:when>
+                <c:otherwise>
+                  <c:set value="" var="selected"></c:set>
+                </c:otherwise>
+              </c:choose>
+              <option href="<c:url value='${servletPath}?page=${p}&type=column&key=${keyword}'/>"
+                ${selected}>${p}
+              </option>
+            </c:forEach>
+          </select>
+          
+          <c:if test="${pageNo != TotalPages}">
+            <a href="<c:url value='${servletPath}?page=${pageNo+1}&type=column' />" class="btn1" style="text-decoration: none;">
+              <div class="tc_next">
+                <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+              </div>
+            </a>
+          </c:if>
+        </div>
+      </div>
+      <div class="col-md-4 ">
+        <div class="w3-card-2 tc_ul ">
+          <div class="tc_ultext">
+            <h4 class="tc_fontstyle">Popular Posts</h4>
+          </div>
+          <ul style="list-style-type:none;">
+            <c:forEach var="tcPost" items="${tcPosts}" begin="1"  end="5">
+            <li class="tc_li">
+              <a href="<c:url value='Trip_content?id=${tcPost.boardId}&type=column&page=${pageNo}'/>" class="tc_post_a">
+                <div class="justify_content3">
+                  <div class="tc_postimgbox">
+                    <img alt="" src="images/sea-sky-beach-holiday-large.jpg" class="tc_postimg">
+                  </div>
+                  <div class="tc_postspan">
+                    <span>墾丁必遊景點</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="tc_li">
+              <a href="<c:url value='Trip_content?id=${tcPost.boardId}&type=column&page=${pageNo}'/>" class="tc_post_a">
+                <div class="justify_content3">
+                  <div class="tc_postimgbox">
+                    <img alt="" src="images/plan_trip2.jpg" class="tc_postimg">
+                  </div>
+                  <div class="tc_postspan">
+                    <span>露營景點精選</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="tc_li">
+              <a href="<c:url value='Trip_content?id=${tcPost.boardId}&type=column&page=${pageNo}'/>" class="tc_post_a">
+                <div class="justify_content3">
+                  <div class="tc_postimgbox">
+                    <img alt="" src="images/bagage_girl.jpg" class="tc_postimg">
+                  </div>
+                  <div class="tc_postspan">
+                    <span>一個人的旅行</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            </c:forEach>
+          </ul>
+        </div>
+        <div class="tc_tagbox">
+          <div class="tc_tagtitle">
+            <h4 class="tc_fontstyle">Tags</h4>
+          </div>
+          <!--${servletPath}測試用哪個servlet 提出請求,如果不是由/Trip_Search提出,則page從1開始 -->
+          <div class="w3-container w3-white">
+            <c:forEach var="keyword" items="${key}">
+              <c:choose>
+                <c:when test="${servletPath!='/Trip_Search'}">
+                  <span class="tc_tag_btn">
+                    <a href="<c:url value='Trip_Search?key=${keyword}&page=1'/>" style="text-decoration: none;">台北</a>
+                  </span>
+                </c:when>
+                <c:when test="${servletPath=='/Trip_Search'&&pageNo!='1'}">
+                  <span class="tc_tag_btn">
+                    <a  href="<c:url value='Trip_Search?key=${keyword}&page=1'/>" style="text-decoration: none;">旅館</a>
+                  </span>
+                </c:when>
+                <c:otherwise>
+                  <span class="tc_tag_btn">
+                    <a href="<c:url value='Trip_Search?key=${keyword}&page=${pageNo}'/>" style="text-decoration: none;">自由行</a>
+                  </span>
+                </c:otherwise>
+                <c:otherwise>
+                  <span class="tc_tag_btn">
+                    <a href="<c:url value='Trip_Search?key=${keyword}&page=${pageNo}'/>" style="text-decoration: none;">搭車</a>
+                  </span>
+                </c:otherwise>
+              </c:choose>
+            </c:forEach>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+<div class="images_bar3 images_bar_image17"> 
+  <div class="w3-container w3-center w3-black w3-opacity">
+    <h1 class=" w3-xlarge">experience your life</h1>
+    <h2><a href="home_page.html"><img src="images/logo.png" width="200px" height="150px"></a></h2> 
+  </div>  
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-12 w3-center w3-opacity">
+  <div class="w3-xlarge w3-padding-32">
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
+   <a href="#" class="w3-hover-text-red"><i class="fa fa-pinterest-p"></i></a>
+   <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
+   <a href="#" class="w3-hover-text-grey"><i class="fa fa-flickr"></i></a>
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
+ </div>
+ <p>Copyright&copy;2016</p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+</script>
+<script src="js/jquery_ui.js"></script>
+
+</body>
+</html>

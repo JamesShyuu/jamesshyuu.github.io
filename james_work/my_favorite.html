@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>我的最愛</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"> -->
+<link rel="stylesheet" href="css/latin-ext.css">
+<link rel="stylesheet" href="css/font-face.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/mainFinal.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/member.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Microsoft JhengHei UI Light";
+  src:url(fonts/msjh.ttc);}
+.w3-navbar,h1,button {font-family: "Microsoft JhengHei UI Light";  src:url(fonts/msjh.ttc);}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="tabcontent-box">
+<ul class="w3-navbar w3-red w3-card-2 w3-top w3-left-align w3-large tabcontent-box-zindex">
+  <li  class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+    <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+  </li>
+  <li class="logo-picture-change "><a href="home_page.html" class="w3-padding-large w3-white " style="height:100px; width:120px;" ><img src="images/logo_black.png" width="70px" height="70px"></a></li>
+  <li class="w3-hide-small ">
+    <a href="#" class=" w3-padding-large w3-hover-white">關於我們</a>	
+  </li>
+  <li class="w3-hide-small dropdown-meunbar">
+    <a href="#" class="dropbtn-meunbar w3-padding-large w3-hover-white">行程規劃</a>
+	<div class="tabcontent-box2">
+    <div class="dropdown-content-meunbar">
+      <a href="#" style="float:left;">使用教學</a>
+      <a href="#"  style="float:left;">旅程規劃</a>      
+    </div>
+	</div>
+  </li>  
+  <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-white">行程分享</a></li>
+  <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-white">旅遊專欄</a></li>
+  <li class="w3-hide-small"><a href="#" class="w3-padding-large w3-hover-white">景點搜尋</a></li>
+  <li class="w3-hide-small ">
+	<a href="#" class="w3-padding-large login-button"><i class="fa fa-user fa-3x login-picture " aria-hidden="true"></i></a>
+  </li>
+</ul>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="accordion w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:100px">
+  <ul class="w3-navbar w3-left-align w3-large w3-black">
+     <li><a class="w3-padding-large" href="#">關於我們</a></li>
+    <li>    
+      <button class="w3-padding-large accordion">行程規劃</button>
+      <div class="panel">
+      <a href="">使用教學</a>
+      <a href="">旅程規劃</a>      
+      </div>     
+    </li>
+    <li><a class="w3-padding-large" href="#">行程分享</a></li>
+    <li><a class="w3-padding-large" href="#">旅遊專欄</a></li>
+    <li><a class="w3-padding-large" href="#">景點搜尋</a></li>	
+	<li><a class="w3-padding-large" href="#"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a></li>	
+  </ul>  
+</div>
+
+<!-- Header -->
+<div class="w3-container-header w3-red w3-center ">
+  <div class="images_bar images_bar_image05 w3-padding-24">
+    <h1 class=" w3-jumbo fonts-style6">收藏行程</h1>
+    <p class="w3-xlarge fonts-style6-2">Experience your Life</p>
+  </div>
+</div>
+
+<!-- First Grid -->
+
+<!-- RWD模式一 -->
+<div class="auto_width7 3-light-grey ">
+  <div class="media-change13-width-block">
+    <div class="justify_content2 w3-padding-32 margin_bottom4">
+      <div class="border_style2 w3-white  border_style_radius2 media-change13-width dropdown-shard">
+        <a href="my_favorite_detail.html" class="button_style1 ">
+          <div class="auto_width3 w3-center w3-padding-bottom text-hover-style1 ">
+            <img src="images/sunnybeach.jpg" class="auto_width3 height_230 radius_top1">
+            <h5>北海岸一日遊</h5>
+            <p>分享日期:2016/9/16</p>
+          </div>
+        </a>
+        <div class="lefted dropdown-content-shard">
+          <button class="button_style9" onclick="myAlert()">
+            <i class="fa fa-trash-o fa-2x" aria-hidden="true">
+             <font class="fonts-style4">刪除收藏</font>
+            </i>
+          </button>
+        </div> 
+      </div> 
+    </div>
+  </div>
+
+<!-- RWD模式二 -->
+  <div class="media-change13-width-block2">
+    <div class="justify_content2 w3-padding-32">
+      <div class="border_style2 w3-white  border_style_radius2 media-change13-width2 dropdown-shard">
+        <a href="my_favorite_detail.html" class="button_style1 ">
+          <div class="auto_width3 w3-center w3-padding-bottom text-hover-style1 ">
+            <img src="images/sunnybeach.jpg" class="auto_width3 height_230 radius_top1">
+            <h5>北海岸一日遊</h5>
+            <p>分享日期:2016/9/16</p>
+          </div>
+        </a>
+        <div class="lefted dropdown-content-shard">
+          <button class="button_style9" onclick="myAlert()">
+            <i class="fa fa-trash-o fa-2x" aria-hidden="true">
+             <font class="fonts-style4">刪除收藏</font>
+            </i>
+          </button>
+        </div> 
+      </div>      
+    </div>
+  </div>
+
+<!-- RWD模式三 -->
+<div class="media-change13-width-block3">
+  <div class="align-content1 auto_width7 w3-padding-32">
+    <div class="border_style2 w3-white  border_style_radius2 media-change13-width2 margin_bottom4 dropdown-shard">
+      <a href="my_favorite_detail.html" class="button_style1 ">
+        <div class="auto_width3 w3-center w3-padding-bottom text-hover-style1 ">
+          <img src="images/sunnybeach.jpg" class="auto_width3 height_230 radius_top1">
+          <h5>北海岸一日遊</h5>
+          <p>分享日期:2016/9/16</p>
+        </div>
+      </a>
+      <div class="lefted dropdown-content-shard">
+          <button class="button_style9" onclick="myAlert()">
+            <i class="fa fa-trash-o fa-2x" aria-hidden="true">
+             <font class="fonts-style4">刪除收藏</font>
+            </i>
+          </button>
+        </div> 
+    </div>
+  </div>
+  </div>
+
+<!-- 換頁標籤 -->
+ <div class="auto_width3 justify_content3 margin_left-20">
+      <ul class="pagination ">
+        <li><a href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+        <li>
+            <form action="" method="">
+              <select class="border_style4">
+                <option value="">1</option>
+                <option value="">2</option>
+              </select>
+            </form>
+        </li>  
+        <li><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+      </ul>
+  </div>  
+  <p class="w3-center">
+      <a href="member_center.html" class="button_style5 media-change12-button-width">會員中心</a>
+  </p>
+</div>
+
+
+
+
+<div class="images_bar3  images_bar_image13"> 
+  <div class="w3-container w3-center w3-black w3-opacity">
+    <h1 class=" w3-xlarge">experience your life</h1>
+    <h2><a href="home_page.html"><img src="images/logo.png" width="200px" height="150px"></a></h2> 
+  </div>  
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-12 w3-center w3-opacity">
+  <div class="w3-xlarge w3-padding-32">
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
+   <a href="#" class="w3-hover-text-red"><i class="fa fa-pinterest-p"></i></a>
+   <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
+   <a href="#" class="w3-hover-text-grey"><i class="fa fa-flickr"></i></a>
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
+ </div>
+ <p>Copyright&copy;2016</p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+function myAlert() {
+    alert("收藏行程已刪除!");
+}
+
+</script>
+
+</body>
+</html>

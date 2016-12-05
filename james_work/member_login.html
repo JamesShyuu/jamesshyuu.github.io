@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>會員登入</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"> -->
+<link rel="stylesheet" href="css/latin-ext.css">
+<link rel="stylesheet" href="css/font-face.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/mainFinal.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/member.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Microsoft JhengHei UI Light";
+  src:url(fonts/msjh.ttc);}
+.w3-navbar,h1,button {font-family: "Microsoft JhengHei UI Light";  src:url(fonts/msjh.ttc);}
+
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="tabcontent-box " id="b_top">
+  <ul class="w3-navbar w3-red w3-card-2 w3-top w3-left-align w3-large tabcontent-box-zindex">
+      <li  class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+          <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      </li>
+      <li class="logo-picture-change "><a href="home_page.html" class="w3-padding-large w3-white " style="height:100px; width:120px;" >
+          <img src="images/logo_black.png" width="70px" height="70px"></a>
+      </li>
+      <li class="w3-hide-small ">
+          <a href="#" class=" w3-padding-large w3-hover-white">關於我們</a> 
+      </li>
+      <li class="w3-hide-small dropdown-meunbar">
+          <a href="#" class="dropbtn-meunbar w3-padding-large w3-hover-white">行程規劃</a>
+          <div class="tabcontent-box2">
+              <div class="dropdown-content-meunbar">
+                <a href="#" style="float:left;">使用教學</a>
+                <a href="plan_trip.html"  style="float:left;">旅程規劃</a>      
+              </div>
+          </div>
+      </li>  
+      <li class="w3-hide-small">
+          <a href="member_share.html" class="w3-padding-large w3-hover-white">行程分享</a>
+      </li>
+      <li class="w3-hide-small">
+          <a href="travel_column.html" class="w3-padding-large w3-hover-white">旅遊專欄</a>
+      </li>
+      <li class="w3-hide-small">
+          <a href="search.html" class="w3-padding-large w3-hover-white">景點搜尋</a>
+      </li>
+      <li class="w3-hide-small w3-center ">
+          <a href="member_login.html" class="w3-padding-12 login-button2 w3-hover-white " ><i class="fa fa-users fa-2x  w3-center "  aria-hidden="true"></i><p class="fonts-style5">會員中心</p></a>
+      </li>
+      <li class="w3-hide-small w3-center">
+          <a href="member_login.html" class="w3-padding-large login-button w3-hover-white" ><i class="fa fa-user fa-2x "  aria-hidden="true"></i><p class="fonts-style5">登入</p></a>
+      </li>
+      <li class="w3-hide-small w3-center">
+         <a href="member_login.html" class="w3-padding-large login-button w3-hover-white" ><i class="fa fa-user fa-2x"  aria-hidden="true"></i><p class="fonts-style5">登入</p></a>
+      </li>
+  </ul>
+</div>
+<!-- Navbar on small screens -->
+<div id="navDemo" class=" accordion w3-hide w3-hide-large w3-hide-medium w3-top z-index10" style="margin-top:100px;">
+  <ul class="w3-navbar w3-left-align w3-large w3-black ">    
+      <li><a class="w3-padding-large" href="#">關於我們</a></li>
+      <li class=" ">    
+        <button class="w3-padding-12  accordion" >&nbsp;行程規劃</button>
+        <div class="panel margin_bottom0" >
+          <a href="">使用教學</a>
+          <a href="plan_trip_member.html">旅程規劃</a>      
+        </div>     
+      </li>
+      <li><a class="w3-padding-large" href="member_share.html">行程分享</a></li>
+      <li><a class="w3-padding-large" href="travel_column.html">旅遊專欄</a></li>
+      <li><a class="w3-padding-large" href="search.html">景點搜尋</a></li>
+      <li><a class="w3-padding-large" href="member_login.html">會員中心</a></li>    
+       <li style="height:51px;"><a class="w3-padding-large " href="member_login.html"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a></li>  ？
+  </ul>  
+</div>
+
+  <!-- Modal content -->  
+<div id="myModal-login" class="modal-login ">
+    <div class="modal-content-login border_style_radius2 ">
+        <span class="close-login">x</span>
+        <div class="align-content1 w3-padding-32 w3-center margin_top1">
+            <form>
+              <div class="w3-margin-bottom ">
+                <input type="text" name="Id" placeholder="&nbsp;帳號" class="media-change textarea_style1">
+              </div>
+              <div>
+                <input type="email" name="Email" placeholder="&nbsp;Email" class="media-change textarea_style1">
+              </div>
+              <div>
+                <input type="button" name="submit" value="確定" class="button_style5 media-change12-button-width-2 w3-margin-top">
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>     
+
+
+<!-- Header -->
+<div class="w3-container-header w3-red w3-center ">
+  <div class="images_bar images_bar_image02 w3-padding-24">
+    <h1 class=" w3-jumbo fonts-style6">會員登入</h1>
+    <p class="w3-xlarge fonts-style6-2">Experience your Life</p>
+  </div>
+</div>
+
+<!-- First Grid -->
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-xs-6 w3-card-4 margin_top1 margin_bottom1 w3-white login-box">        
+        <div class="w3-container w3-center w3-padding-32 ">
+            <form action="" method="">
+              <p>                                         
+                  <input type="text" name="memberId" placeholder="&nbsp;帳號" class="media-change textarea_style1"></input>
+               </p>
+               <p class="login-block-margin login-block-margin-bottom join-table-text-size ">
+                 <font>未填寫帳號</font>  <!-- 帳號提示框 -->
+               </p>
+                <p>                    
+                  <input type="password" name="password" placeholder="&nbsp;密碼" class="media-change textarea_style1"></input>
+                </p>  
+                <p class="login-block-margin join-table-text-size ">
+                    <font>未填寫密碼</font> <!-- 密碼提示框 -->
+                </p>
+                <p>
+                  <input type="checkbox" name="">
+                    <font>記住密碼</font>
+                </p>
+                <hr> 
+                <p class="login-block-margin login-block-margin-bottom join-table-text-size ">
+                  <font>帳號或密碼有誤</font> <!-- 出入錯誤提示框 -->
+                </p>
+                <p>                    
+                  <input type="submit" name="enter" value="確認" class="button_style5 media-change12-button-width"></input>
+                </p>
+            </form>
+            <div class="auto_width3 justify_content3 ">
+              <p class="">            
+                <a href="member_join.html" class=" w3-medium  button_style7">加入會員</a>  
+              </p>
+              <p class=" ">            
+                <a style="cursor:pointer" class="w3-medium  button_style7" id="myBtn-login">忘記密碼</a>  
+              </p>
+            </div>
+        </div>  
+    </div>
+  </div>
+</div>
+<div class="images_bar3  images_bar_image12">
+  <div class="w3-container w3-center w3-black w3-opacity">        
+    <h1 class=" w3-xlarge">experience your life</h1>
+    <h2><a href="home_page.html"><img src="images/logo.png" width="200px" height="150px"></a></h2>   
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-24 w3-center w3-opacity">
+  <div class="w3-xlarge w3-padding-32">
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
+   <a href="#" class="w3-hover-text-red"><i class="fa fa-pinterest-p"></i></a>
+   <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
+   <a href="#" class="w3-hover-text-grey"><i class="fa fa-flickr"></i></a>
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
+ </div>
+ <p>Copyright&copy;2016</p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+
+var modal = document.getElementById("myModal-login");
+var btn = document.getElementById("myBtn-login");
+var span = document.getElementsByClassName("close-login")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
+
+</body>
+</html>

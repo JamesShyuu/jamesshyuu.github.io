@@ -1,0 +1,211 @@
+.page{
+	position:absolute;
+	width:100%;		
+	margin:0;
+}
+.maincolor{
+	background:#fffff;
+	
+}
+
+.topPage{
+	background:#f44336;	
+	height:150px;	
+}
+
+.logo{
+	border:1px solid green;	
+	width:100px;
+	height:100px;
+	margin-left:50px;
+	margin-top:30px;	
+	
+	
+}
+.logoSmall{
+	border:1px solid green;	
+	width:50px;
+	height:50px;
+	margin-left:50px;
+	margin-top:30px;	
+	
+	
+}
+
+#topMune{
+	border:1px solid blue;	
+	width:600px;
+	height:100px;
+	margin-left:200px;	
+	position:absolute;
+	top:75px;
+	padding-top:10px;
+}
+
+.loginIcon{
+	/* top:50px;	
+	left:100px; */	
+	position:absolute;
+	
+}
+.loginIconSmall{
+	
+	/* right:10px;	 */
+	position:absolute;
+	
+}
+
+
+/* Dropdown Button */
+.dropbtn_onClick {
+    background-color: #f44336;    
+    padding: 16px;    
+    border: none;
+    cursor: pointer;
+	/* #525252 */
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn_onClick:hover, .dropbtn_onClick:focus {
+    background-color: #cd554c;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown_onClick {
+	border:1px solid red;
+	height:130px;
+	top:30px;
+	left:120px;
+	position:absolute;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content_onClick {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	
+}
+
+/* Links inside the dropdown */
+.dropdown-content_onClick a {
+    color: #f44336;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content_onClick a:hover {
+	background-color: #f44336;
+	color:#f9f9f9;
+	}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show_onClick {display:block;}
+
+
+/*Hover Drop Button*/
+.dropbtn_hover {
+    background-color: #f44336;
+    color: white;
+    padding: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown_hover {
+    position: relative;
+	left:10px;
+    display: inline-block;
+}
+
+.dropdown-content_hover {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content_hover a {
+    color: #525252;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content_hover a:hover {
+	background-color: #f1f1f1;
+	color:#f44336;
+}
+
+.dropdown_hover:hover .dropdown-content_hover {
+    display: block;
+}
+
+.dropdown_hover:hover .dropbtn_hover {
+    background-color: #cd554c;
+	color:#ffffff;
+}
+/*Hover Drop Button*/
+
+
+#top-bar-right{
+	border:1px solid orange;	
+	width:50px;
+	height:50px;
+	right:30px;
+	top:30px;
+	position:absolute;
+}
+.picture-bar{
+	border:1px solid red;
+	background:#ddd;
+	height:600px;
+	width:100%;
+	padding:300px;
+	top:150px;
+	position:absolute;
+	
+}
+.picture-bar-inner{
+	height:300px; 
+	width:700px;
+	border:1px solid blue;
+}
+
+.middle-bar{
+	border:1px solid red;
+	background:#ddd;
+	height:300px;
+	top:850px;	
+	
+}
+
+.end-bar{
+	border:1px solid red;
+	background:#f44336;
+	height:250px;
+	top:1150px;
+}
+.backHomePage{
+	border:1px solid green;
+	width:100px;
+	height:100px;
+	margin-left:950px;
+	margin-top:30px;
+	
+}
+.footerInfo{
+	border:1px solid blue;
+	width:600px;
+	height:100px;
+	margin-left:700px;
+	margin-top:10px;
+}

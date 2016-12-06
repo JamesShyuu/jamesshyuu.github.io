@@ -1,0 +1,727 @@
+/*nav bar*/
+.re_nav{
+	background: #272822;
+	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	border: none;
+	height: 80px;
+}
+.re_ulStyle{
+	float: left;
+	list-style-type:none;
+	margin-top: 15px;	
+	display: block;
+	margin-left: -40px;
+}
+@media screen and (max-width: 700px){
+	.re_ulStyle{
+		display: none;
+	}
+}
+
+.re_ulSmall{
+	display: none;
+	width: 100%;
+	height: 50px;
+	padding-left: 80%;
+}
+@media screen and (max-width: 700px){
+	.re_ulSmall{
+		display: block;
+		
+	}
+}
+.re_liSmall{
+	height: 250px;
+	width: 100%;
+	top: 50px;
+	position: absolute;
+	text-align: center;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+	font-size: 20px;
+}
+.re_liSmall li{
+	margin-top: 10px;
+}
+.re_smailBtn{
+	position: absolute;
+	top: 10px;
+	background: #272822;
+	color: #fbfbfb;
+	border: 1px solid #ffffff;
+	transition: 0.3s ease-in-out;
+}
+.re_smailBtn:hover{
+	
+	background: #272822;
+	color: #fbfbfb;
+}
+.re_smailBtn:focus{
+	
+	background: #272822;
+	color: #fbfbfb;
+}
+.re_liStyle{
+	float: left;
+	margin-left: 50px;
+	margin-top: 10px;
+}
+.re_lilogo{
+	float: left;
+	width: 150px;
+	height: 100%;	
+	border-right: 1px dotted #272822;
+}
+.re_titlelogo{
+	width: 100px;
+	height: 100%;
+	background: #fbfbfb;
+	border-right: 1px dotted #272822;
+	margin-left: 0px;
+	/*left: 0px;
+	position: absolute;*/
+	transition: 0.3s ease-in-out;
+}
+.re_titlelogo:hover{	
+	background: #7a8981;	
+}
+.re_logoimg{
+	height: 30px;
+	width: 130px;
+	margin-top: 10px;
+	margin-left: 10px;
+	/*margin-left: 30px;*/
+}
+.re_titleBtn{	
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+	font-weight: bold;
+	font-size: 20px;
+  	text-decoration: none;
+	color: #ffffff;
+	transition: 0.3s ease-in-out;
+	cursor:pointer;
+}
+.re_titleBtn:hover{
+  	text-decoration: none;
+  	color: #b33434;
+}
+.re_content{
+	display: block;
+	z-index: 1;
+}
+
+/*homepage*/
+.hp_bg{
+	height: 900px;
+	width: 100%;
+}
+.hp_bgImg{
+	width: 100%;
+	height: 800px;
+	background-image: url(../images/pen.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.hp_title{
+/*	display: flex;
+	justify-content:center;
+	display: -webkit-flex;
+	-webkit-justify-content: center;*/
+	text-align: center;
+	top: 350px;
+	position: relative;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+	font-weight: bold;
+	font-size: 50px;
+	text-shadow:1px 1px 0 #444;
+}
+
+/*about me*/
+.am_box{
+	width: 100%;
+}
+.am_main{
+	display: flex;
+	justify-content:center;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	width: 100%;	
+}
+.am_mainPage{
+	width: 90%;	
+	border: 1px solid red;
+}
+.am_logo{
+	width: 150px;
+	height: 150px;
+}
+.am_fig{
+	width: 33.333333%;
+	height: 200px;
+}
+
+.am_main_box{
+	width: 100%;
+	margin-top: 100px;
+	
+}
+.am_main_box p{
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+}
+.am_main_box li{
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+}
+.am_main_box > .am_full_gallery{
+	margin-top: 50px;
+	width: 100%;
+	margin-bottom: 50px;
+}
+/*@media screen and (max-width: 400px){
+	.am_main_box >.am_full_gallery{
+		float: none;
+
+	}
+}*/
+.am_title{
+	text-align: center;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+
+}
+
+.am_main_box > .am_full_gallery > .am_gallery_img{
+	width: 33.333333%;
+	float: left;
+	height: 100%;
+}
+@media screen and (max-width: 600px){
+	.am_main_box > .am_full_gallery >.am_gallery_img{
+		float: none;
+		width: 100%;
+	}
+}
+.am_gallery_img img{
+	width: 100%;
+	
+}
+.am_intro_box{
+	margin-top: 50px;
+}
+.am_intro_box li{
+	margin-top: 10px;
+}
+
+.am_bottom{
+	border-bottom: 1px dotted #272822;
+	width: 80%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+
+/* Education*/
+.edu_main_box{
+	margin-top: 100px;
+}
+/*.edu_main_box > .edu_content{
+	float: none;
+}
+.edu_main_box > .edu_content > .edu_content_inner{
+	float: left;
+}*/
+.edu_content_box{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.edu_content{
+	/*float: left;*/
+	/*margin-left: 100px;*/
+}
+.edu_content p{
+	/*text-align: center;*/
+	margin-left: 40px;
+	font-size: 20px;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+}
+.edu_content img{
+	width: 100px;
+	height: 100px;
+}
+.edu_content a{
+	text-decoration: none;
+	color: #b43434;
+	transition: 0.5s ease-in-out;
+}
+.edu_content a:hover{
+	
+	color: #ff2600;
+}
+.edu_bg_img{
+	width: 100%;
+	height: 400px;
+	background-image: url(../images/wood.jpg);
+	background-size: cover;
+	background-position: center;
+	padding-top: 50px;
+}
+.edu_box{
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	height: 300px;
+	margin: auto;
+	background: #e5e7e6;
+	border-radius: 20px;
+}
+
+.edu_imgbox{
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.edu_box_img1{
+	height: 400px;
+	width: 300px;	
+	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.edu_box_img2{
+	height: 300px;
+	width: 350px;	
+	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.edu_bg{
+	background: #272822;
+	width: 100%;
+	height: 100%;
+}
+.edu_carousel{
+	padding-top: 30px;
+}
+.edu_depo_img1{
+	width: 200px;
+	height: 300px;	
+	margin: auto;
+	
+}
+
+.edu_depo_title{
+	font-size: 20px;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);	
+	top: 300px;
+	
+	border: 1px solid red;
+}
+/* Experience*/
+.exe_main_box{
+	margin-top: 100px;
+	margin-bottom: 60px;
+}
+.exe_content_title{
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+.exe_cotent p{
+	margin-left: 40px;
+	font-size: 20px;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+}
+.exe_cotent img{
+	width: 100px;
+	height: 100px;
+}
+
+/* Skill*/
+.ski_main_box{	
+	width: 80%;
+	margin: auto;	
+	display: flex;
+	justify-content:center;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	
+
+}
+.ski_main_bg{
+	width: 100%;
+	/*height: 400px;*/	
+	background-image: url(../images/box.jpg);
+	background-size: cover;
+	background-position: center;
+	margin-top: 100px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.ski_ul{
+	list-style-type:none;
+	background: #e5e7e6;
+}
+.ski_li{
+	float: left;
+	text-align: center;
+	padding: 30px 50px;
+
+}
+.ski_gallery_box{
+	width: 33.333333%;
+	float: left;
+}
+.ski_gallery_img{
+	width: 100px;
+	height: 100px;
+}
+
+.pf_bgImg{
+	width: 100%;
+	height: 800px;
+	background-image: url(../images/pen3.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.pf_main_box{
+	margin-top: 50px;
+}
+.pf_main_row{
+	/*width: 100%;*/
+	height: 250px;
+}
+.pf_gallery_img{
+	width: 25%;
+	height: 100%;
+	float: left;
+	background: #272822;
+}
+.pf_gallery_img div{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	margin-top: -220px;
+	border: 2px solid white;
+	transition: 0.5s ease-in-out;
+	
+}
+/*.pf_gallery_img div:hover{
+	margin-top: -220px;
+	
+}*/
+.pf_gallery_img p{
+	margin:auto;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+	font-size: 18px;
+	color: white;
+	z-index: 20;
+}
+@media screen and (max-width: 1000px){
+	.pf_gallery_img{
+		width: 50%;
+	}
+}
+@media screen and (max-width: 600px){
+	.pf_gallery_img{
+		width: 100%;
+	}
+}
+.pf_img{
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition: 0.5s ease-in-out;
+}
+.pf_img:hover{
+	
+	opacity: 0.5;
+}
+.pf_img_content1{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	border: 1px solid white;
+}
+.pf_hide_box1{
+	justify-content:center;
+	padding-top: 70px;
+	
+}
+.pf_hide_box1 p{
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+}
+
+.mod_content{
+	display: flex;
+	justify-content:center;
+}
+.mod_content2{
+	display: flex;
+	
+}
+@media screen and (max-width: 500px){
+	.mod_content2{
+		display: list-item;
+		list-style-type:none;
+		padding-left: 10%;
+	}
+}
+.mod_content3_1{
+	display: flex;
+	justify-content:center;
+}
+.mod_content3_2{
+	display: flex;
+	justify-content:center;
+	margin-top: 20px;
+}
+
+.mod_img1{
+	width: 300px;
+	height: 200px;
+	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+}
+.mod_img1_2{
+	width: 300px;
+	height: 100px;
+	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	
+}
+.mod_img2_1{
+	width: 33.333333%;
+	height: 300px;
+}
+@media screen and (max-width: 500px){
+	.mod_img2_1{
+		width: 200px;
+
+	}
+}
+.mod_img3{
+	width: 300px;
+	height: 200px;
+	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.mod_img4{
+	width: 300px;
+	height: 400px;
+}
+.mod_img5_box{
+	width: 500px;
+	height: 100%;
+	
+}
+@media screen and (max-width: 450px){
+	.mod_img5_box{
+		width: 300px;
+		
+	}
+}
+.mod_img5_box a{
+	color: #822d2b;
+	text-decoration: none;
+	transition: 0.5s ease-in-out;
+	text-align: right;
+}
+.mod_img5_box a:hover{
+	color: #d82000;
+}
+.mod_img5{
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition: 0.5s ease-in-out;
+}
+/*.mod_img5:hover{
+	opacity: 0.5;
+}*/
+.mod_text{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.mod_content_mod4{
+	display: flex;
+	justify-content:center;
+	
+}
+@media screen and (max-width: 600px){
+	.mod_content_mod4{
+		display: list-item;
+		text-decoration: none;
+
+	}
+}
+.mod_content_mod4_img{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+@media screen and (max-width: 600px){
+	.mod_content_mod4_img{
+		
+
+	}
+}
+
+.foot_box{
+	width: 100%;
+	
+	height: 100px;
+	background: #272822;
+}
+.foot_p{
+	display: -webkit-flex;
+	-webkit-justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.foot_p a{
+	color: #fbfbfb;
+	transition: 0.3s ease-in-out;
+}
+.foot_p a:hover{
+	color: #b33434;
+	text-decoration: none;
+}
+.foot_span1{
+	font-size: 20px;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+	margin-left: 5px;
+	color: #fbfbfb;
+}
+.foot_span2{
+	font-size: 15px;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+	margin-top: 5px;
+	color: #fbfbfb;
+}
+
+.web_mainbox{
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+.web_imgbox{
+	margin: auto;
+	width: 600px;
+	height: 300px;
+	background: #272822;
+}
+.web_imgbox a{
+	text-decoration: none;
+}
+.web_imgbox img{
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition: 0.5s ease-in-out;
+}
+.web_imgbox img:hover{
+	opacity: 0.5;
+}
+@media screen and (max-width: 650px){
+	.web_imgbox{
+		width: 300px;
+		height: 150px;
+	}
+}
+
+
+.painting_box{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.painting_box_padding{
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+.painting_padding{
+	text-align:center;
+	padding-top:270px; 
+}
+@media screen and (max-width: 950px){
+	.painting_padding{
+		padding-top:170px;
+	}
+}
+.painting_button1{
+	height:300px;
+	width:300px;
+	margin-left:100px;
+	border-radius: 20px;	
+  	transition: 0.1s ease-in-out;
+  	font-size: 18px;
+  	font-weight: bold;
+  	color:white;
+  	
+}
+@media screen and (max-width: 950px){
+	.painting_button1{
+		height:200px;
+		width:200px;
+	}
+}
+.painting_button1 a{
+	text-decoration: none;
+	color: white;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+}
+.bg_pic{
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	border-radius: 20px;
+}
+.pic1{
+	background-image: url(../images/oil3.jpg);
+	transition: 0.6s ease-in-out;
+}
+.pic1:hover{
+	background-image: url(../images/oil2.jpg);
+}
+.pic2{
+	background-image: url(../images/sketch1.jpg);
+	transition: 0.6s ease-in-out;
+}
+.pic2:hover{
+	background-image: url(../images/sketch2.jpg);
+}
+.painting_imgbox{
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+}
+.painting_mod_img1{
+	margin-left: 20px;
+	height: 200px;
+	width: 50%;
+	border-radius: 20px;
+}
+.painting_mod_img2{
+	margin-left: 20px;
+	height: 300px;
+	width: 200px;
+	border-radius: 20px;
+}
+@media screen and (max-width: 500px){
+	.painting_mod_img2{
+		height:150px;
+		width:100px;
+	}
+}
+
+
+
+

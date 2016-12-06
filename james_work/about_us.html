@@ -29,9 +29,66 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Microsoft JhengHei UI Light";
 }
 </style>
 <body>
-<!--header -->
-<jsp:include page="/fragment/top.jsp" />
-<!--header -->
+<!-- Navbar -->
+<div class="tabcontent-box " id="b_top">
+  <ul class="w3-navbar w3-red w3-card-2 w3-top w3-left-align w3-large tabcontent-box-zindex">
+      <li  class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+          <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      </li>
+      <li class="logo-picture-change "><a href="home_page.html" class="w3-padding-large w3-white " style="height:100px; width:120px;" >
+          <img src="images/logo_black.png" width="70px" height="70px"></a>
+      </li>
+      <li class="w3-hide-small ">
+          <a href="about_us.html" class=" w3-padding-large w3-hover-white">關於我們</a>	
+      </li>
+      <li class="w3-hide-small dropdown-meunbar">
+          <a href="#" class="dropbtn-meunbar w3-padding-large w3-hover-white">行程規劃</a>
+	        <div class="tabcontent-box2">
+              <div class="dropdown-content-meunbar">
+                <a href="#" style="float:left;">使用教學</a>
+                <a href="plan_trip.html"  style="float:left;">旅程規劃</a>      
+              </div>
+	        </div>
+      </li>  
+      <li class="w3-hide-small">
+          <a href="member_share.html" class="w3-padding-large w3-hover-white">行程分享</a>
+      </li>
+      <li class="w3-hide-small">
+          <a href="travel_column.html" class="w3-padding-large w3-hover-white">旅遊專欄</a>
+      </li>
+      <li class="w3-hide-small">
+          <a href="search.html" class="w3-padding-large w3-hover-white">景點搜尋</a>
+      </li>
+      <li class="w3-hide-small w3-center ">
+          <a href="member_login.html" class="w3-padding-12 login-button2 w3-hover-white " ><i class="fa fa-users fa-2x  w3-center "  aria-hidden="true"></i><p class="fonts-style5">會員中心</p></a>
+      </li>
+      <li class="w3-hide-small w3-center">
+          <a href="member_login.html" class="w3-padding-large login-button w3-hover-white" ><i class="fa fa-user fa-2x "  aria-hidden="true"></i><p class="fonts-style5">登入</p></a>
+      </li>
+      <li class="w3-hide-small w3-center">
+	       <a href="member_login.html" class="w3-padding-large login-button w3-hover-white" ><i class="fa fa-user fa-2x"  aria-hidden="true"></i><p class="fonts-style5">登入</p></a>
+      </li>
+  </ul>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class=" accordion w3-hide w3-hide-large w3-hide-medium w3-top z-index10" style="margin-top:100px;">
+  <ul class="w3-navbar w3-left-align w3-large w3-black ">    
+      <li><a class="w3-padding-large" href="about_us.html">關於我們</a></li>
+      <li class=" ">    
+        <button class="w3-padding-12  accordion" >&nbsp;行程規劃</button>
+        <div class="panel margin_bottom0" >
+          <a href="">使用教學</a>
+          <a href="plan_trip_member.html">旅程規劃</a>      
+        </div>     
+      </li>
+      <li><a class="w3-padding-large" href="member_share.html">行程分享</a></li>
+      <li><a class="w3-padding-large" href="travel_column.html">旅遊專欄</a></li>
+      <li><a class="w3-padding-large" href="search.html">景點搜尋</a></li>
+      <li><a class="w3-padding-large" href="member_login.html">會員中心</a></li>  	
+	     <li style="height:51px;"><a class="w3-padding-large " href="member_login.html"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a></li>	
+  </ul>  
+</div>
 
 <div class="w3-container-header w3-red w3-center ">
   <div class="images_bar images_bar_image18 w3-padding-48">
@@ -122,9 +179,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Microsoft JhengHei UI Light";
   	</div>  
 </div>
 
-<!-- Footer -->
-<jsp:include page="/fragment/footer.jsp" />
-<!--footer -->
+<footer class="w3-container w3-padding-32 w3-center w3-opacity">
+  <div class="w3-xlarge w3-padding-32">
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
+   <a href="#" class="w3-hover-text-red"><i class="fa fa-pinterest-p"></i></a>
+   <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
+   <a href="#" class="w3-hover-text-grey"><i class="fa fa-flickr"></i></a>
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
+ </div>
+ <p>Copyright&copy;2016</p>
+</footer>
 
 <script>
 // Used to toggle the menu on small screens when clicking on the menu button

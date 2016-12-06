@@ -687,6 +687,7 @@
 .pic1{
 	background-image: url(../images/oil3.jpg);
 	transition: 0.6s ease-in-out;
+	-webkit-transition: 0.6s ease-in-out;
 }
 .pic1:hover{
 	background-image: url(../images/oil2.jpg);
@@ -694,6 +695,7 @@
 .pic2{
 	background-image: url(../images/sketch1.jpg);
 	transition: 0.6s ease-in-out;
+	-webkit-transition: 0.6s ease-in-out;	
 }
 .pic2:hover{
 	background-image: url(../images/sketch2.jpg);

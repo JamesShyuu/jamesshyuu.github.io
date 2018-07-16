@@ -724,6 +724,139 @@
 	}
 }
 
+.profile_webDesign_travel{
+	background-image: url(../images/web_design.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 300px;
+	width: 100%;
+}
 
+
+
+
+
+/* 
+	slide show start 12 Jul 18
+*/
+.mySlides_1, .mySlides_2, .mySlides_3 {display: none}/* _1 北科大, _2 全球, _3愛物聯*/
+/* .mySlides {display: none} */
+.slideImg {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons   myProfile_slideShow*/
+.myProfile_slideShow_prev, .myProfile_slideShow_next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.myProfile_slideShow_next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.myProfile_slideShow_prev:hover, .myProfile_slideShow_next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.myProfile_slideShow_text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.myProfile_slideShow_numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */ /* _1 北科大, _2 全球, _3愛物聯*/
+.myProfile_slideShow_dot_1, .myProfile_slideShow_dot_2, .myProfile_slideShow_dot_3 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+/* .myProfile_slideShow_dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+} */
+
+.myProfile_slideShow_active_1, 
+.myProfile_slideShow_active_2,
+.myProfile_slideShow_active_3,
+.myProfile_slideShow_dot_1:hover, 
+.myProfile_slideShow_dot_2:hover, 
+.myProfile_slideShow_dot_3:hover {
+  background-color: #717171;
+}/* _1 北科大, _2 全球, _3愛物聯*/
+/* .myProfile_slideShow_active, .myProfile_slideShow_dot:hover{
+  background-color: #717171;
+} */
+
+/* Fading animation */
+.myProfile_slideShow_fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .myProfile_slideShow_prev, 
+  .myProfile_slideShow_next,
+  .myProfile_slideShow_text {font-size: 11px}
+}
+
+/* 
+	slide show end
+*/
 
 

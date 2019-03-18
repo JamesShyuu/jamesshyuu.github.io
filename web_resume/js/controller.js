@@ -7,38 +7,14 @@ var webDesign_travelContent = document.getElementById('webDesign_travelContent')
 // var travelPic3 =  document.getElementById('travelPic3');
 // travelPic2.style.opacity = 0;
 // travelPic3.style.opacity = 0;
-var slides1 = document.getElementsByClassName("mySlides_1");
-var dots1 = document.getElementsByClassName("myProfile_slideShow_dot_1");
-var slides2 = document.getElementsByClassName("mySlides_2");
-var dots2 = document.getElementsByClassName("myProfile_slideShow_dot_2");
-var slides3 = document.getElementsByClassName("mySlides_3");
-var dots3 = document.getElementsByClassName("myProfile_slideShow_dot_3");
+var slides1 = document.getElementsByClassName("mySlides_1");//北科大
+var dots1 = document.getElementsByClassName("myProfile_slideShow_dot_1");//北科大
+var slides2 = document.getElementsByClassName("mySlides_2");//全球人壽
+var dots2 = document.getElementsByClassName("myProfile_slideShow_dot_2");//全球人壽
+var slides3 = document.getElementsByClassName("mySlides_3");//iiot
+var dots3 = document.getElementsByClassName("myProfile_slideShow_dot_3");//iiot
 
-//carousel function
-// @param:
-function carouselPic(num){
-    if(num == 1){
-        setInterval(function(){ 
-        
-        travelPic1.style.opacity = 0;
-        travelPic1.style.backgroundImage = "url(images/web_design2.jpg)";
-        travelPic1.style.opacity = 1;
-        }, 4000);
-        // setInterval(function(){ 
-        //     travelPic2.style.opacity = 0;
-        //     travelPic3.style.opacity = 1;
-        // }, 4000);
-        // setInterval(function(){ 
-        //     travelPic1.style.opacity = 1;
-        //     travelPic3.style.opacity = 0;
-        // }, 4000);
-    }
-    
-}
 
-function slideShow(num, n){
-
-}
 /*
     slide show start Jul 12 18
 */

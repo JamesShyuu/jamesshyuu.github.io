@@ -609,7 +609,7 @@
 .web_mainbox{
 	width: 100%;
 	margin-top: 50px;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 .web_imgbox{
 	margin: auto;
@@ -821,6 +821,8 @@
 .myProfile_slideShow_active_1, 
 .myProfile_slideShow_active_2,
 .myProfile_slideShow_active_3,
+.myProfile_slideShow_active_public,
+.myProfile_slideShow_dot_public:hover,
 .myProfile_slideShow_dot_1:hover, 
 .myProfile_slideShow_dot_2:hover, 
 .myProfile_slideShow_dot_3:hover {

@@ -1,0 +1,106 @@
+.header-bg{
+    background-image: url(../imgs/Luca-Tombolini.jpg);
+    background-size: cover;
+	background-position: center;
+}
+.header-bg2{
+   
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    height: 470px;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      height: 300%;
+      top: -100%;
+    }
+  }
+  
+  @media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      width: 300%;
+      left: -100%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .fullscreen-bg {
+      background: url('../img/videoframe.jpg');
+    }
+  
+    .fullscreen-bg__video {
+      display: none;
+    }
+  }
+
+.img-size-1{
+    height: 30%;
+    width: 50%;
+}
+
+.img-margin-left-1{
+    margin-left: 30%;
+}
+.img-padding-1{
+    padding: 0px 240px;
+}
+
+.paragraph-padding-1{
+    padding: 12px 120px;
+}
+
+.carousel-img-padding{
+    padding: 300px 0px;
+}
+
+
+
+/* global style */
+.button-style-1{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.button-style-1{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.button-style-1:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
+.w3-dropdown-hover:hover > .button-style-1:first-child,.w3-dropdown-click:hover > .button-style-1:first-child{background-color:#ccc;color:#fff}
+.w3-bar-block .w3-dropdown-hover .button-style-1,.w3-bar-block .w3-dropdown-click .button-style-1{width:100%;text-align:left;padding:8px 16px}
+.button-style-1{white-space:normal; color: rgb(255, 255, 255); }
+.button-style-1:hover{color:#C0D84A;}
+
+.padding-top-48{
+    padding-top: 48px;
+}
+
+.header-btn-style{
+    background-color: none;
+}
+.header-btn-style:hover{
+    background-color: none;
+}
+
+.header-gradient{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0));
+}
+
+.logo{
+  margin-left: 45%;
+}

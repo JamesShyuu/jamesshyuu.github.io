@@ -8,10 +8,25 @@
 .re_ulStyle{
 	float: left;
 	list-style-type:none;
-	margin-top: 15px;	
+	margin-top: 15px;
 	display: block;
 	margin-left: -40px;
 }
+/*.index-nav-show{
+	display: block;
+}
+#index-nav{
+	display: block;
+}
+#photograph-nav{
+	display: none;
+}
+#uiux-nav{
+	display: none;
+}
+#design-nav{
+	display: none;
+}*/
 @media screen and (max-width: 700px){
 	.re_ulStyle{
 		display: none;
@@ -43,6 +58,19 @@
 .re_liSmall li{
 	margin-top: 10px;
 }
+/*#index-nav-small{
+	display: block;
+}
+#uiux-nav-small{
+	display: none;
+}
+#photograph-nav-small{
+	display: none;
+}
+#design-nav-small{
+	display: none;
+}*/
+
 .re_smailBtn{
 	position: absolute;
 	top: 10px;
@@ -65,7 +93,9 @@
 	float: left;
 	margin-left: 50px;
 	margin-top: 10px;
+	display: block;
 }
+
 .re_lilogo{
 	float: left;
 	width: 150px;
@@ -120,6 +150,27 @@
 	width: 100%;
 	height: 800px;
 	background-image: url(../images/pen.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.uiux-banner-img{
+	width: 100%;
+	height: 500px;
+	background-image: url(../images/paper.jpeg);
+	background-size: cover;
+	background-position: center;
+}
+.photo-banner-img{
+	width: 100%;
+	height: 500px;
+	background-image: url(../images/DSC00154.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.design-banner-img{
+	width: 100%;
+	height: 500px;
+	background-image: url(../images/block.jpeg);
 	background-size: cover;
 	background-position: center;
 }
@@ -379,10 +430,11 @@
 	height: 100px;
 }
 
+/* portfolio*/
 .pf_bgImg{
 	width: 100%;
-	height: 800px;
-	background-image: url(../images/pen3.jpg);
+	height: 500px;
+	background-image: url(../images/DSC01754.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -430,6 +482,10 @@
 		width: 100%;
 	}
 }
+.photograph_img{
+	width: 100%;
+	height: 100%;
+}
 .pf_img{
 	width: 100%;
 	height: 100%;
@@ -454,6 +510,11 @@
 .pf_hide_box1 p{
 	font-family: "Microsoft JhengHei UI Light";
 	src:url(../fonts/msjh.ttc);
+	display: none;
+}
+
+.pf_hide_box1 p:hover{
+	display: flex;
 }
 
 .mod_content{
@@ -671,6 +732,149 @@
 		width:200px;
 	}
 }
+.projects_button{
+	height:300px;
+	width:800px;
+	margin-left:20%;
+	border-radius: 20px;
+	text-align: center;
+	background: black;
+  	transition: 0.1s ease-in-out;
+}
+.projects_label{
+	font-size: 24px;
+	font-weight: bold;
+	top: -180px;
+	position: relative;
+}
+@media screen and (max-width: 1250px){
+	.projects_button{
+		margin-left:18%;
+	}
+}
+@media screen and (max-width: 1200px){
+	.projects_button{
+		margin-left:17%;
+	}
+}
+@media screen and (max-width: 1150px){
+	.projects_button{
+		margin-left:15%;
+	}
+}
+@media screen and (max-width: 1050px){
+	.projects_button{
+		margin-left:13%;
+	}
+}
+@media screen and (max-width: 1000px){
+	.projects_button{
+		margin-left:10%;
+	}
+}
+@media screen and (max-width: 950px){
+	.projects_button{
+		margin-left:7%;
+	}
+}
+@media screen and (max-width: 900px){
+	.projects_button{
+		margin-left:5%;
+	}
+}
+@media screen and (max-width: 870px){
+	.projects_button{
+		margin-left:15%;
+		width:600px;
+	}
+	.projects_label{
+		top: -150px;
+	}
+}
+@media screen and (max-width: 870px){
+	.projects_button{
+		margin-left:15%;
+		width:600px;
+	}
+}
+@media screen and (max-width: 800px){
+	.projects_button{
+		margin-left:13%;
+		width:600px;
+	}
+}
+@media screen and (max-width: 740px){
+	.projects_button{
+		margin-left:11%;
+		width:600px;
+	}
+}
+@media screen and (max-width: 725px){
+	.projects_button{
+		margin-left:9%;
+	}
+}
+@media screen and (max-width: 700px){
+	.projects_button{
+		margin-left:20%;
+		width:400px;
+		height: 200px;
+	}
+	.projects_label{
+		top: -120px;
+	}
+}
+@media screen and (max-width: 600px){
+	.projects_button{
+		margin-left:20%;
+	}
+}
+@media screen and (max-width: 580px){
+	.projects_button{
+		margin-left:15%;
+	}
+}
+@media screen and (max-width: 520px){
+	.projects_button{
+		margin-left:13%;
+	}
+}
+@media screen and (max-width: 500px){
+	.projects_button{
+		margin-left:10%;
+	}
+}
+@media screen and (max-width: 450px){
+	.projects_button{
+		width:300px;
+		margin-left:18%;
+	}
+}
+@media screen and (max-width: 420px){
+	.projects_button{
+		margin-left:16%;
+	}
+}
+@media screen and (max-width: 410px){
+	.projects_button{
+		margin-left:15%;
+	}
+}
+@media screen and (max-width: 380px){
+	.projects_button{
+		margin-left:11%;
+	}
+}
+@media screen and (max-width: 360px){
+	.projects_button{
+		margin-left:8%;
+	}
+}
+@media screen and (max-width: 340px){
+	.projects_button{
+		margin-left:2%;
+	}
+}
 .painting_button1 a{
 	text-decoration: none;
 	color: white;
@@ -699,6 +903,51 @@
 }
 .pic2:hover{
 	background-image: url(../images/sketch2.jpg);
+}
+.pic3{
+	background-image: url(../images/lunchBox_twoDevice2.jpg);
+	opacity: 1;
+	transition: 0.6s ease-in-out;
+	-webkit-transition: 0.6s ease-in-out;
+}
+.pic3:hover{
+	opacity: 0.7;
+}
+.pic4{
+	background-image: url(../images/web_design4.jpg);
+	opacity: 1;
+	transition: 0.6s ease-in-out;
+	-webkit-transition: 0.6s ease-in-out;
+}
+.pic4:hover{
+	opacity: 0.7;
+}
+.pic5{
+	background-image: url(../images/paper.jpeg);
+	opacity: 1;
+	transition: 0.6s ease-in-out;
+	-webkit-transition: 0.6s ease-in-out;
+}
+.pic5:hover{
+	opacity: 0.7;
+}
+.pic6{
+	background-image: url(../images/DSC00154.jpg);
+	opacity: 1;
+	transition: 0.6s ease-in-out;
+	-webkit-transition: 0.6s ease-in-out;
+}
+.pic6:hover{
+	opacity: 0.7;
+}
+.pic7{
+	background-image: url(../images/block.jpeg);
+	opacity: 1;
+	transition: 0.6s ease-in-out;
+	-webkit-transition: 0.6s ease-in-out;
+}
+.pic7:hover{
+	opacity: 0.7;
 }
 .painting_imgbox{
 	display: flex;

@@ -35,23 +35,57 @@
 	<body>
 		<nav class="navbar navbar-default navbar-fixed-top re_nav">
   			<div class="">
-  				<ul class="re_ulStyle">
-  					<li class="re_lilogo">
+				<ul class="re_ulStyle">
+					<li class="re_lilogo">
 						<a href="#top" class="clickHide re_titleBtn"><img src="images/my_name.png" class="re_logoimg"></a>
 					</li>
 					<li class="re_liStyle">
 						<a href="#aboutMe" class="clickHide re_titleBtn" onclick="hide()">關於我</a>
 					</li>
-  					<li class="re_liStyle">
-  						<a href="#education" class="re_titleBtn">教育與訓練</a>
-  					</li>
-  					<li class="re_liStyle">
-  						<a href="#Exe" class="re_titleBtn">經驗</a>
-  					</li>
-  					<li class="re_liStyle">
-  						<a href="#portfolio" class="re_titleBtn">作品集</a>
-  					</li>
-  				</ul>
+					<li class="re_liStyle">
+						<a href="#education" class="re_titleBtn">教育與訓練</a>
+					</li>
+					<li class="re_liStyle">
+						<a href="#Exe" class="re_titleBtn">經驗</a>
+					</li>
+					<li class="re_liStyle">
+						<a href="#portfolio" class="re_titleBtn">作品集</a>
+					</li>
+				</ul>
+<!--					<ul id="uiux-nav" class="re_ulStyle">
+						<li class="re_lilogo">
+							<a href="#top" class="clickHide re_titleBtn"><img src="images/my_name.png" class="re_logoimg"></a>
+						</li>
+						<li class="re_liStyle">
+							<a class="re_titleBtn">UIUX</a>
+						</li>
+						<li class="re_liStyle">
+							<a class="re_titleBtn">回到履歷</a>
+						</li>
+					</ul>
+					<ul id="photograph-nav" class="re_ulStyle">
+						<li class="re_lilogo">
+							<a href="#top" class="clickHide re_titleBtn"><img src="images/my_name.png" class="re_logoimg"></a>
+						</li>
+						<li class="re_liStyle">
+							<a class="re_titleBtn">Photograph</a>
+						</li>
+						<li class="re_liStyle">
+							<a class="re_titleBtn">回到履歷</a>
+						</li>
+					</ul>
+					<ul id="design-nav" class="re_ulStyle">
+						<li class="re_lilogo">
+							<a href="#top" class="clickHide re_titleBtn"><img src="images/my_name.png" class="re_logoimg"></a>
+						</li>
+						<li class="re_liStyle">
+							<a class="re_titleBtn">Design</a>
+						</li>
+						<li class="re_liStyle">
+							<a class="re_titleBtn">回到履歷</a>
+						</li>
+					</ul>-->
+
   				<!-- Single button -->
 				<div class="btn-group re_ulSmall">
 					<button type="button" class="btn  dropdown-toggle re_smailBtn" data-toggle="dropdown" aria-expanded="false" >
@@ -62,6 +96,16 @@
 						<li><a href="#education">教育與訓練</a></li>
 						<li><a href="#Exe">經驗</a></li>
 						<li><a href="#portfolio">作品集</a></li>
+<!--					<div id="uiux-nav-small">
+							<li><a href="#aboutMe">UIUX</a></li>
+							<li><a href="#">回到履歷</a></li>
+						</div>
+						<div id="photograph-nav-small">
+							<li><a href="#aboutMe">回到履歷</a></li>
+						</div>
+						<div id="design-nav-small" >
+							<li><a href="#aboutMe">回到履歷</a></li>
+						</div>-->	
 					</ul>
 				</div>
   			</div>
@@ -72,6 +116,18 @@
 				<img src="">
 				<h1 class="hp_title" style="color: white;">許晨光履歷</h1>
 			</div>
+<!--		<div class="re_content hp_bgImg" id="uiux-banner">
+				<img src="">
+				<h1 class="hp_title" style="color: white;">UIUX</h1>
+			</div>
+			<div class="re_content hp_bgImg" id="photo-banner">
+				<img src="">
+				<h1 class="hp_title" style="color: white;">Photograph</h1>
+			</div>
+			<div class="re_content hp_bgImg" id="design-banner">
+				<img src="">
+				<h1 class="hp_title" style="color: white;">Design</h1>
+			</div>-->
 		</section>
 
 		<div id="aboutMe"></div>
@@ -402,7 +458,7 @@
 
 		<section class="" id="portfolio">
 			<div class="re_content pf_bgImg" >
-				<h1 class="hp_title">作品集</h1>
+				<h1 class="hp_title" style="top: 230px; ">作品集</h1>
 			</div>
 		</section>
 
@@ -440,27 +496,6 @@
 							</div>
 						</div>
 						
-						<!-- <div class="item">
-							<div class="web_imgbox">
-								<a href="" data-toggle="modal" data-target="#myModal_pos">
-									<img src="images/web_design_pos1.png">
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="web_imgbox">
-								<a href="" data-toggle="modal" data-target="#myModal_TG">
-									<img src="images/web_design_gb1.jpg">
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="web_imgbox">
-								<a href="" data-toggle="modal" data-target="#myModal_public">
-									<img src="images/web_design_iiot1.png">
-								</a>
-							</div>
-						</div> -->
 					</div>
 		
 					<!-- Controls -->
@@ -472,6 +507,84 @@
 						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
+				</div>
+
+			</div>
+		</section>
+
+		<section>
+			<div class="container-fluid">
+				<h2>專案作品</h2>
+				<div class="row">
+					<div class="painting_box_padding">
+						<div class="projects_button">
+							<a href="" data-toggle="modal" data-target="#myModal_projDesign" onclick="projDesignModalShow('lunchBox')">
+								<div class="bg_pic pic3 painting_padding">
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="painting_box_padding">
+						<div class="projects_button">
+							<a href="" data-toggle="modal" data-target="#myModal_projDesign" onclick="projDesignModalShow('travel')">
+								<div class="bg_pic pic4 painting_padding">
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="painting_box_padding">
+						<div class="projects_button">
+							<a href="views/uiux.html">
+								<div class="bg_pic pic5 painting_padding">
+								</div>
+							</a>
+							<label class="projects_label">UIUX</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="painting_box_padding">
+						<div class="projects_button">
+							<a href="views/photograph.html" >
+								<div class="bg_pic pic6 painting_padding">
+								</div>
+							</a>
+							<label class="projects_label">Photograph</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="painting_box_padding">
+						<div class="projects_button">
+							<a href="views/design.html">
+								<div class="bg_pic pic7 painting_padding">
+								</div>
+							</a>
+							<label class="projects_label">Design</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+		<section>
+			<div class="container-fluid">
+				<h2>攝影</h2>
+				<div class="row">
+					<div class="col-md-4">
+						<img src="images/DSC00792.jpg" class="photograph_img">
+					</div>
+					<div class="col-md-4">
+						<img src="images/DSC00792.jpg" class="photograph_img">
+					</div>
+					<div class="col-md-4">
+						<img src="images/DSC00792.jpg" class="photograph_img">
+					</div>
 				</div>
 			</div>
 		</section>
@@ -503,6 +616,18 @@
 					<div class=" pf_gallery_img">
 						<a href="" data-toggle="modal" data-target="#myModal4">
 							<img src="images/eat1.jpg" class="pf_img">
+						</a>
+					</div>
+				</div>
+				<div class="row pf_main_row">
+					<div class=" pf_gallery_img" id="myContent1">						
+						<a href="" data-toggle="modal" data-target="#myModal" >
+							<img src="images/eng_camp.jpg" class="pf_img" >							
+						</a>
+					</div>
+					<div class=" pf_gallery_img" >
+						<a href="" data-toggle="modal" data-target="#myModal2">
+							<img src="images/sea.jpg" class="pf_img">
 						</a>
 					</div>
 				</div>
@@ -1045,6 +1170,7 @@
 		
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/ResponsiveSlides.js-master/responsiveslides.min.js"></script>
 		<script src="content.js"></script>
 		<!-- <script src="js/js1.12.4.js"></script>
 		<script src="js/jqueryuiv1.12.0.js"></script> -->
@@ -1103,6 +1229,11 @@
 			// 	}
 			// }
 
+			$(function () {
+				$(".rslides").responsiveSlides({
+					speed: 1000, 
+				});
+			});
 			
 
 		</script>
@@ -1111,5 +1242,6 @@
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 		<script src="js/controller.js"></script>
+		<script src="js/page-change.js"></script>
 	</body>
 </html>

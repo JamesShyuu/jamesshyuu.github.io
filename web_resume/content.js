@@ -15,7 +15,7 @@ var iiot = {
 var insurance = {
     projModal_title: '全球人壽',
     projModal_img1: 'images/web_design_gb1.jpg',
-    projModal_img2: 'images/web_design_gb2.jpg',
+    projModal_img2: 'images/web_design_gb1.jpg',
     projModal_label1: '全球人壽行動投保(mPos)',
     projModal_duty1: '負責部分：前端工程',
     projModal_skill1: '使用技術：HTML, CSS, Angular JS, Bootstrap, RequireJS',

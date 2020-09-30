@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+		<link rel="stylesheet" href="../js/bootstrap-3.3.7-dist/css/bootstrap.css">
+		<link rel="stylesheet" href="../js/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+		<!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+		<!-- <link rel="stylesheet" href="css/font-awesome.min.css">	 -->
+		<link rel="stylesheet" href="../js/font-awesome-4.7.0/css/font-awesome.min.css">	
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/projectParticipation.css">
+		<!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
+		
+		<style>
+			h2 ,h4 {font-family: "Microsoft JhengHei UI Light"; src:url(../fonts/msjh.ttc); 
+				font-weight: bold; 
+				text-align: center;
+				
+			}
+			h3{
+				font-family: "Microsoft JhengHei UI Light"; src:url(../fonts/msjh.ttc);
+				font-weight: bold;
+			}
+			h5{
+				color: #822d2b;
+				font-weight: bold;
+			}
+		</style>
+		<title>UIUX</title>
+    </head>
+    
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top re_nav">
+  			<div class="">
+  				<ul class="re_ulStyle">
+  					<li class="re_lilogo">
+						<a href="#top" class="clickHide re_titleBtn"><img src="../images/my_name.png" class="re_logoimg"></a>
+					</li>
+                    <li class="re_liStyle">
+                        <a href="#aboutMe" class="re_titleBtn">UIUX</a>
+                    </li>
+                    <li class="re_liStyle">
+                        <a href="../resume.html" class="re_titleBtn">回到履歷</a>
+                    </li>
+  				</ul>
+  				<!-- Single button -->
+				<div class="btn-group re_ulSmall">
+					<button type="button" class="btn dropdown-toggle re_smailBtn" data-toggle="dropdown" aria-expanded="false" >
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
+					<ul class="dropdown-menu re_liSmall" role="menu">
+						<li><a href="#aboutMe">關於我</a></li>
+                        <li><a href="#">回到履歷</a></li>
+					</ul>
+				</div>
+  			</div>
+        </nav>
+        
+        <section id="top">
+			<div class="re_content uiux-banner-img">
+				<img src="">
+				<h1 class="hp_title" style="color: black; top: 250px;">UIUX</h1>
+			</div>
+        </section>
+
+        <section id="main-uiux-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="painting_box_padding">
+						<div class="projects_button">
+							<a href="#" onclick="changeContent('sha')">
+								<div class="bg_pic pic3 painting_padding">
+								</div>
+							</a>
+							<label class="projects_label">要吃啥 UIUX</label>
+						</div>
+					</div>
+                </div>
+                <div class="row">
+                    <div class="painting_box_padding">
+						<div class="projects_button">
+							<a href="#" onclick="changeContent('as')">
+								<div class="bg_pic pic3 painting_padding">
+								</div>
+							</a>
+							<label class="projects_label">as yourself UIUX</label>
+						</div>
+					</div>
+                </div>
+            </div>
+		</section>
+		
+		<section id="sha-uiux-block" style="display: none;">
+			<div class="container-fluid">
+				<div class="row" style="text-align: center;">
+					<h2>要吃啥 UIUX</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+				</div>
+				<div class="row">
+					<div style="text-align: center;">
+						<h3>Flow Charts</h3>
+						<img src="../images/sha_flow_charts.jpg" style="height: 525px; width: 865px;">
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="as-uiux-block" style="display: none;">
+			<div class="container-fluid">
+				<div>
+					<h2>as yourself UIUX</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+				</div>
+			</div>
+		</section>
+
+		
+
+        <footer>
+			<div class="container-fluid foot_box">
+				<div class="foot_p">
+					<span>
+						<a href="" style="cursor: pointer;" data-toggle="modal" data-target="#myContact">
+							<i class="fa fa-envelope fa-2x" aria-hidden="true"></i><span class="foot_span1">聯絡我</span>
+						</a>
+					</span>
+					<span class="foot_span2">Copyright&nbsp;&copy;&nbsp;2018</span>
+					<span></span>
+				</div>
+			</div>
+        </footer>
+        
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="../js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="../bower_components/ResponsiveSlides.js-master/responsiveslides.min.js"></script>
+        <script src="../content.js"></script>
+        
+        <!-- <script src="../js/style.js"></script>-->
+		<script src="../js/sidebutton.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+		<!-- <script src="../js/controller.js"></script>-->
+		<script src="../js/page-change.js"></script>
+		<script>
+			function changeContent(v){
+				let main = document.getElementById('main-uiux-block');
+				let sha = document.getElementById('sha-uiux-block');
+				let as = document.getElementById('as-uiux-block');
+
+				if(v=='main'){
+					main.style.display = 'block';
+					sha.style.display = 'none';
+					as.style.display = 'none';
+				} else if(v == 'sha'){
+					main.style.display = 'none';
+					sha.style.display = 'block';
+					as.style.display = 'none';
+				} else if (v == 'as'){
+					main.style.display = 'none';
+					sha.style.display = 'none';
+					as.style.display = 'block';
+				}
+			}
+		</script>
+    </body>
+</html>

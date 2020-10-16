@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="../css/main.css">
 		<link rel="stylesheet" href="../css/style.css">
 		<link rel="stylesheet" href="../css/projectParticipation.css">
+
 		<!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
 		
 		<style>
@@ -28,6 +29,20 @@
 				color: #822d2b;
 				font-weight: bold;
 			}
+
+			.uiux-block{
+				margin-top: 50px; 
+				margin-bottom: 50px;
+			}
+			.uiux-btnback{
+				text-decoration: none;
+				color: #b33434;
+				transition: 0.3s ease-in-out;
+			}
+			.uiux-btnback:hover{
+				text-decoration: none;
+  				color: #822d2b;
+			}
 		</style>
 		<title>UIUX</title>
     </head>
@@ -39,8 +54,8 @@
   					<li class="re_lilogo">
 						<a href="#top" class="clickHide re_titleBtn"><img src="../images/my_name.png" class="re_logoimg"></a>
 					</li>
-                    <li class="re_liStyle">
-                        <a href="#aboutMe" class="re_titleBtn">UIUX</a>
+                    <li id="uiux-li" class="re_liStyle" style="display: none;">
+                        <a href="#" class="re_titleBtn" onclick="changeContent('main')">UIUX</a>
                     </li>
                     <li class="re_liStyle">
                         <a href="../resume.html" class="re_titleBtn">回到履歷</a>
@@ -60,13 +75,25 @@
         </nav>
         
         <section id="top">
-			<div class="re_content uiux-banner-img">
+			<div id="uiux-banner-index" class="re_content uiux-banner-img" style="display: block;">
 				<img src="">
 				<h1 class="hp_title" style="color: black; top: 250px;">UIUX</h1>
 			</div>
-        </section>
 
-        <section id="main-uiux-block">
+			<div id="uiux-banner-sha" class="re_content uiux-banner-img-sha" style="display: none;">
+				<img src="">
+				<h1 class="hp_title" style="color: black; top: 250px;">要吃啥UIUX</h1>
+			</div>
+
+			<div id="uiux-banner-as" class="re_content uiux-banner-img-as" style="display: none;">
+				<img src="">
+				<h1 class="hp_title" style="color: black; top: 250px;">as yourself UIUX</h1>
+			</div>
+
+		</section>
+
+
+        <section id="main-uiux-block" class="uiux-block">
             <div class="container-fluid">
                 <div class="row">
                     <div class="painting_box_padding">
@@ -83,36 +110,62 @@
                     <div class="painting_box_padding">
 						<div class="projects_button">
 							<a href="#" onclick="changeContent('as')">
-								<div class="bg_pic pic3 painting_padding">
+								<div class="bg_pic pic8 painting_padding">
 								</div>
 							</a>
-							<label class="projects_label">as yourself UIUX</label>
+							<label class="projects_label" style="color: black; text-shadow: 1px 1px white, -1px -1px white">as yourself UIUX</label>
 						</div>
 					</div>
                 </div>
             </div>
 		</section>
 		
-		<section id="sha-uiux-block" style="display: none;">
+		<section id="sha-uiux-block" class="uiux-block" style="display: none; ">
 			<div class="container-fluid">
 				<div class="row" style="text-align: center;">
 					<h2>要吃啥 UIUX</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
 				</div>
-				<div class="row">
-					<div style="text-align: center;">
-						<h3>Flow Charts</h3>
-						<img src="../images/sha_flow_charts.jpg" style="height: 525px; width: 865px;">
+				<div class="row" style="text-align: center;">
+					<h3>Flow Charts</h3>
+					<div class="col-md-12" >
+						<img src="../images/sha_flow_charts.jpg" style="height: 100%; width: 100%;">
 					</div>
+				</div>
+				<hr>
+				<div class="row" style="text-align: center;">
+					<h3>Wireframe-手機版</h3>
+					<div class="col-md-12" >
+						<img src="../images/sha_wireframe_phone.jpg" style="height: 100%; width: 100%;">
+					</div>
+				</div>
+				<hr>
+				<div class="row" style="text-align: center;">
+					<h3>Wireframe-網頁版</h3>
+					<div class="col-md-12" >
+						<img src="../images/sha_wireframe_computer.jpg" style="height: 100%; width: 100%;">
+					</div>
+				</div>
+				<div class="row" style="text-align: center;">
+					<a href="#" class="uiux-btnback" onclick="changeContent('main')">回上一頁</a>
 				</div>
 			</div>
 		</section>
 		
-		<section id="as-uiux-block" style="display: none;">
+		<section id="as-uiux-block" class="uiux-block" style="display: none;">
 			<div class="container-fluid">
-				<div>
+				<div class="row" style="text-align: center;">
 					<h2>as yourself UIUX</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+				</div>
+				<div class="row" style="text-align: center;">
+					<h3>Flow Charts</h3>
+					<div class="col-md-12" >
+						<img src="../images/as_yourself_flow_chart.jpg" style="height: 100%; width: 100%;">
+					</div>
+				</div>
+				<div class="row" style="text-align: center;">
+					<a href="#" class="uiux-btnback" onclick="changeContent('main')">回上一頁</a>
 				</div>
 			</div>
 		</section>
@@ -149,19 +202,35 @@
 				let main = document.getElementById('main-uiux-block');
 				let sha = document.getElementById('sha-uiux-block');
 				let as = document.getElementById('as-uiux-block');
+				let li = document.getElementById('uiux-li');
+				let indexBanner = document.getElementById('uiux-banner-index');
+				let shaBanner = document.getElementById('uiux-banner-sha');
+				let asBanner = document.getElementById('uiux-banner-as');
 
 				if(v=='main'){
 					main.style.display = 'block';
 					sha.style.display = 'none';
 					as.style.display = 'none';
+					li.style.display = 'none';
+					indexBanner.style.display = 'block';
+					shaBanner.style.display = 'none';
+					asBanner.style.display = 'none';
 				} else if(v == 'sha'){
 					main.style.display = 'none';
 					sha.style.display = 'block';
 					as.style.display = 'none';
+					li.style.display = 'block';
+					indexBanner.style.display = 'none';
+					shaBanner.style.display = 'block';
+					asBanner.style.display = 'none';
 				} else if (v == 'as'){
 					main.style.display = 'none';
 					sha.style.display = 'none';
 					as.style.display = 'block';
+					li.style.display = 'block';
+					indexBanner.style.display = 'none';
+					shaBanner.style.display = 'none';
+					asBanner.style.display = 'block';
 				}
 			}
 		</script>

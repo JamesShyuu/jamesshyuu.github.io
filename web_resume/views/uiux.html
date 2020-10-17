@@ -43,6 +43,16 @@
 				text-decoration: none;
   				color: #822d2b;
 			}
+
+			.uiux-description{
+				text-align: center; 
+				padding: 0px 100px 0px 100px;
+			}
+			@media screen and (max-width: 500px){
+				.uiux-description{
+					padding: 0px 50px 0px 50px;
+				}
+			}
 		</style>
 		<title>UIUX</title>
     </head>
@@ -52,13 +62,13 @@
   			<div class="">
   				<ul class="re_ulStyle">
   					<li class="re_lilogo">
-						<a href="#top" class="clickHide re_titleBtn"><img src="../images/my_name.png" class="re_logoimg"></a>
+						<a href="../resume.html" class="clickHide re_titleBtn"><img src="../images/my_name.png" class="re_logoimg"></a>
 					</li>
                     <li id="uiux-li" class="re_liStyle" style="display: none;">
                         <a href="#" class="re_titleBtn" onclick="changeContent('main')">UIUX</a>
                     </li>
                     <li class="re_liStyle">
-                        <a href="../resume.html" class="re_titleBtn">回到履歷</a>
+                        <a href="../resume.html#uiux" class="re_titleBtn">回到履歷</a>
                     </li>
   				</ul>
   				<!-- Single button -->
@@ -68,7 +78,7 @@
 					</button>
 					<ul class="dropdown-menu re_liSmall" role="menu">
 						<li><a href="#" class="re_titleBtn" onclick="changeContent('main')">UIUX</a></li>
-                        <li><a href="../resume.html">回到履歷</a></li>
+                        <li><a href="../resume.html#uiux">回到履歷</a></li>
 					</ul>
 				</div>
   			</div>
@@ -122,9 +132,8 @@
 		
 		<section id="sha-uiux-block" class="uiux-block" style="display: none; ">
 			<div class="container-fluid">
-				<div class="row" style="text-align: center;">
-					<h2>要吃啥 UIUX</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+				<div class="row uiux-description">
+					<p>此專案設計給每位不想日曬、淋雨的上班族，快速訂餐與外送服務的平台。此專案有會員系統與購物車，讓使用者能快速下單、查詢訂單、修改訂單，並且擁有優惠卷與紅利機制，讓你每次的訂購都能多省一點。另外還有後台管理系統，讓管理者能掌握每天的訂單。</p>
 				</div>
 				<div class="row" style="text-align: center;">
 					<h3>Flow Charts</h3>
@@ -154,9 +163,8 @@
 		
 		<section id="as-uiux-block" class="uiux-block" style="display: none;">
 			<div class="container-fluid">
-				<div class="row" style="text-align: center;">
-					<h2>as yourself UIUX</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+				<div class="row uiux-description">
+					<p>As yourself 專案設計，近期與朋友正在進行與規劃中。專案想提供使用者一個平台能分享資訊與知識，並且擁有會員與社群的機制。由於還在規劃中目前只有把部分flow charts 畫出來。</p>
 				</div>
 				<div class="row" style="text-align: center;">
 					<h3>Flow Charts</h3>
@@ -170,7 +178,7 @@
 			</div>
 		</section>
 
-		
+		<a href="#top" class="cd-top">Top</a>
 
         <footer>
 			<div class="container-fluid foot_box">

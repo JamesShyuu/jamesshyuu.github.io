@@ -71,14 +71,14 @@ var travel = {
 
 // 專案設計 要吃啥
 var lunchBox = {
-    projDesign_title: '要吃啥',
+    projDesign_title: '網頁專案：福新福隆便當要吃啥訂餐平台',
     projDesign_label1: '網頁訂餐平台',
     projDesign_img: 'images/lunchBox_twoDevice.jpg',
     projDesign_duty1: '負責部分：前端工程、後端工程、資料庫、UI',
     projDesign_skill1: '使用技術：前端：Angular, JQuery, Bootstrap, HTML, CSS',
     projDesign_skill2: '        後端：Node JS',
     projDesign_skill3: '        資料庫：Firebase',
-    projDesign_descibe1: '說明：此專案設計給每位不想日曬、淋雨的上班族，快速訂餐與外送服務的平台。此專案有會員系統與購物車，讓使用者能快速下單、查詢訂單、修改訂單，並且擁有優惠卷與紅利機制，讓你每次的訂購都能多省一點。另外還有後台管理系統，讓管理者能掌握每天的訂單。 (測試帳號：testlunchbox@hotmail.com, 密碼：123456)',
+    projDesign_descibe1: '說明：此專案與福新福隆便當合作，提供給每位不想日曬、淋雨的上班族，快速訂餐與外送服務的平台。此專案有會員系統與購物車，讓使用者能快速下單、查詢訂單、修改訂單，並且擁有優惠卷與紅利機制，讓你每次的訂購都能多省一點。另外還有後台管理系統，讓管理者能掌握每天的訂單。 (測試帳號：testlunchbox@hotmail.com, 密碼：123456)',
     projDesign_period1: '開發時程：2019.02~2020.01',
     projDesign_url1: 'https://lunch-box-app.appspot.com/'
 }

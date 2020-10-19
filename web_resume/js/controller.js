@@ -146,6 +146,8 @@ function projDesignModalShow(key){
         document.getElementById('projDesign_label1').innerHTML = travel.projDesign_label1;
         document.getElementById('projDesign_duty1').innerHTML = travel.projDesign_duty1;
         document.getElementById('projDesign_skill1').innerHTML = travel.projDesign_skill1;
+        document.getElementById('projDesign_skill2').innerHTML = travel.projDesign_skill2;
+        document.getElementById('projDesign_skill3').innerHTML = travel.projDesign_skill3;
         document.getElementById('projDesign_descibe1').innerHTML = travel.projDesign_descibe1;
         document.getElementById('projDesign_period1').innerHTML = travel.projDesign_period1;
         document.getElementById('projDesign_url1').href = travel.projDesign_url1;

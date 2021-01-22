@@ -1,0 +1,69 @@
+.error-msg{
+    width: 300px;
+    height: 100%;
+    margin: 80px auto;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.error-b-margin{
+    padding-left: 40%;
+    padding-top: 20px;
+}
+
+.error-icon{
+    padding-left: 40%;
+    padding-top: 10px;
+}
+
+.error-icon i{
+    color: rgba(203, 64, 66, 1); 
+}
+
+@media (max-width: 800px) {
+    .error-msg {
+        width: 50%;
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+    .error-msg {
+        width: 40%;
+    }
+}
+
+@media (max-width: 690px) {
+    .error-msg {
+        width: 50%;
+    }
+}
+
+@media (max-width: 560px){
+    .error-msg {
+        width: 60%;
+    }
+}
+
+@media (max-width: 530px){
+    .error-msg {
+        width: 70%;
+    }
+}
+
+@media (max-width: 390px){
+    .error-msg {
+        width: 80%;
+    }
+}
+
+@media (max-width: 350px){
+    .error-msg {
+        width: 90%;
+    }
+}

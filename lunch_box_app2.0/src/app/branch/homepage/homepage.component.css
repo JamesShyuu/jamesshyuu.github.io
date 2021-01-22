@@ -1,0 +1,114 @@
+.carousel-img{
+    height: 200px;
+    width: 100%;
+}
+
+.carousel-img-block1{
+    display: block;
+}
+.carousel-img-block2{
+    display: none;
+}
+
+.hp-content {
+    margin-top:30px; 
+    padding: 100px;
+}
+
+.hp-logo-style {
+    height: 100px;
+    width: 100px;
+}
+
+.hp-logo-block {
+    margin-left: 100px;
+}
+
+.hp-logo-block label{
+    margin-left: 15px;
+}
+
+.logo-style {
+    height: 100px;
+    width: 100px;
+    margin-left: 100px;
+}
+
+.icon-block{
+    margin-left: 30%;
+    margin-top: 0px;
+}
+
+@media screen and (min-width: 320px){
+	
+}
+@media screen and (max-width: 480px){
+	.hp-logo-block {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 768px){
+	.hp-logo-block {
+        margin-left: 50px;
+    }
+    
+}
+ 
+@media screen and (min-width: 1024px){
+	.carousel-img-block1{
+    display: none;
+    }
+    .carousel-img-block2{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 765px){
+	.icon-block{
+        margin-left: 40%;
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 440px){
+	.icon-block{
+        margin-left: 27%;
+    }
+}
+
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+.table>tbody>tr>td {
+    padding: 0px;
+}

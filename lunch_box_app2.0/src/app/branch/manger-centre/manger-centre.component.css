@@ -1,0 +1,39 @@
+.member-btn{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.member-btnIcon{
+    margin-left: 30%;
+    margin-top: 40px;
+}
+
+.member-title{
+    margin-left: 35%;
+}
+
+.member-title2{
+    margin-left: 12%;
+}
+
+.member-btnBlock{
+    height: 200px;
+    margin-left: 30px;
+    display: block;
+    
+}
+
+.member-btnStyle{
+    color: #21969f;
+    cursor: pointer;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.member-btnStyle:hover {
+    color: #1c7e86;
+}
+.member-btnStyle:active {
+    color: #1c7e86;
+}

@@ -1,0 +1,135 @@
+<div class="container" style="margin-top: 100px;" *ngIf="isShow">
+  <div class="row">
+    <div class="col-md-3 col-sm-6">
+      <!-- <div class="panel panel-default order-btnBlock">
+        <div>
+          <a class="order-btnStyle" style="cursor: pointer;" (click)="openOrderModal(productList[0]['productKey'])">
+            <img src="../../../assets/img/fulon-lunch-box_big3.jpg" style="height: 100%; width:100%;">
+            <label class="order-title2">{{productList[0]['productName']}}</label>
+            <label class="order-title2">{{productList[0]['productPrice']}}</label>
+          </a>
+        </div>
+        
+      </div> -->
+      <div class="va-box">
+        <div class="menu-box menu-box-width">
+          <a style="text-decoration: none; cursor: pointer;" (click)="openOrderModal(productList[0]['productKey'])">
+            <div class="menu-style">
+              <img src="../../../assets/img/fulon-lunch-box_big3.jpg" class="img-style">
+              <label class="order-title2">{{productList[0]['productName']}}</label><br>
+              <label class="order-title2">{{productList[0]['productPrice']}}</label>
+            </div>
+            
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 暫用 選擇商品 modal start-->
+<div class="modal fade bs-example-modal-lg" id="orderModal" tabindex="-1" role="dialog"
+  aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="margin: 20px;">
+      <!-- <form [formGroup]="orderForm">
+        <div style="display:flex; padding: 30px;">
+          <label>商品：</label>
+          {{productName}}
+          <label style="margin-left: 20px">單價：</label>
+          {{productPrice}}
+          <label style="margin-left:20px;">數量</label>
+          <button class="plus-btn btn-1" (click)="decreaseAmount(amount)" [disabled]="amount===5">
+            <i class="fa fa-minus" aria-hidden="true"></i>
+          </button>
+          <span style="margin-left: 5px;">{{amount}}</span>
+          <button class="minus-btn btn-1" style="margin-left: 5px;" (click)="addAmount(amount)">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </button>
+
+          <div style="margin-left:100px">
+
+            <label>總價：</label>
+            {{totalPrice}}
+          </div>
+
+        </div>
+
+        <div style="color: red; padding-left: 30px;">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span>外送商品總數需超過5份以一上，才外送</span>
+        </div>
+
+        <div style="display:flex; margin:30px; ">
+          <button class="btn-1" (click)="addOrderToCart()">確定</button>
+          <button class="btn-1" style="margin-left:10px;" (click)="closeOrderModal()">取消</button>
+        </div>
+      </form> -->
+
+      <div class="order-info">
+        <form [formGroup]="orderForm">
+          <div style="padding: 30px;">
+            <div class="order-info-grid">
+              <div class="order-info-grid-left">
+                <label>商品：</label>
+              </div>
+              <div class="order-info-grid-right">
+                {{productName}}
+              </div>
+            </div>
+            <div class="order-info-grid">
+              <div class="order-info-grid-left">
+                <label>單價：</label>
+              </div>
+              <div class="order-info-grid-right">
+                {{productPrice}}
+              </div>
+            </div>
+            <div class="order-info-grid">
+              <div class="order-info-grid-left">
+                <label>數量：</label>
+              </div>
+              <div class="order-info-grid-right">
+                <button class="plus-btn btn-1" (click)="decreaseAmount(amount)" [disabled]="amount===5">
+                  <i class="fa fa-minus" aria-hidden="true"></i>
+                </button>
+                <span style="margin-left: 5px;">{{amount}}</span>
+                <button class="minus-btn btn-1" style="margin-left: 5px;" (click)="addAmount(amount)">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="order-info-grid">
+              <div class="order-info-grid-left">
+                <label>總價：</label>
+              </div>
+              <div class="order-info-grid-right">
+                {{totalPrice}}
+              </div>
+            </div>
+            <div class="order-info-grid">
+              <div class="order-info-grid-left">
+                <label>
+                  <i class="fa fa-exclamation-triangle" style="color: rgb(249, 214, 20);" aria-hidden="true"></i>
+                </label>
+                <span>最少需訂購5份</span>
+              </div>
+              <div class="order-info-grid-right">
+                
+              </div>
+            </div>
+          </div>
+        </form>
+        <div style="display:flex; margin:30px; ">
+          <button class="btn-1" (click)="addOrderToCart()">確定</button>
+          <button class="btn-1" style="margin-left:10px;" (click)="closeOrderModal()">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 暫用 選擇商品 modal end-->
+
+<app-success [successMsg]="successMessage"></app-success>
+
+<app-loading-spinner *ngIf="showSpainner"></app-loading-spinner>

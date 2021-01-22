@@ -1,0 +1,161 @@
+.member-btn{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.member-btnIcon{
+    margin-left: 30%;
+    margin-top: 40px;
+}
+
+.member-title{
+    margin-left: 30%;
+    margin-top: 10px;
+}
+
+.member-title2{
+    margin-left: 28%;
+    margin-top: 10px;
+}
+
+.member-btnBlock{
+    height: 200px;
+    margin-left: 30px;
+    display: block;
+    
+}
+
+.member-btnStyle{
+    color: #21969f;
+    cursor: pointer;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.member-btnStyle:hover {
+    color: #1c7e86;
+}
+.member-btnStyle:active {
+    color: #1c7e86;
+}
+
+.announcement-main-box{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.announcement-row{
+    height: 250px;
+    width: 100vw;
+}
+
+.announcement-row2{
+    height: 250px;
+    width: 100vw;
+}
+
+.announcement-title-grid{
+    width: 100%; 
+    text-align: center;
+}
+
+.announcement-gallery-img{
+    /* width: 25%; */
+    width: 33.3333%;
+	height: 100%;
+	float: left;
+	background: #272822;
+}
+
+.announcement-gallery-img2{
+    width: 33.3333%;
+	height: 100%;
+	float: left;
+}
+
+.gallery-show{
+    display: block;
+}
+
+.announcement-img{
+    width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition: 0.5s ease-in-out;
+}
+.announcement-img:hover{
+	opacity: 0.5;
+}
+
+.announcement-img2{
+    width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width: 1250px){
+    .announcement-row2{
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .announcement-row2{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+	.announcement-gallery-img{
+		width: 50%;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .announcement-row2{
+        height: 170px;
+    }
+}
+
+@media screen and (max-width: 850px){
+	.announcement-row2{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .gallery-show{
+        display: none;
+    }
+	.announcement-gallery-img2{
+        width: 100%;
+    }
+    .announcement-row2{
+        height: 250px;
+    }
+}
+
+/* @media screen and (max-width: 650px){
+	.announcement-row2{
+        height: 250px;
+    }
+} */
+
+@media screen and (max-width: 600px){
+	.announcement-gallery-img{
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 480px){
+	.announcement-row2{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 390px){
+	.announcement-row2{
+        height: 150px;
+    }
+}

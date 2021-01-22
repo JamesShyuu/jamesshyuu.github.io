@@ -1,0 +1,150 @@
+<div class="container-fluid" >
+  <!-- row 1 start-->
+  <div class="row" style="margin-top:100px;">
+
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <div class="member-btnBlock">
+          <!-- <a class="member-btnStyle" style="color: gray;" >
+          <div>
+            <i class="fa fa-cutlery fa-5x member-btnIcon" aria-hidden="true"></i>
+          </div>
+          </a>
+          <label class="member-title">新增訂單</label> -->
+          <a class="member-btnStyle" routerLink="/shopping-cart">
+            <div>
+              <i class="fa fa-shopping-cart fa-5x member-btnIcon" aria-hidden="true"></i>
+              <span class="cart-notification" *ngIf="data.shoppingCartItemsQunt!=0">
+                {{data.shoppingCartItemsQunt}}
+              </span>
+            </div>
+          </a>
+          <label class="member-title">購物車</label>
+        </div>
+      </div>
+      <div class="item">
+        <div class="member-btnBlock">
+          <div>
+            <a class="member-btnStyle" (click)="pageSwitch('4')">
+              <i class="fa fa-search fa-5x member-btnIcon" aria-hidden="true"></i>
+            </a>
+          </div>
+          <label class="member-title">查詢訂單</label>
+        </div>
+      </div>
+      <!-- <div class="item">
+        <div class="member-btnBlock">
+          <div>
+            <a class="member-btnStyle" (click)="pageSwitch('3')">
+              <i class="fa fa-pencil-square-o fa-5x member-btnIcon" aria-hidden="true"></i>
+            </a>
+          </div>
+          <label class="member-title">修改訂單</label>
+        </div>
+      </div> -->
+      <div class="item">
+        <div class="member-btnBlock">
+          <div>
+            <a class="member-btnStyle" (click)="pageSwitch('2')">
+              <i class="fa fa-users fa-5x member-btnIcon" aria-hidden="true"></i>
+            </a>
+          </div>
+          <label class="member-title2">修改會員資料</label>
+        </div>
+      </div>
+      <div class="item">
+        <div class="member-btnBlock">
+          <div>
+            <a class="member-btnStyle" (click)="pageSwitch('0')">
+              <i class="fa fa-bullhorn fa-5x member-btnIcon" aria-hidden="true"></i>
+            </a>
+          </div>
+          <label class="member-title2">最新消息</label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- row 1 end-->
+
+  <!-- row 2 start-->
+
+  <!-- <div class="row" style="margin: 10px;" *ngIf="contentOption==='0'">
+    <div class="col-md-4 col-lg-4 col-sm-4">
+
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-4">
+      <div>
+        <label>Hi &nbsp;{{userName}}! &nbsp;歡迎使用</label>
+      </div>
+      
+      <div style="margin-top: 10px;">
+        <label>最新消息</label>
+        <p></p>
+        <div style="margin-top:20px;">
+          <img src="../../assets/img/lunch-box-pic.jpg" style="height: 120px; width:150px;">
+        </div>
+        <label style="margin-left: 5px;">外送試營運中</label>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-4">
+      
+    </div>
+    
+  </div> -->
+  
+  <!-- row 2 end-->
+</div>
+
+<div class="announcement-main-box" *ngIf="contentOption==='0'">
+  <div class="container-fluid">
+    <div class="announcement-title-grid">
+      <label>Hi &nbsp;{{userName}}! &nbsp;歡迎使用</label>
+    </div>
+    <div class="announcement-title-grid" style="margin-top: 10px;">
+      <label>
+        <i class="fa fa-bullhorn" style="color:#21969f;" aria-hidden="true"></i>
+        最新消息
+      </label>
+    </div>
+    <!-- <div class="row announcement-row">
+      <div class="announcement-gallery-img">
+        <img src="../../assets/img/lunch-box-pic.jpg" class="announcement-img">
+      </div>
+      <div class="announcement-gallery-img">
+        <img src="../../assets/img/lunch-box-pic.jpg" class="announcement-img">
+      </div>
+      <div class="announcement-gallery-img">
+        <img src="../../assets/img/lunch-box-pic.jpg" class="announcement-img">
+      </div>
+    </div> -->
+    <div class="row announcement-row2">
+      <div class="announcement-gallery-img2 gallery-show">
+      </div>
+      <div class="announcement-gallery-img2">
+        <img src="../../assets/img/index_pic3.jpg" class="announcement-img2">
+      </div>
+      <div class="announcement-gallery-img2 gallery-show">
+      </div>
+    </div>
+    <div class="row announcement-row2" style="margin-top: 50px;">
+      <div class="announcement-gallery-img2 gallery-show">
+      </div>
+      <div class="announcement-gallery-img2">
+        <img src="../../assets/img/reward.jpg" class="announcement-img2">
+      </div>
+      <div class="announcement-gallery-img2 gallery-show">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <app-member-cart *ngIf="contentOption==='1'"></app-member-cart> -->
+<app-member-edit-info *ngIf="contentOption==='2'"></app-member-edit-info>
+<!-- <app-member-edit-order *ngIf="contentOption==='3'"></app-member-edit-order> -->
+<app-member-search-order *ngIf="contentOption==='4'"></app-member-search-order>
+
+<app-loading-spinner *ngIf="showSpainner"></app-loading-spinner>
+
+<app-error [errorMsg]="errorMessage"></app-error>
+

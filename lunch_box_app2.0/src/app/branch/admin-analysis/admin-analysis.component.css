@@ -1,0 +1,78 @@
+.todayorder-empty-grid {
+    display: block;
+}
+
+.todayorder-empty-grid label{
+    height: 20px;
+    margin-left: 45%;
+}
+
+.todayorder-empty-grid button{
+    width: 100px;
+    height: 30px;
+    margin-left: 46%;
+}
+
+@media screen and (max-width: 1065px){
+    .todayorder-empty-grid label{
+        margin-left: 43%;
+    }
+
+    .todayorder-empty-grid button{
+        margin-left: 44%;
+    }
+
+}
+
+@media screen and (max-width: 650px){
+    /*------- 無商品時 start ------------ */
+    .todayorder-empty-grid label{
+        margin-left: 35%;
+    }
+
+    .todayorder-empty-grid button{
+        margin-left: 37%;
+    }
+    /*------- 無商品時 end ------------ */
+
+    
+}
+
+@media screen and (max-width: 600px){
+    /*------- 無商品時 start ------------ */
+    .todayorder-empty-grid label{
+        margin-left: 35%;
+    }
+
+    .todayorder-empty-grid button{
+        margin-left: 37%;
+    }
+    /*------- 無商品時 end ------------ */
+
+}
+
+@media screen and (max-width: 400px){
+    /*------- 無商品時 start ------------ */
+    .todayorder-empty-grid label{
+        margin-left: 30%;
+    }
+
+    .todayorder-empty-grid button{
+        margin-left: 32%;
+    }
+    /*------- 無商品時 end ------------ */
+    
+}
+
+@media screen and (max-width: 350px){
+    /*------- 無商品時 start ------------ */
+    .todayorder-empty-grid label{
+        margin-left: 25%;
+    }
+
+    .todayorder-empty-grid button{
+        margin-left: 27%;
+    }
+    /*------- 無商品時 end ------------ */
+
+}

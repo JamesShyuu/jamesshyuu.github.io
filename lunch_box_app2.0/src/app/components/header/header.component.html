@@ -1,0 +1,136 @@
+
+<nav class="navbar navbar-default header-style">
+  <div class="container-fluid" style="margin-top:10px;">
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <!-- home btn start-->
+        <div>
+          <a class="navbar-brand" routerLink="">
+            <!-- <i class="fa fa-home fa-2x" aria-hidden="true"></i> -->
+            <img src="../../../assets/img/logo.png" style="width: 40px; height: 40px;">
+          </a><!--回首頁-->
+        </div>
+        <!-- home btn end-->
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <!-- member btn device size start-->
+        <div class="navbar-header webSize-show" style="float: right;">
+          <div class="btn-group" role="group">
+            <button type="button" class="dropdown-toggle barBtn-style" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">
+              <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            </button>
+        
+            <ul class="dropdown-menu">
+              <li>
+                <!-- 查看商品 start-->
+                <a routerLink="/menu">
+                  <span class="menu-btn">商品</span>
+                </a>
+                <!-- 查看商品 end-->
+              </li>
+              <li>
+                <!--加入會員-->
+                <!-- <a routerLink="/register" *ngIf="data.isLogin==='0'">
+                  <i class="fa fa-user-plus  fa-2x" style="cursor: pointer;" aria-hidden="true"></i>
+                </a> -->
+                <!-- 購物車 start-->
+                <a routerLink="/shopping-cart">
+                  <i class="fa fa-shopping-cart fa-2x" style="cursor: pointer;" aria-hidden="true"></i>
+                  <span class="cart-notification" *ngIf="data.shoppingCartItemsQunt!=0">
+                    {{data.shoppingCartItemsQunt}}
+                  </span>
+                </a>
+                <!-- 購物車 end-->
+              </li>
+              
+              <li>
+                <a routerLink="/login" *ngIf="data.isLogin==='0'">
+                  <i class="fa fa-user  fa-2x" style="cursor: pointer;" aria-hidden="true"></i><!--會員登入-->
+                </a>
+              </li>
+              <li class="dropdown" *ngIf="data.isLogin==='1'">
+                <a routerLink="/member">會員中心</a>
+                
+              </li>
+              <li class="dropdown" *ngIf="data.isLogin==='2'">
+                <a routerLink="/manager">管理中心</a>
+              
+              </li>
+              <li class="dropdown" *ngIf="data.isLogin==='1'"><a (click)="signout()">登出</a></li>
+              <li class="dropdown" *ngIf="data.isLogin==='2'"><a (click)="signout()">登出</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- member btn device size end-->
+
+        <!-- member btn web size start-->
+        <div class="deviceSize-show">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <!-- 查看商品 start-->
+              <a routerLink="/menu" style="margin-top:5px;">
+                <span class="menu-btn">商品</span>
+              </a>
+              <!-- 查看商品 end-->
+            </li>
+            <li>
+              <!-- <a routerLink="/register" *ngIf="data.isLogin==='0'">
+                <i class="fa fa-user-plus  fa-2x" style="cursor: pointer;" aria-hidden="true"></i>
+              </a> -->
+              <!-- 購物車 start-->
+              <a routerLink="/shopping-cart">
+                <i class="fa fa-shopping-cart fa-2x" style="cursor: pointer;" aria-hidden="true"></i>
+                <span class="cart-notification" *ngIf="data.shoppingCartItemsQunt!=0">
+                  {{data.shoppingCartItemsQunt}}
+                </span>
+              </a>
+              <!-- 購物車 end-->
+            </li>
+            <li>
+              <a routerLink="/login" *ngIf="data.isLogin==='0'">
+                <i class="fa fa-user  fa-2x" style="cursor: pointer;" aria-hidden="true"></i>
+              </a>
+            </li>
+            <!-- <li class="dropdown" *ngIf="data.isLogin==='1'">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fa fa-user  fa-2x" style="cursor: pointer;" aria-hidden="true"></i> 
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a routerLink="/member">會員中心</a></li>
+                <li><a (click)="signout()">登出</a></li>
+              </ul>
+            </li> -->
+            <li class="dropdown" *ngIf="data.isLogin==='1'">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fa fa-user  fa-2x" style="cursor: pointer;" aria-hidden="true"></i> 
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a routerLink="/member">會員中心</a></li>
+                <li><a (click)="signout()">登出</a></li>
+              </ul>
+            </li>
+            <li class="dropdown" *ngIf="data.isLogin==='2'">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user  fa-2x" style="cursor: pointer;" aria-hidden="true"></i>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a routerLink="/manager">管理中心</a></li>
+                <li><a (click)="signout()">登出</a></li>
+              </ul>
+            </li>
+        
+          </ul>
+        </div>
+        <!-- member btn web size end-->
+      </div>
+    </div>
+    
+
+  </div><!-- /.container-fluid -->
+</nav>

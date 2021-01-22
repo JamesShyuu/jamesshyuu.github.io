@@ -1,0 +1,23 @@
+.aboutus_main_box{
+	width: 100%;
+	margin-top: 100px;
+}
+.aboutus_intro_box{
+    padding: 20px 100px 100px 100px;
+}
+
+.aboutus_img{
+    padding: 20px 100px 20px 100px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 500px){
+	.aboutus_intro_box{
+        padding: 20px 20px 100px 20px;
+    }
+    .aboutus_img{
+        padding: 0px;
+        width: 100vw;
+    }
+}

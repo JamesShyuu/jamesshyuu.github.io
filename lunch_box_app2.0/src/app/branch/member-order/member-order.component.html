@@ -1,0 +1,336 @@
+<div class="container-fluid">
+
+  <!-- today order start-->
+ <div class="row" *ngIf="memberOrderPage==='1'">
+    <div class="panel panel-default" style="margin-top:150px;">
+      <div class="panel-body">
+        <span *ngIf="!isOrder">目前尚未新增商品</span>
+
+
+        <button (click)="newOrder()">新增訂單</button>
+
+        <label *ngIf="isOrder">您今日訂單</label>
+        <table *ngIf="isOrder" class="table table-striped">
+          <thead>
+            <tr>
+              <td>商品名稱</td>
+              <td>商品單價</td>
+              <td>數量</td>
+              <td>價錢</td>
+              <td>刪除訂單</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of orders; index as i">
+              <td>{{productList[item.productKey].productName}}</td>
+              <td>{{item.productPrice}}</td>
+              <td>{{item.productAmount}}</td>
+              <td>{{item.productAmount*item.productPrice}}</td>
+              
+              <td>
+                <button (click)="deleteOrder(i)">刪除訂單</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <i *ngIf="isOrder" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <span *ngIf="isOrder">目前還尚未完成訂單請按結帳，確認訂單</span>
+        <button *ngIf="isOrder" (click)="openConfirmModal()">結帳</button>
+        
+      </div>
+    </div>
+  </div>
+  <!-- today order end-->
+
+  <!-- menu list start-->
+  <div class="row" *ngIf="memberOrderPage==='2'">
+    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+      <div class="panel panel-default order-btnBlock">
+        <div>
+          <a class="order-btnStyle" (click)="openOrderModal(productList[0]['productKey'])">
+            <img src="../../assets/img/lunch-box-pic1.JPG" style="height: 100%; width:100%;">
+          </a>
+        </div>
+        <label class="order-title2">{{productList[0]['productName']}}</label>
+        <label class="order-title2">{{productList[0]['productPrice']}}</label>
+      </div>
+    </div>
+    
+    <!-- <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+      <div class="panel panel-default order-btnBlock">
+        <div>
+          <a class="order-btnStyle" (click)="openOrderModal(productList[1]['productKey'])">
+            <img src="../../assets/img/lunch_box2.jpg" style="height: 100%; width:100%;">
+          </a>
+        </div>
+        <label class="order-title2">{{productList[1]['productName']}}</label>
+        <label class="order-title2">{{productList[1]['productPrice']}}</label>
+      </div>
+    </div> -->
+    
+    <!-- <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+      <div class="panel panel-default order-btnBlock">
+        <div>
+          <a class="order-btnStyle" (click)="openOrderModal(productList[2]['productKey'])">
+            <img src="../../assets/img/lunch_box3.jpg" style="height: 100%; width:100%;">
+          </a>
+        </div>
+        <label class="order-title2">{{productList[2]['productName']}}</label>
+        <label class="order-title2">{{productList[2]['productPrice']}}</label>
+      </div>
+    </div> -->
+    <!-- <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+      <div class="panel panel-default order-btnBlock">
+        <div>
+          <a class="order-btnStyle" (click)="openOrderModal(productList[3]['productKey'])">
+            <img src="../../assets/img/lunch_box4.jpg" style="height: 100%; width:100%;">
+          </a>
+        </div>
+        <label class="order-title2">{{productList[3]['productName']}}</label>
+        <label class="order-title2">{{productList[3]['productPrice']}}</label>
+      </div>
+    </div> -->
+    
+    <!-- <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+      <div class="panel panel-default order-btnBlock">
+        <div>
+          <a class="order-btnStyle" (click)="openOrderModal(productList[4]['productKey'])">
+            <img src="../../assets/img/lunch_box1.jpg" style="height: 100%; width:100%;">
+          </a>
+        </div>
+        <label class="order-title2">{{productList[4]['productName']}}</label>
+        <label class="order-title2">{{productList[4]['productPrice']}}</label>
+      </div>
+    </div> -->
+    <!-- <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+      <div class="panel panel-default order-btnBlock">
+        <div>
+          <a class="order-btnStyle" (click)="openOrderModal(productList[5]['productKey'])">
+            <img src="../../assets/img/lunch_box3.jpg" style="height: 100%; width:100%;">
+          </a>
+        </div>
+        <label class="order-title2">{{productList[5]['productName']}}</label>
+        <label class="order-title2">{{productList[5]['productPrice']}}</label>
+      </div>
+    </div> -->
+    
+  </div>
+  <div style="margin-top: 10px;" *ngIf="memberOrderPage==='2'">
+    <button (click)="backToFirstStep()">上一步</button>
+  </div>
+  <div style="margin-top: 30px;">
+    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    <span>外送商品總數需超過5份以一上，才外送</span>
+  </div>
+  
+  <!-- menu list end-->
+</div>
+
+<!-- <div class="container-fluid">
+  <div class="panel panel-default" style="margin-top:150px;">
+    <div class="panel-body">
+      <h1>新增訂單</h1>
+      <form [formGroup]="orderForm">
+        <div style="display:flex;">
+          <label>商品：</label>
+          <select formControlName="productName" (change)="getPrice()">
+            <option *ngFor="let item of productList" [value]=item.productKey>{{item.productName}}</option>
+          </select>
+          <label style="margin-left:20px;">數量：</label>
+          <input type="text" class="form-control" formControlName="amount" #amount (change)="countPrice()" style="width:50px;" >
+          <div style="margin-left:100px">
+            <span>{{price}}</span>
+            <span *ngIf="price">X</span>
+            <span>{{amount.value}}</span>
+            <span *ngIf="amount.value">=</span>
+            <span>{{totalPrice}}</span>
+          </div>
+          
+        </div>
+        <div style="display:flex; margin-top:20px;">
+          <button (click)="submitData()">確定</button>
+          <button style="margin-left:10px;">重新填寫</button>
+          <button style="margin-left:10px;" routerLink="/member">取消</button>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>-->
+
+<!-- hard code 下一版改由 app component統一實作-->
+<app-loading-spinner *ngIf="showSpainner"></app-loading-spinner>
+
+
+<!-- 暫用 選擇商品 modal start-->
+<div class="modal fade bs-example-modal-lg" id="orderModal" 
+    tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="margin: 20px;">
+      <form [formGroup]="orderForm">
+        <div style="display:flex; padding: 30px;" >
+          <label>商品：</label>
+          {{productName}}
+          <label style="margin-left: 20px">單價：</label>
+          {{productPrice}}
+          <label style="margin-left:20px;">數量</label>
+          <!-- <input type="text" class="form-control" 
+          style="width:70px; margin-top: -5px; margin-left:5px;" 
+          appRegExpression="N"
+          formControlName="amount" (change)="countPrice()"> -->
+          <button (click)="decreaseAmount(amount)" [disabled]="amount===5">-</button>
+          <span>{{amount}}</span>
+          <button (click)="addAmount(amount)" >+</button>
+
+          <div style="margin-left:100px">
+          
+            <label>總價：</label>
+              {{totalPrice}}
+          </div>
+          
+        </div>
+
+        <div style=" margin:30px;">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span>外送商品總數需超過5份以一上，才外送</span>
+        </div>
+       
+        <div style="display:flex; margin:30px; ">
+          <button (click)="setOrderInfo()">確定</button>
+          <button style="margin-left:10px;" (click)="closeOrderModal()">取消</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- 暫用 選擇商品 modal end-->
+
+
+<!-- 暫用 確認訂購者 結帳 modal start-->
+<div class="modal fade bs-example-modal-lg" id="confirmModal" tabindex="-1" role="dialog"
+  aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="margin: 20px;">
+      <form [formGroup]="deliverForm">
+        <div *ngIf="isOrder">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <td>商品名稱</td>
+                <td>商品單價</td>
+                <td>數量</td>
+                <td>價錢</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of orders; index as i">
+                <td>{{productList[item.productKey].productName}}</td>
+                <td>{{item.productPrice}}</td>
+                <td>{{item.productAmount}}</td>
+                <td>{{item.productAmount*item.productPrice}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin: 20px;">
+            <div>
+              <label>運費：0</label>
+            </div>
+            <!-- <div>
+                  <label>您擁有的回饋金：{{totalReward}}</label>
+                  <input type="text" formControlName="rewardOfYouUse" appRegExpression="N">
+                </div> -->
+            <!-- <div>
+                  <label>使用折扣碼：</label>
+                  <input type="text" formControlName="coupon" appRegExpression="N">
+                </div> -->
+            <div>
+              <label>總價：{{checkoutTotal}}</label>
+            </div>
+          </div>
+          
+            
+        </div>
+        
+        <div style="padding: 30px;">
+          <div class="form-group">
+            <label>收件者姓名</label>
+            <input type="text" class="form-control" formControlName="name">
+          </div>
+          <div class="form-group">
+            <label>聯絡電話</label>
+            <input type="text" class="form-control" appRegExpression="N" formControlName="phone">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">收件地址</label>
+            <div style="display: flex;">
+              <select *ngFor="let item of cityList" formControlName="city">
+                <option [value]="deliverForm.controls.city.value">{{item.name}}</option>
+              </select>
+              <select *ngFor="let item of districtList" style="margin-left: 5px;" formControlName="district">
+                <option [value]="deliverForm.controls.district.value">{{item.name}}</option>
+              </select>
+              <input type="text" class="form-control" style="margin-left: 5px;" formControlName="address">
+            </div>
+          </div>
+          <div >
+            <label>備註</label>
+            <textarea rows="4" cols="50" maxlength="50" formControlName="notice"></textarea>
+          </div>
+          <div class="form-group">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <span>結帳後無法在修改訂單，如需修改請洽 賀先生 0919-832-269</span>
+          </div>
+          <button type="submit" class="btn btn-default" (click)="confirmOrder()">確認</button>
+          <button type="submit" class="btn btn-default" style="margin-left: 5px;" (click)="closeconfirmModal()">取消</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+<!-- 暫用 確認訂購者 modal end-->
+
+
+
+
+<!-- error msg-->
+<app-error [errorMsg]="errorMessage"></app-error>
+<!-- <app-edit-order *ngIf="isShowEditModal" ></app-edit-order> -->
+
+
+
+
+
+<!-- I'm A BIGGEST HARD CODE EVER-->
+<!-- <div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog"
+  aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="margin: 20px;">
+      <form [formGroup]="editForm">
+
+        <div style="display:flex; padding: 30px;">
+          <label>商品：</label>
+          {{productName_edit}}
+          <label style="margin-left: 20px">單價：</label>
+          {{productPrice_edit}}
+          <label style="margin-left:20px;">數量</label>
+          <input type="text" class="form-control" formControlName="amount" style="width:70px; margin-top: -5px; margin-left:5px;"
+            (blur)="countPrice_im_a_biggest_hard_code_ever()">
+          {{errMsg}}
+          <div style="margin-left:100px">
+
+            <label>總價：</label>
+            {{totalPrice_edit}}
+          </div>
+
+        </div>
+        <div style="display:flex; margin:30px; ">
+          <button (click)="setOrderInfo_im_a_biggest_hard_code_ever()">確定</button>
+          <button style="margin-left:10px;" (click)="closeOrderModal_im_a_biggest_hard_code_ever()">取消</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div> -->
+<!-- I'm A BIGGEST HARD CODE EVER-->

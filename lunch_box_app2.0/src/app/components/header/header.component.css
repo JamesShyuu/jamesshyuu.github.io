@@ -1,0 +1,65 @@
+/* .nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background: #aaa;
+
+} */
+
+.button_style>li>a{
+    color:black;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+.button_style>li>a:hover{
+    color:#9b7d3b;
+}
+
+.header-style{
+    z-index:1000;
+    border-radius: 0%;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    /* background: linear-gradient( rgba(197, 158, 71, 1), rgba(197, 158, 71, 0)); */
+    /* background: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+    background: white;
+    box-shadow: 0px 2px 50px 1px gray;
+    /* border:  rgba(197, 158, 71, 0.5); */
+}
+
+.header-style i {
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    color: black;
+}
+.header-style i:hover {
+    color: #21969f;
+}
+
+.menu-btn {
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    color: black;
+}
+.menu-btn:hover {
+    color: #21969f;
+}
+
+.barBtn-style {
+    color: rgb(242, 153, 153);
+    background: white;
+    border: none;
+    border-radius: 10%;
+    height: 60px;
+    padding: 15px 15px;
+    
+    font-size: 18px;
+    line-height: 20px;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.barBtn-style :hover {
+    color: #9b7d3b;
+}
+

@@ -47,21 +47,7 @@ export class AdminOrderListComponent implements OnInit {
   constructor(private http: HttpService, private data: DataService, private utils: UtilsService) { }
 
   ngOnInit() {
-    // 判斷是否本機第一次登入 第一次登入向server取今日訂單
-    // if (!this.data.getLocalStorage('todayOrders_admin')){
-    //   this.http.getTodayOrders_admin().subscribe(data => {
-    //     console.log(data);
-    //     console.log('success');
-    //     this.todayList = data['ar'];
-    //     this.data.setLocalStorage('todayOrders_admin', JSON.stringify(data['ar']));
-    //   },
-    //   error => {
-    //     console.log('fails')
-    //   });
-    // } else {
-    //   // 如以登入直接
-    //   this.todayList = JSON.parse(this.data.getLocalStorage('todayOrders_admin'));
-    // }
+
 
     // 登入取今日訂單
     this.showSpainner = true;

@@ -114,36 +114,7 @@ export class LoginComponent implements OnInit {
     })
 
 
-    
 
-    
-
-   /*  const user = firebase.auth().currentUser;
-    console.log('this is current user data', user); */
-
-    
-    // firebase.auth().onAuthStateChanged(user => {
-    //   if(user){
-    //     console.log('I am login page', user.uid);
-       
-    //   }else {
-    //     console.log('I am login page, not thing happen!')
-    //   }
-    // })
-
-
-    /* if (this.memberInfo){
-      this.data.setSession(this.data.isLogin, true);
-      alert(this.memberInfo['userInfo'].userName + '歡迎登入!!');
-    } else {
-      return "error";
-    } */
-    
-    
-    
-    
-    // server 端來
-    // this.http.login();
   }
 
   //sign in success

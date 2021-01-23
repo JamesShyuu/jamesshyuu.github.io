@@ -41,22 +41,6 @@ export class MemberEditInfoComponent implements OnInit, AfterViewInit {
     this.editInfoForm.controls.company.setValue(memberData['company']);
 
     // TODO: 須加身分證存取的機制
-
-    // this.editInfoForm.controls.birthday.setValue(memberData['birthday']);
-    // this.editInfoForm.controls.gender.setValue(memberData['gender']);
-    
-
-    // this.http.getMemberInfo(firebase.auth().currentUser.email)
-    //   .subscribe((data) => {
-    //     console.log(data);
-
-    //     // this.editInfoForm.controls.name.setValue(data['userName']);
-    //     // this.editInfoForm.controls.phone.setValue(data['phone']);
-    //     // this.editInfoForm.controls.address.setValue(data['address']);
-    //     // this.editInfoForm.controls.company.setValue(data['company']);
-    //     // this.editInfoForm.controls.birthday.setValue(data['birthday']);
-    //     // this.editInfoForm.controls.gender.setValue(data['gender']);
-    //   })
     
   }
 

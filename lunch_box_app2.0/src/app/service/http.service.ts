@@ -1,8 +1,6 @@
 import { Injectable } from "@angular/core";
 import { AngularFirestore } from '@angular/fire/firestore';
-import { UserInfo } from "../model/userInfo.model";
 import { User } from "../model/user.model";
-// import * as firebaseui from 'firebaseui';
 import * as firebase from 'firebase/app';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { DataService } from "./dataService.service";
@@ -72,27 +70,7 @@ export class HttpService {
         return this.memberInfo;
     }
 
-    //test
-    // register_test(form){
-    //     let headers = new HttpHeaders({
-    //         'Content-Type': 'application/json'
-    //     });
-    //     let options = {
-    //         headers
-    //     };
-    //     return this.http.post('https://us-central1-test-lunch-box1.cloudfunctions.net/register', form, options).subscribe
-    // }
 
-    // register
-    // register(form) {
-    //     let headers = new HttpHeaders({
-    //         'Content-Type': 'application/json'
-    //     });
-    //     let options = {
-    //         headers
-    //     };
-    //     return this.http.post('https://us-central1-test-lunch-box1.cloudfunctions.net/register', form, options);
-    // }
 
     registerPermisson(form){
         let headers = new HttpHeaders({
@@ -104,16 +82,7 @@ export class HttpService {
         return this.http.post('https://us-central1-test-lunch-box1.cloudfunctions.net/signinPermission', form, options);
     }
 
-    // judge member complelet member form
-    // isFullMemberForm(id){
-    //     let headers = new HttpHeaders({
-    //         'Content-Type': 'application/json'
-    //     });
-    //     let options = {
-    //         headers
-    //     };
-    //     return this.http.post('https://us-central1-test-lunch-box1.cloudfunctions.net/isFullMemberForm', JSON.stringify({ email: id }), options);
-    // }
+
 
     getMemberInfo(email){
         return this.http.post('https://us-central1-test-lunch-box1.cloudfunctions.net/getMemberInfo', email);
@@ -154,17 +123,7 @@ export class HttpService {
         return this.http.get('https://us-central1-test-lunch-box1.cloudfunctions.net/getProductData', options);
     }
 
-    // add a new order  *add to today order list BTW new a new todayOrder doc
-    // newOrder(order){
-    //     //return this.http.post('', order);
-    //     let headers = new HttpHeaders({
-    //         'Content-Type': 'application/json'
-    //     });
-    //     let options = {
-    //         headers
-    //     };
-    //     return this.http.post('https://us-central1-test-lunch-box1.cloudfunctions.net/firstOrder', order, options);
-    // }
+
 
     // delete a today order
     deleteOrder(orderNo: string){

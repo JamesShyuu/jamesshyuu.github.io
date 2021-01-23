@@ -58,35 +58,6 @@ export class MemberCentreComponent implements OnInit {
       this.showSpainner = false;
     }
 
-    // jugde that user is first time login
-    /* this.http.isFullMemberForm(firebase.auth().currentUser.email)
-      .subscribe(data=>{
-        console.log('this is Full Form', data);
-        
-        if (data === false && this.http.checkAuthStatue !== null) {
-          $('#userInfoForm').modal('show');
-
-        }
-      }) */
-
-      // check member is still login
-    // console.log('check auth', this.http.checkAuthStatue());
-
-
-    // first time signin get user data
-    // if(!this.data.getLocalStorage('email')){
-    //   this.http.getUserData(firebase.auth().currentUser.email)
-    //     .subscribe(res=>{
-    //       console.log('memner Cent', res);
-    //       this.data.setLocalStorage('userInfo', JSON.stringify(res['value']['userInfo']));
-    //       this.data.setLocalStorage('todayOrder', JSON.stringify(res['value']['todayOrder']));
-    //       this.data.setLocalStorage('orderList', JSON.stringify(res['value']['orderList']));
-    //       this.data.setLocalStorage('email', res['value']['email']);
-    //     },
-    //     (error)=>{
-    //       console.log('memner Cent error');
-    //     })
-    // }
 
 
     // user options tool
@@ -115,69 +86,6 @@ export class MemberCentreComponent implements OnInit {
     this.contentOption = option;
   }
 
-  // submitMemberInfo(){
-  //   if (!this.memberInfoGroup.controls.name.value){
-  //     alert("請填寫姓名");
-  //     return;
-  //   }
-  //   if (!this.memberInfoGroup.controls.birthday.value){
-  //     alert("請填寫生日");
-  //     return;
-  //   }
-  //   if (!this.memberInfoGroup.controls.gender.value) {
-  //     alert("請填寫性別");
-  //     return;
-  //   }
-  //   if (!this.memberInfoGroup.controls.phone.value) {
-  //     alert("請填寫手機");
-  //     return;
-  //   }
-  //   if (!this.memberInfoGroup.controls.company.value) {
-  //     alert("請填寫公司名稱");
-  //     return;
-  //   }
-  //   if (!this.memberInfoGroup.controls.address.value) {
-  //     alert("請填寫地址");
-  //     return;
-  //   }
 
-
-  //   const setMemberInfo = {
-  //     email: firebase.auth().currentUser.email,
-  //     userName: this.memberInfoGroup.controls.name.value,
-  //     birthday: this.memberInfoGroup.controls.birthday.value,
-  //     gender: this.memberInfoGroup.controls.gender.value,
-  //     phone: this.memberInfoGroup.controls.phone.value,
-  //     address: this.memberInfoGroup.controls.address.value,
-  //     company: this.memberInfoGroup.controls.company.value,
-  //   }
-
-  //   console.log('setMemberInfo', setMemberInfo);
-  //   console.log(JSON.stringify(setMemberInfo));
-
-  //   this.http.register(JSON.stringify(setMemberInfo))
-  //     .subscribe((info)=>{
-  //       console.log('謝謝填寫', info);
-  //       this.data.isFullMemberForm = true;
-  //       this.data.setSession('isFullMemberForm', '1');
-  //       alert('謝謝填寫');
-  //       $('#userInfoForm').modal('hide');
-  //     },
-  //     (error)=>{
-  //       // alert('抱歉！系統問題請重新填寫');
-  //       console.log('抱歉！系統問題請重新填寫', error);
-  //       this.data.isFullMemberForm = true;
-  //       this.data.setSession('isFullMemberForm', '1');
-  //       alert('謝謝填寫');
-  //       $('#userInfoForm').modal('hide');
-  //     })
-
-    
-  // }
-
-  // closeModal(){
-  //   $('#userInfoForm').modal('hide');
-  //     this.router.navigate([""]);
-  // }
 
 }

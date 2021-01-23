@@ -55,21 +55,6 @@ export class RegisterComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
   }
 
-  // testError(){
-  //   this.testMsg = 'i am modal test';
-  //   $('#errorModal').modal('show');
-  // }
-
-  // showLog(){
-  //   let controls = this.registForm.controls;
-  //   console.log(this.registForm);
-  //   if (controls.password.errors) {
-  //     this.errorMessage = this.valid.customizedValidator(controls.password.errors);
-  //     // this.errorMessage = ErrorMsgService.getErrorMsg(controls.password.errors.validationMsg);
-  //     $('#errorModal').modal('show');
-  //   }
-  // }
-
   // submit user info
   onSubmit() {
     let controls = this.registForm.controls;
@@ -100,14 +85,6 @@ export class RegisterComponent implements OnInit, AfterViewInit {
       return;
     }
 
-
-    // 驗證身分證
-    // if (controls.personalId.errors !== null) {
-    //   this.errorMessage = ErrorMsgService.getErrorMsg(controls.personalId.errors.validationResult);
-
-    //   $('#errorModal').modal('show');
-    //   return;
-    // }
 
     // 驗證電話
     if (controls.phone.errors !== null) {

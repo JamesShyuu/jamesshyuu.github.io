@@ -25,11 +25,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ErrorComponent } from './components/error/error.component';
-// import { OnBoadingComponent } from './components/on-boading/on-boading.component';
 import { AdminOrderListComponent } from './branch/admin-order-list/admin-order-list.component';
 import { AdminNewProductComponent } from './branch/admin-new-product/admin-new-product.component';
 import { AdminAnalysisComponent } from './branch/admin-analysis/admin-analysis.component';
-import { AddressService } from './service/addressService.service';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 import { ErrorMsgService } from './service/error.service';
 import { RegExpressionDirective } from './directive/reg-expression.directive';
@@ -55,10 +53,8 @@ import { AboutUsComponent } from './branch/about-us/about-us.component';
     MangerCentreComponent,
     MemberOrderComponent,
     MemberEditInfoComponent,
-    //MemberEditOrderComponent,
     MemberSearchOrderComponent,
     ErrorComponent,
-    //OnBoadingComponent,
     AdminOrderListComponent,
     AdminNewProductComponent,
     AdminAnalysisComponent,
@@ -83,14 +79,12 @@ import { AboutUsComponent } from './branch/about-us/about-us.component';
     HttpClientModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
-  //  AngularFireStorageModule
   ],
   providers: [DataService, 
       HttpService, 
       ValidationService, 
       UtilsService, 
       ErrorMsgService, 
-      AddressService
     ],
 
   bootstrap: [AppComponent]

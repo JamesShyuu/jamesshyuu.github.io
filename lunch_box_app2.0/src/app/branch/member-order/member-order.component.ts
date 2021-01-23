@@ -157,35 +157,10 @@ export class MemberOrderComponent implements OnInit {
 
   }
 
-  // 計算總價  FIXME: 此方法為 hard code 需修正 此方發需與 countPrice
-  // countPrice2() {
-  //   if (this.editForm.controls.amount.value) {
-  //     let num = parseInt(this.editForm.controls.amount.value, 10) *
-  //       this.productPrice;
-  //     this.totalPrice2 = num;
-  //   }
-
-  // }
 
   // get menu page
   newOrder(){
-
-    // 訂購時間驗證
-    // if (this.date.getHours() < 9) {
-    //   this.errorMessage = ErrorMsgService.getErrorMsg('invalidBeginTime');
-    //   $('#errorModal').modal('show');
-    //   return;
-    // }
-
-    // 訂購時間驗證
-    // if (this.date.getHours() > 9){
-    //   this.errorMessage = ErrorMsgService.getErrorMsg('invalidLastTime');
-    //   $('#errorModal').modal('show');
-    //   return;
-    // }
-
-    
-    
+  
     this.memberOrderPage = '2';
   }
 
@@ -253,16 +228,6 @@ export class MemberOrderComponent implements OnInit {
   // 新增一筆訂單
   setOrderInfo(){
 
-    // if (this.orderForm.controls.amount.errors){
-    //   this.errorMessage = ErrorMsgService.getErrorMsg(this.orderForm.controls.amount.errors.validationResult);
-    //   $('#errorModal').modal('show');
-    //   return;
-    // }
-    // if (!this.orderForm.controls.amount.value) {
-    //   alert('請填寫數量');
-    //   return;
-    // }
-
     this.orders.push({ 
         productAmount: this.amount, 
         productKey: this.productKey,
@@ -308,18 +273,6 @@ export class MemberOrderComponent implements OnInit {
       return;
     }
 
-    // if (!this.deliverForm.controls.name){
-    //   alert('請填寫收件者姓名');
-    //   return;
-    // }
-    // if(!this.deliverForm.controls.phone){
-    //   alert('請填寫聯絡電話');
-    //   return;
-    // }
-    // if (!this.deliverForm.controls.address){
-    //   alert('請填寫收件地址');
-    //   return;
-    // }
 
     this.showSpainner = true;
 
@@ -385,26 +338,6 @@ export class MemberOrderComponent implements OnInit {
     this.memberOrderPage = '1';
     // this.location.back();
   }
-
-  // 修改訂單
-  // editOrder(no) {
-    
-    //$('#editModal').modal('show');
-    // this.ordersList = this.orders[no];
-    // this.data.editOrdersList_ProductPrice = this.orders[no]['productPrice'];
-    // this.data.editOrdersList_productAmount = this.orders[no]['productAmount'];
-    // this.data.editOrdersList_productName = this.orders[no]['productName'];
-    // this.data.editOrdersList_total = this.orders[no]['productAmount'] * this.orders[no]['productPrice'];
-    // this.isShowEditModal = true;
-    // this.productName_edit = list.productPrice;
-    // this.productPrice_edit = list.productAmount;
-    // this.totalPrice_edit = totalPrice;
-  //   this.productName_edit = this.orders[no]['productName'];
-  //   this.productPrice_edit = this.orders[no]['productPrice'];
-  //   this.amount_edit = this.orders[no]['productAmount'];
-  //   this.totalPrice_edit = this.orders[no]['productAmount'] * this.orders[no]['productPrice'];
-  //   this.orderNumber_edit = no;
-  // }
   
 
   deleteOrder(no) {
@@ -416,30 +349,6 @@ export class MemberOrderComponent implements OnInit {
     }
     
   }
-
-
-  // countPrice_im_a_biggest_hard_code_ever() {
-  //   if (this.editForm.controls.amount.value) {
-  //     let num = parseInt(this.editForm.controls.amount.value, 10) *
-  //       this.productPrice_edit;
-  //     this.totalPrice_edit = num;
-  //   }
-
-  // }
-
-  // closeOrderModal_im_a_biggest_hard_code_ever(){
-  //   $('#editModal').modal('hide');
-  // }
-
-
-  // setOrderInfo_im_a_biggest_hard_code_ever(){
-  //   const obj = {
-  //     this.productName_edit
-  //   }
-  //   this.orderNumber_edit
-  //   $('#editModal').modal('hide');
-  // }
-
 
 
 }

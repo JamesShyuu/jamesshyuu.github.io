@@ -83,7 +83,7 @@ var lunchBox = {
     projDesign_skill2: '        後端：Node JS',
     projDesign_skill3: '        資料庫：Firebase',
     projDesign_descibe1: '說明：此專案與福新福隆便當合作，提供給每位不想日曬、淋雨的上班族，快速訂餐與外送服務的平台。此專案有會員系統與購物車，讓使用者能快速下單、查詢訂單、修改訂單，並且擁有優惠卷與紅利機制，讓你每次的訂購都能多省一點。另外還有後台管理系統，讓管理者能掌握每天的訂單。',
-    projDesign_period1: '開發時程：2019.02~2020.01',
+    projDesign_period1: '開發時程：2019.05~2020.06',
     projDesign_url1: 'https://lunch-box-app.appspot.com/',
     projDesign_descibe2: '操作說明：右上角3個 icon，分別是會員系統、購物車、查看商品。可先點選會員系統登入',
     projDesign_descibe3: '※測試帳號：testlunchbox@hotmail.com ',

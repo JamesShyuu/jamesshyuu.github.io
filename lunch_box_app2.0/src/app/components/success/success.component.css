@@ -1,0 +1,66 @@
+.success-msg{
+    width: 300px;
+    height: 100%;
+    margin: 80px auto;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.success-b-margin{
+    padding-left: 40%;
+    padding-top: 20px;
+}
+
+.success-icon{
+    padding-left: 40%;
+    padding-top: 10px;
+    color: #21969f;
+}
+
+@media (max-width: 800px) {
+    .success-msg {
+        width: 50%;
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+    .success-msg {
+        width: 40%;
+    }
+}
+
+@media (max-width: 690px) {
+    .success-msg {
+        width: 50%;
+    }
+}
+
+@media (max-width: 560px){
+    .success-msg {
+        width: 60%;
+    }
+}
+
+@media (max-width: 530px){
+    .success-msg {
+        width: 70%;
+    }
+}
+
+@media (max-width: 390px){
+    .success-msg {
+        width: 80%;
+    }
+}
+
+@media (max-width: 350px){
+    .success-msg {
+        width: 90%;
+    }
+}

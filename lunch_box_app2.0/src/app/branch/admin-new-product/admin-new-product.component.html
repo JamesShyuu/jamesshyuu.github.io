@@ -1,0 +1,137 @@
+<!-- <div class="container-fluid">
+  <div class="panel panel-default" style="margin-top:150px;">
+    <div class="panel-body">
+      <h1>新增商品</h1>
+      <form [formGroup]="orderForm">
+        <div style="display:flex;">
+          <label>商品名稱：</label>
+          <input type="text" class="form-control" formControlName="productName" style="width:50px;">
+          <label style="margin-left:20px;">價格：</label>
+          <input type="text" class="form-control" formControlName="productPrice"  style="width:50px;">
+          
+          <div style="margin-left:100px">
+            <span>{{price}}</span>
+            <span *ngIf="price">X</span>
+            <span>{{amount.value}}</span>
+            <span *ngIf="amount.value">=</span>
+            <span>{{totalPrice}}</span>
+          </div>
+
+        </div>
+        <div style="display:flex; margin-top:20px;">
+          <button (click)="submitData()">確定</button>
+          <button style="margin-left:10px;">重新填寫</button>
+          <button style="margin-left:10px;" routerLink="/member">取消</button>
+        </div>
+
+      </form>
+      <form>
+        <div>
+          <label>折扣碼：</label>
+          <input type="text" class="form-control" formControlName="productName" style="width:50px;">
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+<div class="payment-style">
+  <div class="title">
+    付費方式
+  </div>
+  <form [formGroup]="paymentForm">
+    <div style="padding: 30px;">
+      <div class="payment-style-grid">
+        <div class="payment-style-grid-left">
+          <label>小計：</label>
+        </div>
+        <div class="payment-style-grid-right">
+          <span>{{totalPrice}}</span>
+        </div>
+
+      </div>
+      <div class="payment-style-grid">
+        <div class="payment-style-grid-left">
+          <label>運費：</label>
+        </div>
+        <div class="payment-style-grid-right">
+          <span>{{deliveryPrice}}</span>
+        </div>
+
+      </div>
+      <div class="payment-style-grid">
+        <div class="payment-style-grid-left">
+          <label>付費方式：</label>
+        </div>
+        <div class="payment-style-grid-right">
+          <select formControlName="paymentOptions">
+            <option *ngFor="let item of data.paymentList" [value]="item.key">{{item.value}}</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="payment-style-grid">
+        <div class="payment-style-grid-left" style="padding-top:15px;">
+          <label>
+            使用優惠卷：
+          </label>
+        </div>
+        <div class="payment-style-grid-right">
+          <input type="text" class="form-control" style="width:100px;float: right;" formControlName="coupon"
+            (blur)="rewardCouponTotalPrice()"><br>
+
+        </div>
+      </div>
+      <div style="text-align: right;" *ngIf="couponError">
+        <p style="color: red; margin-top: 5px;">此優惠卷有誤</p>
+      </div>
+
+
+      <div class="payment-style-grid">
+        <div class="payment-style-grid-left" style="padding-top:15px;">
+          <label style="margin-top: 5px;">
+            使用回饋點數：
+          </label>
+        </div>
+        <div class="payment-style-grid-right">
+          <input type="text" class="form-control" style="width:100px; float: right;" appRegExpression="N"
+            formControlName="reward" (blur)="rewardCouponTotalPrice()"><br>
+
+        </div>
+      </div>
+      <div style="text-align: right;">
+        <p style="color: red; margin-top: 5px;">目前剩餘點數：{{show_reward}}</p>
+      </div>
+
+      <hr>
+
+      <div class="payment-style-grid">
+        <div class="payment-style-grid-left">
+
+        </div>
+        <div class="payment-style-grid-right" style="text-align: right;">
+          <p style="color: red; margin-top: 5px;">折價卷折扣：{{couponPriceOff}}</p>
+        </div>
+      </div>
+      <div class="payment-style-grid">
+        <div class="payment-style-grid-left">
+
+        </div>
+        <div class="payment-style-grid-right" style="text-align: right;">
+          <p style="color: red; margin-top: 5px;">回饋折扣：{{rewardPriceOff}}</p>
+        </div>
+      </div>
+      <div class="payment-style-grid">
+        <div class="payment-style-grid-left">
+          <label>總計：</label>
+        </div>
+        <div class="payment-style-grid-right" style="text-align: right;">
+          <p>
+            {{show_totalPrice}}元
+          </p>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>

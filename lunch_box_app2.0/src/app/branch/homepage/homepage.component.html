@@ -1,0 +1,137 @@
+
+<ul class="rslides carousel-img-block1"  style="margin-top:30px;">
+  <li><img src="../../assets/img/index_pic1_big.jpg" alt=""></li>
+  <li>
+      <img src="../../assets/img/order_big.jpg" alt="">
+  </li>
+  <li><img src="../../assets/img/index_pic3_big.jpg" alt=""></li>
+  <li><img src="../../assets/img/reward_big.jpg"  alt=""></li>
+  
+</ul>
+
+<ul class="rslides carousel-img-block2" style="margin-top:30px;">
+  <li><img src="../../assets/img/index_pic1.jpg" alt=""></li>
+  <li><img src="../../assets/img/order.jpg" alt=""></li>
+  <li><img src="../../assets/img/index_pic3.jpg" alt=""></li>
+  <li><img src="../../assets/img/reward.jpg" alt=""></li>
+</ul> 
+
+
+<div class="container-fluid" style="margin-top:50px; margin-bottom: 100px;">
+  <div class="row">
+    <div class="col-md-4 col-lg-4 col-sm-4" >
+      <div class="hp-logo-block ">
+        <div class="icon-block">
+          <a href="https://www.facebook.com/pg/eatmjs">
+            <img src="../../assets/img/fb_icon.png" class="hp-logo-style">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-4" >
+      <div class="hp-logo-block ">
+        <div class="icon-block">
+          <a href="https://www.instagram.com/eatmjs">
+            <img src="../../assets/img/ig_icon.png" class="hp-logo-style">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-4 ">
+      <div class="hp-logo-block ">
+        <div class="icon-block">
+          <a routerLink="/about-us">
+            <img src="../../assets/img/about-us-icon.png" class="hp-logo-style" >
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- <app-error [errorMsg]="errorMessage"></app-error> -->
+
+<!-- confirm demo 放在父component start-->
+<!-- <app-confirm (confirmEvent)="testConfirm($event)" [confirmMsg]="confirmMessage"></app-confirm>
+<button style="margin-top: 400px;" (click)="goconfirm()">confirm</button>
+<button style="margin-top: 400px;" (click)="systemError()">system error</button> -->
+<!-- confirm demo 放在父component end-->
+
+<!-- set coupon test start-->
+<!-- <form [formGroup]="newCouponForm">
+  <label>NEW</label>
+  <label>key:</label>
+  <input type="text" formControlName="key">
+  
+  <label>couponKey:</label>
+  <input type="text" formControlName="couponKey">
+  
+  <label>discountType:</label>
+  <select  formControlName="discountType">
+    <option *ngFor="let item of discountTypeList" [value]="item.key">{{item.value}}</option>
+  </select>
+  
+  <label>discountValue:</label>
+  <input type="text" formControlName="discountValue">
+  <button (click)="setCoupon()">set coupon</button>
+</form>
+
+<button (click)="testconsole()">console</button> -->
+<!-- set coupon test end-->
+
+<!-- delete coupon test start-->
+<!-- <form [formGroup]="deleteCouponForm">
+  <label>DELETE</label>
+  
+  <div *ngIf="couponList">
+    <label>couponKey:</label>
+    <select formControlName="key">
+      <option *ngFor="let item of couponList" [value]="item.key">{{item.couponKey}}</option>
+    </select>
+    <button (click)="deleteCoupon()">delete coupon</button>
+  </div>
+  
+</form> -->
+<!-- delete coupon test end-->
+<!-- 
+<hr>
+
+<div>
+  <label>test shopping cart</label>
+  <form [formGroup]="testShoppingCart">
+    <div class="form-group">
+      price: {{test_totalPrice}}
+    </div>
+    <div class="form-group">
+      delivery price: {{deliveryPrice}}
+    </div>
+    <div class="form-group">
+      <label>use copon:</label>
+      <input type="text" class="form-control" style="width:100px;" formControlName="coupon"
+        (blur)="testCountTotalPrice()"><br>
+      <span style="color: red;" *ngIf="couponError">coupon error</span>
+    </div>
+    <div class="form-group">
+      <label>use reward:</label>
+      <input type="text" class="form-control" style="width:100px;" formControlName="reward" appRegExpression="N"
+        (blur)="testCountTotalPrice()"><br>
+      <span style="color: red;">remain reward: {{test_show_reward}}</span>
+    </div>
+  </form>
+
+  <hr>
+
+  <div class="form-group">
+    <span style="color: red;">coupon cost off: {{test_couponPriceOff}}</span>
+  </div>
+  <div class="form-group">
+    <span style="color: red;">reward cost off: {{test_rewardPriceOff}}</span>
+  </div>
+  <div class="form-group">
+    <span>total price: {{test_show_totalPrice}}</span>
+  </div>
+</div>
+
+<a routerLink="/menu" class="main_btn btndgray btnsdo" style="margin-top:100px;">Print</a>-->
+
+<app-loading-spinner *ngIf="showSpainner"></app-loading-spinner>

@@ -1,0 +1,21 @@
+.order-btnBlock{
+    height: 200px;
+    margin-left: 30px;
+    display: block;
+    
+}
+/* .member-btnIcon{
+    margin-left: 30%;
+    margin-top: 40px;
+} */
+
+.order-btnStyle{
+    color: #9b7d3b;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.order-title2{
+    margin-left: 28%;
+    margin-top: 10px;
+}

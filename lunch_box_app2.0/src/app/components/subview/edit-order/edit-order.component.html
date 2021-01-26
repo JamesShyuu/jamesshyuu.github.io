@@ -1,0 +1,32 @@
+<div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog"
+  aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="margin: 20px;">
+      <form >
+
+        <div style="display:flex; padding: 30px;">
+          <label>商品：</label>
+          {{productName_edit}}
+          <label style="margin-left: 20px">單價：</label>
+          {{productPrice_edit}}
+          <label style="margin-left:20px;">數量</label>
+          <input type="text" class="form-control" #amount
+              style="width:70px; margin-top: -5px; margin-left:5px;"
+             (blur)="countPrice()">
+            {{errMsg}}
+          <div style="margin-left:100px">
+
+            <label>總價：</label>
+            {{totalPrice_edit}}
+          </div>
+
+        </div>
+        <div style="display:flex; margin:30px; ">
+          <button (click)="setOrderInfo()">確定</button>
+          <button style="margin-left:10px;" (click)="closeOrderModal()">取消</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

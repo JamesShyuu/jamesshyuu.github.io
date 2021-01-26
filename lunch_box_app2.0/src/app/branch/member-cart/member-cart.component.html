@@ -1,0 +1,460 @@
+<div class="container" style="margin-top:100px;">
+    <div *ngIf="!hadOrders">
+        <div class="shopping-cart">
+            <div class="item-cart cart-empty-grid">
+                <div style="height: 30px;">
+                   <label>目前尚未新增商品</label>
+                </div>
+                <div style="height: 30px;">
+                    <button class="btn-1" routerLink="/menu">查看商品</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div *ngIf="hadOrders">
+        <!-- 步驟一 購物車 start-->
+
+        <div class="shopping-cart" *ngIf="purchasingProcess=='1'">
+            <div class="title">
+                購物車
+            </div>
+            <div class="item-cart" *ngFor="let item of cartItems; index as i">
+                <div class="buttons">
+                    <!-- <span class="delete-btn"></span> -->
+                    <a class="cart-delete-btn" (click)="deleteItem(i)">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+            
+                </div>
+                <div class="image" style="margin-top: 5px;">
+                    <img src="../../assets/img/lunch-box-pic1.JPG" style="height: 50px; width:100px;" alt="" />
+                </div>
+                <div class="description" style="margin-top: 5px;">
+                    <span>{{productList[item.productKey].productName}}</span>
+                </div>
+                <div class="quantity" style="margin-top: 5px;">
+                    <button class="plus-btn btn-1" type="button" name="button" (click)="addAmount(i, item.productAmount)">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <span style="margin-left: 5px;">{{item.productAmount}}</span>
+                    <button class="minus-btn btn-1" type="button" style="margin-left: 5px;" name="button" (click)="decreaseAmount(i, item.productAmount)"
+                        [disabled]="item.productAmount==5">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="total-price" style="margin-top: 5px;">
+                    {{item.productPrice * item.productAmount}}
+                </div>
+            </div>
+            <div class="item-cart total-price-device">
+                <div style="width:100%; text-align: center;">
+                    總價：{{totalPrice}}
+                </div>
+            </div>
+            <div class="item-cart">
+                <div style="width:100%;">
+                    <div class="col-sm-4 col-md-4">
+                        
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <div class="next-page1">
+                            <button class="btn-1" style="width: 100px;" (click)="nextProcess_firstToSecond()">下一步</button>
+                        </div>
+                        <div class="login-btn-grid">
+                            <a style="width: 100px; margin-top: 5px;" routerLink="/login" *ngIf="data.isLogin=='0'">登入</a>
+                        </div>
+                        
+                    </div>
+                    <div class="col-sm-4 col-md-4" style="text-align: right;">
+                        <div class="total-price-web">
+                            總價：{{totalPrice}}
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- 步驟一 購物車 end-->
+
+        <!-- 步驟二 填寫資料 start-->
+        <div *ngIf="purchasingProcess=='2'">
+            <div class="shopping-cart" style="width: 100%; margin-bottom: 30px;">
+                <div class="title">
+                    訂購商品
+                </div>
+                <div class="item-cart" *ngFor="let item of cartItems; index as i">
+                    <div class="image">
+                        <img src="../../assets/img/lunch-box-pic1.JPG" style="height: 50px; width:100px;" alt="" />
+                    </div>
+                    <div class="description">
+                        <span>{{productList[item.productKey].productName}}</span>
+                    </div>
+                    <div class="quantity">
+                        <span style="margin-left: 5px;">{{item.productAmount}}</span>
+                    </div>
+                    <div class="total-price" style="margin-top: 20px; padding-top: 0px;">
+                        {{item.productPrice * item.productAmount}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="payment-style">
+                        <div class="title">
+                            收件人資料
+                        </div>
+                        <form [formGroup]="deliverForm">
+                            <div style="padding: 30px;">
+                                <div class="form-group">
+                                    <span style="color: red;">*</span>
+                                    <label>收件者姓名:</label>
+                                    <input type="text" class="form-control" formControlName="name">
+                                </div>
+                                <div class="form-group">
+                                    <span style="color: red;">*</span>
+                                    <label>聯絡電話:</label>
+                                    <input type="text" class="form-control" appRegExpression="N" formControlName="phone">
+                                </div>
+                                <div class="form-group">
+                                    <span style="color: red;">*</span>
+                                    <label for="exampleInputPassword1">收件地址:</label>
+                                    <div style="display: flex;">
+                                        <select *ngFor="let item of cityList" formControlName="city">
+                                            <option [value]="deliverForm.controls.city.value">{{item.name}}</option>
+                                        </select>
+                                        <select *ngFor="let item of districtList" style="margin-left: 5px;" formControlName="district">
+                                            <option [value]="deliverForm.controls.district.value">{{item.name}}</option>
+                                        </select>
+                                        <input type="text" class="form-control" style="margin-left: 5px;" formControlName="address">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa fa-exclamation-triangle" style="color: rgb(249, 214, 20);" aria-hidden="true"></i>
+                                    </label>
+                                    <span>目前只送內湖地區</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label>備註:</label>
+                                    </div>
+                                    <div>
+                                        <textarea rows="4" cols="30" maxlength="50" formControlName="notice"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="payment-style">
+                        <div class="title">
+                            付費方式
+                        </div>
+                        <form [formGroup]="paymentForm">
+                            <div style="padding: 30px;">
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+                                        <label>小計：</label>
+                                    </div>
+                                    <div class="payment-style-grid-right">
+                                        <span>{{totalPrice}}</span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+                                        <label>運費：</label>
+                                    </div>
+                                    <div class="payment-style-grid-right">
+                                        <span>{{deliveryPrice}}</span>
+                                    </div>
+                                   
+                                </div>
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+                                        <label>付費方式：</label>
+                                    </div>
+                                    <div class="payment-style-grid-right">
+                                        <select formControlName="paymentOptions">
+                                            <option *ngFor="let item of data.paymentList" [value]="item.key">{{item.value}}</option>
+                                        </select>
+                                        <p><i class="fa fa-exclamation-triangle" style="color: rgb(249, 214, 20);" aria-hidden="true"></i>目前只提供貨到付款</p>
+                                    </div>
+                                
+                                </div>
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left" style="padding-top:15px;">
+                                        <label >
+                                            使用優惠卷：
+                                        </label>
+                                    </div>
+                                    <div class="payment-style-grid-right" >
+                                        <input type="text" class="form-control" style="width:100px;float: right;" formControlName="coupon" (blur)="rewardCouponTotalPrice()"><br>
+                                        
+                                    </div>
+                                </div>
+                                <div style="text-align: right;" *ngIf="couponError">
+                                    <p style="color: red; margin-top: 5px;">此優惠卷有誤</p>
+                                </div>
+                                <div style="text-align: right;" *ngIf="!couponError&&couponError">
+                                    <p style="color: #21969f; margin-top: 5px;">
+                                        <i class="fa fa-ticket" aria-hidden="true"></i>
+                                        {{couponName}}
+                                    </p>
+                                </div>
+                                
+
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left" style="padding-top:15px;">
+                                        <label style="margin-top: 5px;">
+                                            使用回饋點數：
+                                        </label>
+                                    </div>
+                                    <div class="payment-style-grid-right" >
+                                        <input type="text" class="form-control" style="width:100px; float: right;" appRegExpression="N" formControlName="reward" (blur)="rewardCouponTotalPrice()"><br>
+                                        
+                                    </div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <p style="color: red; margin-top: 5px;">目前剩餘點數：{{show_reward}}</p>
+                                </div>
+
+                                <hr>
+
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+                                        
+                                    </div>
+                                    <div class="payment-style-grid-right" style="text-align: right;">
+                                        <p style="color: red; margin-top: 5px;">折價卷折扣：{{couponPriceOff}}</p>
+                                    </div>
+                                </div>
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+                                
+                                    </div>
+                                    <div class="payment-style-grid-right" style="text-align: right;">
+                                        <p style="color: red; margin-top: 5px;">回饋折扣：{{rewardPriceOff}}</p>
+                                    </div>
+                                </div>
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+                                       <label>總計：</label>
+                                    </div>
+                                    <div class="payment-style-grid-right" style="text-align: right;">
+                                        <p>
+                                            {{show_totalPrice}}元
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+                <div class="payment-btn-grid">
+                    <button class="btn-1" style="width: 100px;" (click)="previousProcess()">上一步</button>
+                    <button class="btn-1" style="width: 100px; margin-left: 10px;" (click)="nextProcess_secondToThird()">下一步</button>
+                </div>
+            </div>
+            
+            
+        </div>
+        <!-- 步驟二 填寫資料 end-->
+
+        <!-- 步驟三 再次確認 start-->
+        <div *ngIf="purchasingProcess=='3'">
+            <div class="shopping-cart" style="width: 100%; margin-bottom: 30px;">
+                <div class="title">
+                    再次確認訂單
+                </div>
+                <div class="item-cart" *ngFor="let item of cartItems; index as i">
+                    <div class="image">
+                        <img src="../../assets/img/lunch-box-pic1.JPG" style="height: 50px; width:100px;" alt="" />
+                    </div>
+                    <div class="description">
+                        <span>{{productList[item.productKey].productName}}</span>
+                    </div>
+                    <div class="quantity">
+                        <span style="margin-left: 5px;">{{item.productAmount}}</span>
+                    </div>
+                    <div class="total-price" style="margin-top: 20px; padding-top: 0px;">
+                        {{item.productPrice * item.productAmount}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="payment-style">
+                        <div class="title">
+                            收件人資料
+                        </div>
+                            <div style="padding: 30px;">
+                                <div class="form-group">
+                                    <label>收件者姓名:</label>
+                                    {{deliverForm.controls.name.value}}
+                                </div>
+                                <div class="form-group">
+                                    <label>聯絡電話:</label>
+                                    {{deliverForm.controls.phone.value}}
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">收件地址:</label>
+                                    {{deliverForm.controls.city.value}}{{deliverForm.controls.district.value}}{{deliverForm.controls.address.value}}
+                                </div>
+                                <div>
+                                    <div>
+                                        <label>備註:</label>
+                                    </div>
+                                    <div>
+                                        {{deliverForm.controls.notice.value}}
+                                    </div>
+                                </div>
+                            </div>
+            
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="payment-style">
+                        <div class="title">
+                            付費方式
+                        </div>
+                        <form>
+                            <div style="padding: 30px;">
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+                                        <label>小計：</label>
+                                    </div>
+                                    <div class="payment-style-grid-right">
+                                        <span>{{totalPrice}}</span>
+                                    </div>
+            
+                                </div>
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+                                        <label>運費：</label>
+                                    </div>
+                                    <div class="payment-style-grid-right">
+                                        <span>{{deliveryPrice}}</span>
+                                    </div>
+            
+                                </div>
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+                                        <label>付費方式：</label>
+                                    </div>
+                                    <div class="payment-style-grid-right">
+                                        <!-- <select formControlName="paymentOptions">
+                                            <option *ngFor="let item of data.paymentList" [value]="item.key">{{item.value}}</option>
+                                        </select> -->
+                                        {{paymentOption_show}}
+                                    </div>
+            
+                                </div>
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left" >
+                                        <label>
+                                            使用優惠卷：
+                                        </label>
+                                    </div>
+                                    <div class="payment-style-grid-right">
+                                        <!-- <input type="text" class="form-control" style="width:100px;float: right;"
+                                            formControlName="coupon"><br> -->
+                                            {{couponName}}
+                                    </div>
+                                </div>
+                                <!-- <div style="text-align: right;">
+                                    <p style="color: red; margin-top: 5px;">此優惠卷有誤</p>
+                                </div> -->
+            
+            
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left" >
+                                        <label>
+                                            使用回饋點數：
+                                        </label>
+                                    </div>
+                                    <div class="payment-style-grid-right">
+                                        <!-- <input type="text" class="form-control" style="width:100px; float: right;"
+                                            formControlName="reward"><br> -->
+                                        {{paymentForm.controls.reward.value}}
+            
+                                    </div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <p style="color: red; margin-top: 5px;">目前剩餘點數：{{show_reward}}</p>
+                                </div>
+            
+                                <hr>
+            
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+            
+                                    </div>
+                                    <div class="payment-style-grid-right" style="text-align: right;">
+                                        <p style="color: red; margin-top: 5px;">折價卷折扣：{{couponPriceOff}}</p>
+                                    </div>
+                                </div>
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+            
+                                    </div>
+                                    <div class="payment-style-grid-right" style="text-align: right;">
+                                        <p style="color: red; margin-top: 5px;">回饋折扣：{{rewardPriceOff}}</p>
+                                    </div>
+                                </div>
+                                <div class="payment-style-grid">
+                                    <div class="payment-style-grid-left">
+                                        <label>總計：</label>
+                                    </div>
+                                    <div class="payment-style-grid-right" style="text-align: right;">
+                                        <p>
+                                            {{show_totalPrice}}元
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+            
+                    </div>
+                </div>
+                <div class="payment-btn-grid">
+                    <button class="btn-1" style="width: 100px;" (click)="previousProcess()">上一步</button>
+                    <button class="btn-1" style="width: 100px; margin-left: 10px;" (click)="toCheck()">結帳</button>
+                </div>
+            </div>
+        </div>
+        <!-- 步驟三 再次確認 end-->
+
+        <!-- 步驟四 完成 start-->
+        <div *ngIf="purchasingProcess=='4'">
+            <div class="shopping-cart" style="height: 100%;">
+                <div class="item-cart cart-empty-grid" style="height: 100%;">
+                    <div style="height: 30px;">
+                        <label>感謝您的訂購</label>
+                    </div>
+                    <div style="height: 30px;">
+                        <button class="btn-1" routerLink="/menu">繼續選購</button>
+                    </div>
+                    <div style="height: 30px;" style="margin-top: 20px;">
+                        <button class="btn-1" routerLink="/member">查看訂單</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 步驟四 完成 end-->
+
+        
+    </div>
+</div>
+
+
+<app-loading-spinner *ngIf="showSpainner"></app-loading-spinner>
+
+<!-- error msg-->
+<app-error [errorMsg]="errorMessage"></app-error>
+<app-notification [notifyMsg]="notificationMsg"></app-notification>
+<app-success [successMsg]="successMessage"></app-success>

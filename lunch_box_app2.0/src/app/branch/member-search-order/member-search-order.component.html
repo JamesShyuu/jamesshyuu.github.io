@@ -1,0 +1,492 @@
+<!-- <div class="container-fluid" style="margin-top:100px;">
+  <h1>訂單資料</h1>
+  <div class="row">
+    <div class="panel panel-defaul">
+      <div class="panel-body">
+        <div >
+          <label>
+            今日訂單
+          </label>
+          <div style="display:flex" *ngIf="todayOrders.length!==0">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <td>編號</td>
+                  <td>訂購日期</td>
+                  <td>訂購人</td>
+                  <td>聯絡電話</td>
+                  <td>送貨地址</td>
+                  <td>本次回饋</td>
+                  <td>訂單內容</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of todayOrders; index as i;">
+                  <td>{{i+1}}</td>
+                  <td>{{item.createTime}}</td>
+                  <td>{{item.name}}</td>
+                  <td>{{item.phone}}</td>
+                  <td>{{item.address}}</td>
+                  <td>{{item.reward}}</td>
+                  <td>
+                    <button (click)="checkOrderInfo(item.orders)">詳情</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div *ngIf="todayOrders.length===0">
+            <label >今日尚未建立訂單</label>
+          </div>
+          <label *ngIf="todayOrders.length!==0">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            10：30前，如需修改訂單請洽 賀先生0919-832-269
+          </label>
+        </div>
+        
+        <hr>
+
+        <div >
+          <label>
+            過去訂單
+          </label>
+          <div style="display:flex" *ngIf="pastOrders.length!==0">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <td>編號</td>
+                  <td>訂購日期</td>
+                  <td>訂購人</td>
+                  <td>聯絡電話</td>
+                  <td>送貨地址</td>
+                  <td>本次回饋</td>
+                  <td>訂單內容</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of pastOrders; index as y;">
+                  <td>{{y+1}}</td>
+                  <td>{{item.createTime}}</td>
+                  <td>{{item.name}}</td>
+                  <td>{{item.phone}}</td>
+                  <td>{{item.address}}</td>
+                  <td>{{item.reward}}</td>
+                  <td>
+                    <button (click)="checkOrderInfo(item.orders)">詳情</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div *ngIf="pastOrders.length===0">
+            <label>尚未有過去訂單資訊</label>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container">
+  <!-- 今天訂單 start-->
+  <!-- 今天訂單 沒訂單 start-->
+  <div *ngIf="todayOrders.length===0">
+    <div class="shopping-cart">
+      <div class="item-cart todayorder-empty-grid">
+        <div style="height: 30px;">
+          <label>今日尚未建立訂單</label>
+        </div>
+        <div style="height: 30px;">
+          <button class="btn-1" routerLink="/menu">查看商品</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 今天訂單 沒訂單 end-->
+
+  <!-- 今天訂單 有訂單 (網頁) start-->
+  <!-- <div *ngIf="todayOrders.length!==0">
+    <div class="shopping-cart orders-web" >
+      <div class="title">
+        今日訂單
+      </div>
+      <div class="item-cart" style="height: 100%;">
+        <table class="table table-striped">
+          <thead class="thead-style">
+            <tr>
+              <td>編號</td>
+              <td>訂購日期</td>
+              <td>訂購人</td>
+              <td>聯絡電話</td>
+              <td>送貨地址</td>
+              <td>獲得回饋</td>
+              <td>訂單內容</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of todayOrders; index as i;">
+              <td>{{i+1}}</td>
+              <td>{{item.createTime}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.phone}}</td>
+              <td>{{item.address}}</td>
+              <td>{{item.reward}}</td>
+              <td>
+                <button class="btn-1" (click)="checkOrderInfo(item)">詳情</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+      <div style="text-align: center;">
+        <label style="margin-top: 10px;" *ngIf="todayOrders.length!==0">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          10：30前，如需修改訂單請洽 賀先生0919-832-269
+        </label>
+      </div>
+    </div>
+
+    
+  </div> -->
+  <!-- 今天訂單 有訂單 (網頁) end-->
+
+  <!-- 今天訂單 有訂單 (裝置) start-->
+  <div class="search-style" *ngIf="todayOrders.length!==0">
+    <div class="title">
+      今日訂單
+    </div>
+    <div style="padding: 20px 30px 0px 30px;" *ngFor="let item of todayOrders; index as i;">
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>編號：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{i+1}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>訂購日期：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.createTime}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>訂購人：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.name}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>聯絡電話：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.phone}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>送貨地址：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.address}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>獲得回饋：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.reward}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>訂單內容：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <button class="btn-1" (click)="checkOrderInfo(item)">詳情</button>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div style="text-align: center;">
+      <label style="margin-top: 10px;" *ngIf="todayOrders.length!==0">
+        <i class="fa fa-exclamation-triangle" style="color: rgb(249, 214, 20);" aria-hidden="true"></i>
+        10：30前，如需修改訂單請洽 賀先生0919-832-269
+      </label>
+    </div>
+    
+  </div>
+  <!-- 今天訂單 有訂單 (裝置) end-->
+  <!-- 今天訂單 end-->
+
+
+  <!-- 過去訂單 start-->
+  <!-- 過去訂單 沒訂單 start-->
+  <div *ngIf="pastOrders.length===0">
+    <div class="shopping-cart">
+      <div class="item-cart todayorder-empty-grid">
+        <div style="height: 30px;">
+          <label>尚未有過去訂單資訊</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 過去訂單 沒訂單 end-->
+  
+  <!-- 過去訂單 有訂單(網頁) start-->
+  <!-- <div class="shopping-cart orders-web" *ngIf="pastOrders.length!==0">
+    <div class="title">
+      過去訂單
+    </div>
+    <div class="item-cart" style="height: 100%;">
+      <table class="table table-striped">
+        <thead class="thead-style">
+          <tr>
+            <td>編號</td>
+            <td>訂購日期</td>
+            <td>訂購人</td>
+            <td>聯絡電話</td>
+            <td>送貨地址</td>
+            <td>獲得回饋</td>
+            <td>訂單內容</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of pastOrders; index as y;">
+            <td>{{y+1}}</td>
+            <td>{{item.createTime}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.phone}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.reward}}</td>
+            <td>
+              <button class="btn-1" (click)="checkOrderInfo(item)">詳情</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> -->
+  <!-- <div class="search-style-web orders-web" *ngIf="pastOrders.length!==0">
+    <div class="title">
+      過去訂單
+    </div>
+    <div style="padding: 20px 30px 0px 30px;" *ngFor="let item of pastOrders; index as y;">
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>編號：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{y+1}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>訂購日期：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.createTime}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>訂購人：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.name}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>聯絡電話：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.phone}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>送貨地址：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.address}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>獲得回饋：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.reward}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>訂單內容：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <button class="btn-1" (click)="checkOrderInfo(item)">詳情</button>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div> -->
+  <!-- 過去訂單 有訂單(網頁) start-->
+
+  <!-- 過去訂單 有訂單(裝置) start-->
+  <div class="search-style" *ngIf="pastOrders.length!==0">
+    <div class="title">
+      過去訂單
+    </div>
+    <div style="padding: 20px 30px 0px 30px;" *ngFor="let item of pastOrders; index as y;">
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>編號：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{y+1}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>訂購日期：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.createTime}}</span>
+            </div>
+          </div>
+          <div class="search-style-grid">
+            <div class="search-style-grid-left">
+              <label>訂購人：</label>
+            </div>
+            <div class="search-style-grid-right">
+              <span>{{item.name}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>聯絡電話：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.phone}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>送貨地址：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.address}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>獲得回饋：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.reward}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>訂單內容：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <button class="btn-1" (click)="checkOrderInfo(item)">詳情</button>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+  <!-- 過去訂單 有訂單(裝置) end-->
+  <!-- 過去訂單 end-->
+</div>
+
+
+<!-- next version fix this, generate it to a component -->
+<div class="modal fade bs-example-modal-lg" id="searchOrderModal" tabindex="-1" role="dialog"
+  aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <!-- <div class="modal-content" style="margin: 20px;">
+      <div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <td>編號</td>
+              <td>商品名稱</td>
+              <td>商品價格</td>
+              <td>數量</td>
+              <td>使用回饋</td>
+              <td>使用優惠卷</td>
+              <td>總價</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of ordersInfo; index as z;">
+              <td>{{z+1}}</td>
+              <td>{{productList[item.productKey].productName}}</td>
+              <td>{{item.productPrice}}</td>
+              <td>{{item.productAmount}}</td>
+
+              <td>{{item.totalPrice}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button (click)="closeModal()">關閉</button>
+      </div>
+    </div> -->
+
+    <div class="shopping-cart">
+      <div class="title">
+        訂單資訊
+      </div>
+      <div class="item-cart" *ngFor="let item of ordersInfo; index as i;">
+        <div class="image">
+          <img src="../../assets/img/lunch-box-pic1.JPG" style="height: 50px; width:100px;" alt="" />
+        </div>
+        <div class="description">
+          <p>{{productList[item.productKey].productName}}</p>
+          <p>價格：{{item.productPrice}}</p>
+          
+        </div>
+        <div class="quantity">
+          <span style="margin-left: 5px;">{{item.productAmount}}</span>
+        </div>
+        <div class="total-price" >
+          <span>價格：{{item.productAmount*item.productPrice}}</span>
+        </div>
+      </div>
+      <div class="item-cart" >
+        <div class="description">
+          <p>運費：100</p>
+          <p>使用回饋：{{rewardForthputting}}</p>
+          <p>折價卷：{{couponForthputting}}</p>
+          <p>總價：{{totalPrice}}</p>
+        </div>
+      </div>
+      <div class="item-cart todayorder-empty-grid">
+        <div style="height: 30px;">
+          <button class="btn-1" (click)="closeModal()">關閉</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- next version fix this, generate it to a component -->
+
+
+<!-- hard code 下一版改由 app component統一實作-->
+<app-loading-spinner *ngIf="showSpainner"></app-loading-spinner>
+
+<!-- error msg-->
+<app-error [errorMsg]="errorMessage"></app-error>

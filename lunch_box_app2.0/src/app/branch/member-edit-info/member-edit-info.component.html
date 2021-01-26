@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="panel panel-default" style="margin-top:150px;">
+    <div class="panel-body">
+      <h1 style="text-align: center;">修改會員資料</h1>
+      <form [formGroup]="editInfoForm">
+        <div class="form-group">
+          <label>會員姓名：</label>
+          <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="form-group">
+          <label>手機：</label>
+          <input type="text" class="form-control" appRegExpression="N" formControlName="phone">
+        </div>
+        <div class="form-group">
+          <label>公司：</label>
+          <input type="text" class="form-control" formControlName="company">
+        </div>
+       <div class="form-group">
+          <label>地址：</label>
+          <input type="text" class="form-control" formControlName="address">
+       </div>
+        <button class="btn-1" (click)="submitData()">確認修改</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<app-error [errorMsg]="errorMessage"></app-error>

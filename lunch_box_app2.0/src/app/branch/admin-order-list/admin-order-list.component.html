@@ -1,0 +1,209 @@
+<!-- <label style="margin-left: 50%">今日訂單</label>
+<label *ngIf="!hadOrdersToday" style="margin-left: 50%">目前沒有訂單</label>
+<table *ngIf="hadOrdersToday" class="table table-striped">
+  <thead>
+    <tr>
+      <td>編號</td>
+      <td>訂購者姓名</td>
+      <td>聯絡電話</td>
+      <td>送貨地址</td>
+      <td>訂單詳情</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of todayList; index as i;">
+      <td>{{i+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.address}}</td>
+      <td><button (click)="checkOrderInfo(item)">詳情</button></td>
+    </tr>
+  </tbody>
+</table> -->
+
+<div class="container">
+  <!-- 今天訂單 沒訂單 start-->
+  <div *ngIf="!hadOrdersToday">
+    <div class="shopping-cart">
+      <div class="item-cart todayorder-empty-grid">
+        <div style="height: 30px;">
+          <label>今日尚未有訂單</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 今天訂單 沒訂單 end-->
+
+  <!-- 今天訂單 有訂單 (網頁) start-->
+  <div *ngIf="hadOrdersToday">
+    <div class="shopping-cart orders-web">
+      <div class="title">
+        今日訂單
+      </div>
+      <div class="item-cart" style="height: 100%;">
+        <table class="table table-striped">
+          <thead class="thead-style">
+            <tr>
+              <td>編號</td>
+              <td>訂購者姓名</td>
+              <td>聯絡電話</td>
+              <td>送貨地址</td>
+              <td>訂單詳情</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of todayList; index as i;">
+              <td>{{i+1}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.phone}}</td>
+              <td>{{item.address}}</td>
+              <td><button class="btn-1" (click)="checkOrderInfo(item)">詳情</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- 今天訂單 有訂單 (網頁) end-->
+
+  <!-- 今天訂單 有訂單 (裝置) start-->
+  <div class="search-style orders-device" *ngIf="hadOrdersToday">
+    <div class="title">
+      今日訂單
+    </div>
+    <div style="padding: 20px 30px 0px 30px;" *ngFor="let item of todayList; index as i;">
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>編號：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{i+1}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>訂購者姓名：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.name}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>聯絡電話：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.phone}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>送貨地址：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <span>{{item.address}}</span>
+        </div>
+      </div>
+      <div class="search-style-grid">
+        <div class="search-style-grid-left">
+          <label>訂單詳情：</label>
+        </div>
+        <div class="search-style-grid-right">
+          <button class="btn-1" (click)="checkOrderInfo(item)">詳情</button>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+  <!-- 今天訂單 有訂單 (裝置) end-->
+</div>
+
+
+<!-- next version fix this, generate it to a component -->
+<div class="modal fade bs-example-modal-lg" id="orderInfoModal" tabindex="-1" role="dialog"
+  aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <!-- <div class="modal-content" style="margin: 20px;">
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <td>訂購者姓名</td>
+              <td>聯絡電話</td>
+              <td>送貨地址</td>
+              <td>備註</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let info of userInfo">
+              <td>{{info.name}}</td>
+              <td>{{info.phone}}</td>
+              <td>{{info.address}}</td>
+              <td>{{info.notice}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <td>編號</td>
+              <td>商品名稱</td>
+              <td>商品價格</td>
+              <td>數量</td>
+              <td>總價</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of ordersInfo; index as i;">
+              <td>{{i+1}}</td>
+              <td>{{products[item.productKey].productName}}</td>
+              <td>{{item.productPrice}}</td>
+              <td>{{item.productAmount}}</td>
+              <td>{{item.productPrice*item.productAmount}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button (click)="closeModal()">關閉</button>
+      </div>
+    </div> -->
+    <div class="shopping-cart">
+      <div class="title">
+        訂單資訊
+      </div>
+      <div class="item-cart" *ngFor="let item of ordersInfo; index as i;">
+        <div class="image">
+          <img src="../../assets/img/lunch-box-pic1.JPG" style="height: 50px; width:100px;" alt="" />
+        </div>
+        <div class="description">
+          <p>{{products[item.productKey].productName}}</p>
+          <p>價格：{{item.productPrice}}</p>
+        
+        </div>
+        <div class="quantity">
+          <span style="margin-left: 5px;">{{item.productAmount}}</span>
+        </div>
+        <div class="total-price">
+          <span>價格：{{item.productAmount*item.productPrice}}</span>
+        </div>
+      </div>
+      <div class="item-cart">
+        <div class="description">
+          <p>運費：100</p>
+          <p>使用回饋：{{rewardForthputting}}</p>
+          <p>折價卷：{{couponForthputting}}</p>
+          <p>總價：{{totalPrice}}</p>
+        </div>
+      </div>
+      <div class="item-cart todayorder-empty-grid">
+        <div style="height: 30px;">
+          <button class="btn-1" (click)="closeModal()">關閉</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- next version fix this, generate it to a component -->
+
+<app-loading-spinner *ngIf="showSpainner"></app-loading-spinner>

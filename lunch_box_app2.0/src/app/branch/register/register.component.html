@@ -1,0 +1,65 @@
+
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3"></div> -->
+    <div class="">
+        <div class="panel panel-default register-content">
+          <div class="panel-heading">加入會員</div>
+          <div class="panel-body">
+            <form [formGroup]="registForm">
+              <div class="form-group">
+                <label>帳號</label>
+                <input type="text" class="form-control" formControlName="account" placeholder="user@example.com">
+                
+              </div>
+        
+              <div class="form-group">
+                <label>密碼</label>
+                <input type="password" class="form-control" formControlName="password">
+              </div>
+              <div class="form-group">
+                <label>再次確認密碼</label>
+                <input type="password" class="form-control" formControlName="password2">
+              </div>
+              <div class="form-group">
+                <label>姓名</label>
+                <input type="text" class="form-control" formControlName="name">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">手機</label>
+                <input type="text" class="form-control" appRegExpression="N" formControlName="phone">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">公司</label>
+                <input type="text" class="form-control" formControlName="company">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">公司地址</label>
+                <div style="display: flex;">
+                  <select *ngFor="let item of cityList" formControlName="city">
+                    <option [value]="registForm.controls.city.value">{{item.name}}</option>
+                  </select>
+                  <select *ngFor="let item of districtList" style="margin-left: 5px;" formControlName="district">
+                    <option [value]="registForm.controls.district.value">{{item.name}}</option>
+                  </select>
+                  <input type="text" class="form-control" style="margin-left: 5px;" formControlName="address">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-default btn-1" 
+                (click)="onSubmit()">確認</button>
+              <button type="submit" class="btn btn-default btn-1" 
+                style="margin-left: 10px;" routerLink="">取消</button>
+              
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- loading -->
+<app-loading-spinner *ngIf="showSpainner"></app-loading-spinner>
+
+<app-error [errorMsg]="errorMessage"></app-error>

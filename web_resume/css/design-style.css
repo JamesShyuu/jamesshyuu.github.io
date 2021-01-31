@@ -1,0 +1,88 @@
+.design-banner-img{
+	width: 100%;
+	height: 500px;
+	background-image: url(../images/block.jpeg);
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+.pf_main_box{
+	margin-top: 50px;
+}
+.pf_main_row{
+	height: 250px;
+}
+.pf_gallery_img{
+	width: 25%;
+	height: 100%;
+	float: left;
+	background: #272822;
+}
+.pf_gallery_img div{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	margin-top: -220px;
+	border: 2px solid white;
+	transition: 0.5s ease-in-out;
+	
+}
+
+.pf_gallery_img p{
+	margin:auto;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+	font-size: 18px;
+	color: white;
+	z-index: 20;
+}
+@media screen and (max-width: 1000px){
+	.pf_gallery_img{
+		width: 50%;
+	}
+}
+@media screen and (max-width: 600px){
+	.pf_gallery_img{
+		width: 100%;
+	}
+}
+.photograph_img{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/* portfolio*/
+.pf_img{
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition: 0.5s ease-in-out;
+}
+.pf_img:hover{
+	
+	opacity: 0.5;
+}
+.pf_img_content1{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	border: 1px solid white;
+}
+.pf_hide_box1{
+	justify-content:center;
+	padding-top: 70px;
+	
+}
+.pf_hide_box1 p{
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+	display: none;
+}
+
+.pf_hide_box1 p:hover{
+	display: flex;
+}

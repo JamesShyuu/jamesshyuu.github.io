@@ -1,0 +1,252 @@
+/*about me*/
+.am_box{
+	width: 100%;
+}
+.am_main{
+	display: flex;
+	justify-content:center;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	width: 100%;	
+}
+.am_mainPage{
+	width: 90%;	
+	border: 1px solid red;
+}
+.am_logo{
+	width: 150px;
+	height: 150px;
+}
+.am_fig{
+	width: 33.333333%;
+	height: 200px;
+}
+
+.am_main_box{
+	width: 100%;
+	margin-top: 100px;
+	
+}
+.am_main_box p{
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+}
+.am_main_box li{
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+}
+.am_main_box > .am_full_gallery{
+	margin-top: 50px;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.am_title{
+	text-align: center;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+
+}
+
+.am_main_box > .am_full_gallery > .am_gallery_img{
+	width: 33.333333%;
+	float: left;
+	height: 100%;
+}
+@media screen and (max-width: 600px){
+	.am_main_box > .am_full_gallery >.am_gallery_img{
+		float: none;
+		width: 100%;
+	}
+}
+.am_gallery_img img{
+	width: 100%;
+	
+}
+.am_intro_box{
+	margin-top: 50px;
+}
+.am_intro_box li{
+	margin-top: 10px;
+}
+
+.am_bottom{
+	border-bottom: 1px dotted #272822;
+	width: 80%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+
+
+
+
+
+/* Education*/
+.edu_main_box{
+	margin-top: 100px;
+}
+
+.edu_content_box{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.edu_content{
+	/*float: left;*/
+	/*margin-left: 100px;*/
+}
+.edu_content p{
+	/*text-align: center;*/
+	margin-left: 40px;
+	font-size: 20px;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+}
+.edu_content img{
+	width: 100px;
+	height: 100px;
+}
+.edu_content a{
+	text-decoration: none;
+	color: #b43434;
+	transition: 0.5s ease-in-out;
+}
+.edu_content a:hover{
+	
+	color: #ff2600;
+}
+.edu_bg_img{
+	width: 100%;
+	height: 400px;
+	background-image: url(../images/wood.jpg);
+	background-size: cover;
+	background-position: center;
+	padding-top: 50px;
+}
+.edu_box{
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	height: 300px;
+	margin: auto;
+	background: #e5e7e6;
+	border-radius: 20px;
+}
+
+.edu_imgbox{
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.edu_box_img1{
+	height: 400px;
+	width: 300px;	
+	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.edu_box_img2{
+	height: 300px;
+	width: 350px;	
+	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.edu_bg{
+	background: #272822;
+	width: 100%;
+	height: 100%;
+}
+.edu_carousel{
+	padding-top: 30px;
+}
+.edu_depo_img1{
+	width: 200px;
+	height: 300px;	
+	margin: auto;
+	
+}
+
+.edu_depo_title{
+	font-size: 20px;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);	
+	top: 300px;
+	
+	border: 1px solid red;
+}
+
+
+
+
+
+/* Experience*/
+.exe_main_box{
+	margin-top: 100px;
+	margin-bottom: 60px;
+}
+.exe_content_title{
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+.exe_cotent p{
+	margin-left: 40px;
+	font-size: 20px;
+	font-family: "Microsoft JhengHei UI Light";
+	src:url(../fonts/msjh.ttc);
+}
+.exe_cotent img{
+	width: 100px;
+	height: 100px;
+}
+
+
+
+/* Skill*/
+.ski_main_box{	
+	width: 80%;
+	margin: auto;	
+	display: flex;
+	justify-content:center;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	
+
+}
+.ski_main_bg{
+	width: 100%;
+	/*height: 400px;*/	
+	background-image: url(../images/box.jpg);
+	background-size: cover;
+	background-position: center;
+	margin-top: 100px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.ski_ul{
+	list-style-type:none;
+	background: #e5e7e6;
+}
+.ski_li{
+	float: left;
+	text-align: center;
+	padding: 30px 50px;
+
+}
+.ski_gallery_box{
+	width: 33.333333%;
+	float: left;
+}
+.ski_gallery_img{
+	width: 100px;
+	height: 100px;
+}
+
+
+/* portfolio*/
+.pf_bgImg{
+	width: 100%;
+	height: 500px;
+	background-image: url(../images/DSC01754.jpg);
+	background-size: cover;
+	background-position: center;
+}
+

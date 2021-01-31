@@ -3,16 +3,11 @@
 	<head>		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
-		<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
 		<link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.css">
 		<link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
-		<!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
-		<!-- <link rel="stylesheet" href="css/font-awesome.min.css">	 -->
 		<link rel="stylesheet" href="js/font-awesome-4.7.0/css/font-awesome.min.css">	
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/projectParticipation.css">
-		<!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
 		
 		<style>
 			h2 ,h4 {font-family: "Microsoft JhengHei UI Light"; src:url(../fonts/msjh.ttc); 
@@ -27,6 +22,13 @@
 			h5{
 				color: #822d2b;
 				font-weight: bold;
+			}
+
+			.projpartici_main_bg{
+				width: 100%;
+				margin-top: 100px;
+				padding-top: 20px;
+				padding-bottom: 20px;
 			}
 		</style>
 		<title>履歷</title>
@@ -52,39 +54,6 @@
 						<a href="#portfolio" class="re_titleBtn">作品集</a>
 					</li>
 				</ul>
-<!--					<ul id="uiux-nav" class="re_ulStyle">
-						<li class="re_lilogo">
-							<a href="#top" class="clickHide re_titleBtn"><img src="images/my_name.png" class="re_logoimg"></a>
-						</li>
-						<li class="re_liStyle">
-							<a class="re_titleBtn">UIUX</a>
-						</li>
-						<li class="re_liStyle">
-							<a class="re_titleBtn">回到履歷</a>
-						</li>
-					</ul>
-					<ul id="photograph-nav" class="re_ulStyle">
-						<li class="re_lilogo">
-							<a href="#top" class="clickHide re_titleBtn"><img src="images/my_name.png" class="re_logoimg"></a>
-						</li>
-						<li class="re_liStyle">
-							<a class="re_titleBtn">Photograph</a>
-						</li>
-						<li class="re_liStyle">
-							<a class="re_titleBtn">回到履歷</a>
-						</li>
-					</ul>
-					<ul id="design-nav" class="re_ulStyle">
-						<li class="re_lilogo">
-							<a href="#top" class="clickHide re_titleBtn"><img src="images/my_name.png" class="re_logoimg"></a>
-						</li>
-						<li class="re_liStyle">
-							<a class="re_titleBtn">Design</a>
-						</li>
-						<li class="re_liStyle">
-							<a class="re_titleBtn">回到履歷</a>
-						</li>
-					</ul>-->
 
   				<!-- Single button -->
 				<div class="btn-group re_ulSmall">
@@ -96,16 +65,6 @@
 						<li><a href="#education">教育與訓練</a></li>
 						<li><a href="#Exe">經驗</a></li>
 						<li><a href="#portfolio">作品集</a></li>
-<!--					<div id="uiux-nav-small">
-							<li><a href="#aboutMe">UIUX</a></li>
-							<li><a href="#">回到履歷</a></li>
-						</div>
-						<div id="photograph-nav-small">
-							<li><a href="#aboutMe">回到履歷</a></li>
-						</div>
-						<div id="design-nav-small" >
-							<li><a href="#aboutMe">回到履歷</a></li>
-						</div>-->	
 					</ul>
 				</div>
   			</div>
@@ -829,179 +788,15 @@
 			</div>
 		</div>
 
-		<!-- modal_北科大專題 start 廢棄-->
-		<!-- <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div id="webDesign_travelContent" class="modal-content" >
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-						<h4 class="modal-title" id="myModalLabel">國立臺北科技大學Java&Android程式設計班期末專題</h4>
-					</div>
-					<div class="modal-body mod_content">
-						<div class="mod_img5_box">
-							
-							<div class="slideshow-container">
-
-								<div class="mySlides_1 myProfile_slideShow_fade">
-								  <img src="images/web_design.jpg" style="width:100%">
-								</div>
-								
-								<div class="mySlides_1 myProfile_slideShow_fade">
-								  <img src="images/web_design2.jpg" style="width:100%">
-								</div>
-								
-								<div class="mySlides_1 myProfile_slideShow_fade">
-								  <img src="images/web_design3.jpg" style="width:100%">
-								</div>
-								
-								<a class="myProfile_slideShow_prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-								<a class="myProfile_slideShow_next" onclick="plusSlides(1, 1)">&#10095;</a>
-								
-								</div>
-								<br>
-								
-								<div style="text-align:center">
-								  <span class="myProfile_slideShow_dot_1" onclick="currentSlide(1, 1)"></span> 
-								  <span class="myProfile_slideShow_dot_1" onclick="currentSlide(2, 1)"></span> 
-								  <span class="myProfile_slideShow_dot_1" onclick="currentSlide(3, 1)"></span> 
-								</div>
-							<div>
-								<h5>專案說明</h5>
-								<p>輕鬆規劃、紀錄您的旅程</p>
-								<p>提供一個簡單明瞭的平台，讓旅行者快速的規劃旅程 
-									紀錄所有已規劃及已完成之旅行
-									分享自己的行程規劃，以及旅行後的心得
-									參考並評價既有的旅行規劃
-									提供專家編寫的旅遊專欄，讓您有更多的旅遊靈感
-									後台管理系統對會員、景點、旅行規劃、心得分享(評價)等各項目進行管理
-								</p>
-								<h5>使用技術</h5>
-								<p>前端：HTML, CSS, JavaScript, Bootstrap, JSP</p>
-								<p>後端：Java, Hibernate</p>
-								<p>資料庫：mySQL</p>
-								<a href="https://jamesshyuu.github.io/james_work/home_page.html" >
-									觀看網站&nbsp;&nbsp;
-									<i class="fa fa-angle-right" aria-hidden="true"></i>
-									<i class="fa fa-angle-right" aria-hidden="true"></i>
-									<i class="fa fa-angle-right" aria-hidden="true"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- modal_北科大專題 start end-->
-
-		<!-- modal_全球人壽 mPos start 廢棄-->
-		<!-- <div class="modal fade" id="myModal_TG" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div id="webDesign_travelContent" class="modal-content" >
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-						<h4 class="modal-title" id="myModalLabel">全球人壽行動投保</h4>
-					</div>
-					<div class="modal-body mod_content">
-						<div class="mod_img5_box">
-							
-							<div class="slideshow-container">
-
-								<div class="mySlides_2 myProfile_slideShow_fade">
-								  <img src="images/web_design_gb1.jpg" style="width:100%">
-								</div>
-								
-								<div class="mySlides_2 myProfile_slideShow_fade">
-								  <img src="images/web_design_gb2.jpg" style="width:100%">
-								</div>
-								
-								<a class="myProfile_slideShow_prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-								<a class="myProfile_slideShow_next" onclick="plusSlides(1, 2)">&#10095;</a>
-								
-								</div>
-								<br>
-								
-								<div style="text-align:center">
-								  <span class="myProfile_slideShow_dot_2" onclick="currentSlide(1, 2)"></span> 
-								  <span class="myProfile_slideShow_dot_2" onclick="currentSlide(2, 2)"></span>
-								</div>
-							<div>
-								<h5>全球人壽行動投保(mPos)</h5>
-									<p>產品類型：ios app</p>
-									<p>負責部分：前端工程</p>
-									<p>說明：此產品為ios app，使用UIWebView載入網頁內容。使從業人員能攜帶ipad外出與客戶討論商品，並且能在離線的狀態下進行投保的工作</p>
-									<p>使用技術：HTML, CSS, Angular JS, Bootstrap, RequireJS </p>
-									<h5>全球人壽業務人員管理系統</h5>
-									<p>產品類型：web</p>
-									<p>負責部分：前端工程</p>
-									<p>說明：業務人員後台管理系統，並會依登入者的身份權限有不同功能。</p>
-									<p>使用技術：HTML, CSS, Angular JS, , Bootstrap, RequireJS, AJAX</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- modal_全球人壽 mPos end 廢棄-->
-
-		<!--modal_愛物聯 start 廢棄 -->
-		<!-- <div class="modal fade" id="myModal_iiot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<div id="webDesign_travelContent" class="modal-content" >
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">
-								<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-							</button>
-							<h4 class="modal-title" id="myModalLabel">愛物聯股份有限公</h4>
-						</div>
-						<div class="modal-body mod_content">
-							<div class="mod_img5_box">
-								
-								<div class="slideshow-container">
-	
-									<div class="mySlides_3 myProfile_slideShow_fade">
-									  <img src="images/web_design_iiot1.png" style="width:100%">
-									</div>
-									
-									<div class="mySlides_3 myProfile_slideShow_fade">
-									  <img src="images/web_design_iiot2.jpg" style="width:100%">
-									</div>
-									
-									<a class="myProfile_slideShow_prev" onclick="plusSlides(-1, 3)">&#10094;</a>
-									<a class="myProfile_slideShow_next" onclick="plusSlides(1, 3)">&#10095;</a>
-									
-									</div>
-									<br>
-									
-									<div style="text-align:center">
-									  <span class="myProfile_slideShow_dot_3" onclick="currentSlide(1, 3)"></span> 
-									  <span class="myProfile_slideShow_dot_3" onclick="currentSlide(2, 3)"></span>
-									</div>
-								<div>
-									<h5>wifi機與後台系統整合服務</h5>
-									<p>負責部分：前端工程、UIUX</p>
-									<p>使用技術：Angular JS, Angular, Gulp, typescript, HTML, CSS, SCSS</p>
-									
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
-			<!--modal_愛物聯 end -->
-
 		<!--modal_參與專案 共用 start-->
-		<div class="modal fade" id="myModal_public" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<!--<div class="modal fade" id="myModal_public" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div id="webDesign_travelContent" class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">
 							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 						</button>
-						<h4 class="modal-title" id="projModal_title""></h4>
+						<h4 class="modal-title" id="projModal_title"></h4>
 					</div>
 					<div class="modal-body mod_content">
 						<div class="mod_img5_box">
@@ -1044,7 +839,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		<!--modal_參與專案 共用 end-->
 
 		<!--modal_設計專案 共用 start -->
@@ -1162,72 +957,9 @@
 		
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-		<script src="bower_components/ResponsiveSlides.js-master/responsiveslides.min.js"></script>
 		<script src="content.js"></script>
-		<!-- <script src="js/js1.12.4.js"></script>
-		<script src="js/jqueryuiv1.12.0.js"></script> -->
-		<script>
-			
-			//$( ".clickHide" ).click(function() {
-  			//	$( ".re_content" ).hide( "drop", { direction: "down" }, "slow" );
-			//});
-
-			// function projModalShow(key){
-			// 	if(key == 'iiot'){
-			// 		document.getElementById('projModal_title').innerHTML = iiot.projModal_title;
-			// 		document.getElementById('projModal_img1').src = iiot.projModal_img1;
-			// 		document.getElementById('projModal_img2').src = iiot.projModal_img2;
-			// 		document.getElementById('projModal_label1').innerHTML = iiot.projModal_label1;
-			// 		document.getElementById('projModal_duty1').innerHTML = iiot.projModal_duty1;
-			// 		document.getElementById('projModal_skill1').innerHTML = iiot.projModal_skill1;
-			// 		document.getElementById('projModal_descibe1').innerHTML = iiot.projModal_descibe1;
-			// 		document.getElementById('projModal_period1').innerHTML = iiot.projModal_period1;
-			// 	} else if(key == 'post'){
-			// 		document.getElementById('projModal_title').innerHTML = post.projModal_title;
-			// 		document.getElementById('projModal_img1').src = post.projModal_img1;
-			// 		document.getElementById('projModal_img2').src = post.projModal_img2;
-			// 		document.getElementById('projModal_label1').innerHTML = post.projModal_label1;
-			// 		document.getElementById('projModal_duty1').innerHTML = post.projModal_duty1;
-			// 		document.getElementById('projModal_skill1').innerHTML = post.projModal_skill1;
-			// 		document.getElementById('projModal_descibe1').innerHTML = post.projModal_descibe1;
-			// 		document.getElementById('projModal_period1').innerHTML = post.projModal_period1;
-			// 	} else if(key == 'insurance'){
-			// 		document.getElementById('projModal_title').innerHTML = insurance.projModal_title;
-			// 		document.getElementById('projModal_img1').src = insurance.projModal_img1;
-			// 		document.getElementById('projModal_img2').src = insurance.projModal_img2;
-			// 		document.getElementById('projModal_label1').innerHTML = insurance.projModal_label1;
-			// 		document.getElementById('projModal_duty1').innerHTML = insurance.projModal_duty1;
-			// 		document.getElementById('projModal_skill1').innerHTML = insurance.projModal_skill1;
-			// 		document.getElementById('projModal_descibe1').innerHTML = insurance.projModal_descibe1;
-			// 		document.getElementById('projModal_label2').innerHTML = insurance.projModal_label2;
-			// 		document.getElementById('projModal_duty2').innerHTML = insurance.projModal_duty2;
-			// 		document.getElementById('projModal_skill2').innerHTML = insurance.projModal_skill2;
-			// 		document.getElementById('projModal_descibe2').innerHTML = insurance.projModal_descibe2;
-			// 		document.getElementById('projModal_period2').innerHTML = insurance.projModal_period2;
-			// 	} else if(key == 'tBank'){
-			// 		document.getElementById('projModal_title').innerHTML = bis.projModal_title;
-			// 		document.getElementById('projModal_img1').src = bis.projModal_img1;
-			// 		document.getElementById('projModal_img2').src = bis.projModal_img2;
-			// 		document.getElementById('projModal_label1').innerHTML = bis.projModal_label1;
-			// 		document.getElementById('projModal_duty1').innerHTML = bis.projModal_duty1;
-			// 		document.getElementById('projModal_skill1').innerHTML = bis.projModal_skill1;
-			// 		document.getElementById('projModal_descibe1').innerHTML = bis.projModal_descibe1;
-			// 		document.getElementById('projModal_period1').innerHTML = bis.projModal_period1;
-			// 	}
-			// }
-
-			$(function () {
-				$(".rslides").responsiveSlides({
-					speed: 1000, 
-				});
-			});
-			
-
-		</script>
 
 		<script src="js/sidebutton.js"></script>
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 		<script src="js/controller.js"></script>
 		<script src="js/page-change.js"></script>
 	</body>

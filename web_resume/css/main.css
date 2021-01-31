@@ -31,24 +31,23 @@ a {
 Modules - reusable parts of our design
 
 -------------------------------- */
-.cd-container {
+/* .cd-container {
   width: 90%;
   max-width: 768px;
   margin: 2em auto;
 }
 .cd-container::after {
-  /* clearfix */
   content: '';
   display: table;
   clear: both;
-}
+} */
 
 /* -------------------------------- 
 
 Main components 
 
 -------------------------------- */
-header {
+/* header {
   background: #5c4751;
   height: 100px;
   text-align: center;
@@ -90,7 +89,7 @@ main p {
     font-size: 20px;
     font-size: 1.25rem;
   }
-}
+} */
 
 .cd-top {
   display: inline-block;

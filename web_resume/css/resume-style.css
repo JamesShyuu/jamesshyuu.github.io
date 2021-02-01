@@ -245,8 +245,7 @@
 .pf_bgImg{
 	width: 100%;
 	height: 500px;
-	background-image: url(../images/DSC01754.jpg);
-	/* background-image: url(../images/pen3.jpg); */
+	background-image: url(../images/pen2.jpg);
 	background-size: cover;
 	background-position: center;
 }

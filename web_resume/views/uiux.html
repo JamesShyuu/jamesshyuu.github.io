@@ -50,10 +50,10 @@
 				<h1 class="hp_title" style="color: black; top: 250px;">要吃啥UIUX</h1>
 			</div>
 
-			<div id="uiux-banner-as" class="re_content uiux-banner-img-as" style="display: none;">
+			<!-- <div id="uiux-banner-as" class="re_content uiux-banner-img-as" style="display: none;">
 				<img src="">
 				<h1 class="hp_title" style="color: black; top: 250px;">as yourself UIUX</h1>
-			</div>
+			</div> -->
 
 		</section>
 
@@ -71,7 +71,7 @@
 						</div>
 					</div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="painting_box_padding">
 						<div class="projects_button">
 							<a href="#" onclick="changeContent('as')">
@@ -81,7 +81,7 @@
 							<label class="projects_label" style="color: black; text-shadow: 1px 1px white, -1px -1px white">as yourself UIUX</label>
 						</div>
 					</div>
-                </div>
+                </div> -->
             </div>
 		</section>
 		
@@ -116,7 +116,7 @@
 			</div>
 		</section>
 		
-		<section id="as-uiux-block" class="uiux-block" style="display: none;">
+		<!-- <section id="as-uiux-block" class="uiux-block" style="display: none;">
 			<div class="container-fluid">
 				<div class="row uiux-description">
 					<p>As yourself 專案設計，近期與朋友正在進行與規劃中。專案想提供使用者一個平台能分享資訊與知識，並且擁有會員與社群的機制。由於還在規劃中目前只有把部分flow charts 畫出來。</p>
@@ -131,7 +131,7 @@
 					<a href="#" class="uiux-btnback" onclick="changeContent('main')">回上一頁</a>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<a href="#top" class="cd-top">Top</a>
 
@@ -160,37 +160,38 @@
 			function changeContent(v){
 				let main = document.getElementById('main-uiux-block');
 				let sha = document.getElementById('sha-uiux-block');
-				let as = document.getElementById('as-uiux-block');
+				//let as = document.getElementById('as-uiux-block');
 				let li = document.getElementById('uiux-li');
 				let indexBanner = document.getElementById('uiux-banner-index');
 				let shaBanner = document.getElementById('uiux-banner-sha');
-				let asBanner = document.getElementById('uiux-banner-as');
+				//let asBanner = document.getElementById('uiux-banner-as');
 
 				if(v=='main'){
 					main.style.display = 'block';
 					sha.style.display = 'none';
-					as.style.display = 'none';
+					//as.style.display = 'none';
 					li.style.display = 'none';
 					indexBanner.style.display = 'block';
 					shaBanner.style.display = 'none';
-					asBanner.style.display = 'none';
+					//asBanner.style.display = 'none';
 				} else if(v == 'sha'){
 					main.style.display = 'none';
 					sha.style.display = 'block';
-					as.style.display = 'none';
+					//as.style.display = 'none';
 					li.style.display = 'block';
 					indexBanner.style.display = 'none';
 					shaBanner.style.display = 'block';
-					asBanner.style.display = 'none';
-				} else if (v == 'as'){
-					main.style.display = 'none';
-					sha.style.display = 'none';
-					as.style.display = 'block';
-					li.style.display = 'block';
-					indexBanner.style.display = 'none';
-					shaBanner.style.display = 'none';
-					asBanner.style.display = 'block';
-				}
+					//asBanner.style.display = 'none';
+				} 
+				// else if (v == 'as'){
+				// 	main.style.display = 'none';
+				// 	sha.style.display = 'none';
+				// 	as.style.display = 'block';
+				// 	li.style.display = 'block';
+				// 	indexBanner.style.display = 'none';
+				// 	shaBanner.style.display = 'none';
+				// 	asBanner.style.display = 'block';
+				// }
 			}
 		</script>
     </body>

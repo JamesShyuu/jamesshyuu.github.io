@@ -20,3 +20,15 @@
 	background-size: cover;
 	background-position: center;
 }
+
+.photo-btn{
+	padding-left: 20px;
+	cursor: pointer;
+	text-decoration: none;
+	color: #b33434;
+	transition: 0.3s ease-in-out;
+}
+.photo-btn:hover{
+	text-decoration: none;
+	color: #822d2b;
+}

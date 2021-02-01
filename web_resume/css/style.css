@@ -1,3 +1,17 @@
+h2 ,h4 {font-family: "Microsoft JhengHei UI Light"; src:url(../fonts/msjh.ttc); 
+	font-weight: bold; 
+	text-align: center;
+	
+}
+h3{
+	font-family: "Microsoft JhengHei UI Light"; src:url(../fonts/msjh.ttc);
+	font-weight: bold;
+}
+h5{
+	color: #822d2b;
+	font-weight: bold;
+}
+
 /*nav bar*/
 .re_nav{
 	background: #272822;
@@ -482,7 +496,8 @@
 	width: 100%;
 	border-radius: 20px;
 }
-.pic1{
+/* 手繪按鈕圖片 */
+/* .pic1{
 	background-image: url(../images/oil3.jpg);
 	transition: 0.6s ease-in-out;
 	-webkit-transition: 0.6s ease-in-out;
@@ -497,7 +512,7 @@
 }
 .pic2:hover{
 	background-image: url(../images/sketch2.jpg);
-}
+} */
 .pic3{
 	background-image: url(../images/lunchBox_twoDevice2.jpg);
 	opacity: 1;
